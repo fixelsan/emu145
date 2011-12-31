@@ -76,6 +76,8 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
             // special case
             if(((command>>16)&0xff)>=0x20)
             {
+                r[4*1]=((((command>>16)&0xf)>>ucount)&1)?true:false;
+                r[4*4]=((((command>>20)&0xf)>>ucount)&1)?true:false;
                 ucmd=asprom[0x5f][jrom[icount]];
             }
             else
