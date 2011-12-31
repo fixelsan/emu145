@@ -63,6 +63,13 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     b=0;
     g=0;
     
+    if(ecount==0)
+    {
+        //sample new H!!!!
+        h[0]=k2;h[3]=k1;
+        h[1]=false;h[2]=false;
+    }
+    
     if(icount<27)
     {
         ucmd=asprom[command&0x7f][jrom[icount]];
@@ -289,9 +296,6 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     {
         ecount=0;
         dcount++;
-        //sample new H!!!!
-        h[0]=k2;h[3]=k1;
-        h[1]=false;h[2]=false;
     }
     if(dcount>=14)
     {
