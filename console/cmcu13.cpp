@@ -63,13 +63,6 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     b=0;
     g=0;
     
-    if(ecount==0)
-    {
-        //sample new H!!!!
-        h[0]=k2;h[3]=k1;
-        h[1]=false;h[2]=false;
-    }
-    
     if(icount<27)
     {
         ucmd=asprom[command&0x7f][jrom[icount]];
@@ -83,8 +76,13 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
             // special case
             if(((command>>16)&0xff)>=0x20)
             {
-                r[4*1]=((((command>>16)&0xf)>>ucount)&1)?true:false;
-                r[4*4]=((((command>>20)&0xf)>>ucount)&1)?true:false;
+                //r0 points to i=36
+                //we need to store ASP field to R1[D14:D13]
+                if(icount==36)
+                {
+                    r[4*1]=((((command>>16)&0xf)>>ucount)&1)?true:false;
+                    r[4*4]=((((command>>20)&0xf)>>ucount)&1)?true:false;
+                }
                 ucmd=asprom[0x5f][jrom[icount]];
             }
             else
@@ -95,7 +93,8 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     if(ucmd>0x3b)
     {
         ucmd=(ucmd-0x3c)*2;
-        ucmd+=!l;
+        ucmd+=!l?1:0;
+        ucmd+=0x3c;
     }
     
     u_command=ucrom[ucmd];
@@ -103,16 +102,16 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
  
     
     if(u_command.bits.a_r)
-        a|=r[icount*4];
+        a|=r[0];
 
     if(u_command.bits.a_m)
-        a|=m[icount*4];
+        a|=m[0];
 
     if(u_command.bits.a_st)
-        a|=st[icount*4];
+        a|=st[0];
 
     if(u_command.bits.a_nr)
-        a|=!r[icount*4];
+        a|=!r[0];
 
     if(u_command.bits.a_10nl)
         a|=((10>>ucount)&1)&!l;
@@ -296,6 +295,9 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     {
         ecount=0;
         dcount++;
+        //sample new H!!!!
+        h[0]=k2;h[3]=k1;
+        h[1]=false;h[2]=false;
     }
     if(dcount>=14)
     {
