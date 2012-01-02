@@ -63,6 +63,14 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     b=0;
     g=0;
     
+    if(ecount==0)
+    {
+        //sample new H!!!! -- for simplicity we'll feed "H" to both k1 and k2 in slaves
+        h[0]=h[3]=false;
+        h[1<<ucount]=(k1|k2);
+        h[1]=h[2]=false;
+    }
+    
     if(icount<27)
     {
         ucmd=asprom[command&0x7f][jrom[icount]];
@@ -142,7 +150,18 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     if(u_command.bits.g_nl)
         g|=!l;
     if(u_command.bits.g_nt)
-        g|=!(h[0]|h[1]|h[2]|h[3]);
+    switch(ecount)
+    {
+        case 0:
+            g|=!k1;
+            break;
+        case 1:
+            g|=!k2;
+            break;
+        case 2:
+            g|=!(k1&k2);
+            break;
+    }
     
     if(ucount!=0) //gamma input -- 1 bit data or carry only. 
         g=carry;
@@ -295,10 +314,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     {
         ecount=0;
         dcount++;
-        //sample new H!!!!
-        h[0]=k2;h[3]=k1;
-        h[1]=false;h[2]=false;
-    }
+     }
     if(dcount>=14)
     {
         dcount=0;
