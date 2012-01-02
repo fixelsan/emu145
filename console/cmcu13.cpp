@@ -159,7 +159,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
             g|=!k2;
             break;
         case 2:
-            g|=!(k1&k2);
+            g|=!(k1|k2);
             break;
     }
     
