@@ -69,13 +69,14 @@ public:
     unsigned int cmdrom[256];       //macrocommand rom   -- format (asp0)|(asp1<<8)|(asp2<<16)|(modflag<<24)
 
 private:
-    bool m[MCU_BITLEN];
-    bool r[MCU_BITLEN];
-    bool st[MCU_BITLEN];
-    bool s[4];
-    bool s1[4];
-    bool h[4];
-    bool l;
+    bool rm[MCU_BITLEN];
+    bool rr[MCU_BITLEN];
+    bool rst[MCU_BITLEN];
+    bool rs[4];
+    bool rs1[4];
+    bool rh[4];
+    bool rl;
+    bool rt;
     unsigned int sigma; //so we can calculate normally
     bool carry;
     

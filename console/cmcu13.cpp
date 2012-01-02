@@ -20,12 +20,12 @@ cMCU::cMCU()
     int i;
     for(i=0;i<MCU_BITLEN;i++)
     {
-        m[i]=0;
-        r[i]=0;
-        s[i&2]=0;
-        s1[i&2]=0;
-        st[i%12]=0;
-        h[i&2]=0;
+        rm[i]=0;
+        rr[i]=0;
+        rs[i&2]=0;
+        rs1[i&2]=0;
+        rst[i%12]=0;
+        rh[i&2]=0;
     }
     
 }
@@ -38,7 +38,8 @@ void cMCU::init()
     ucount=0;
     sigma=0;
     carry=0;
-    l=0;
+    rl=0;
+    rt=0;
     
     cptr=0;
     
@@ -50,26 +51,18 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
 {
     int i;
     unsigned int ret;
-    int t;
     int a;
     int b;
     int g;
     int newr0;
     int newm0;
-    int x,y,z;
+    bool x,y,z;
     unsigned char ucmd;
+    bool temp;
     
     a=0;
     b=0;
     g=0;
-    
-    if(ecount==0)
-    {
-        //sample new H!!!! -- for simplicity we'll feed "H" to both k1 and k2 in slaves
-        h[0]=h[3]=false;
-        h[1<<ucount]=(k1|k2);
-        h[1]=h[2]=false;
-    }
     
     if(icount<27)
     {
@@ -88,8 +81,8 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
                 //we need to store ASP field to R1[D14:D13]
                 if(icount==36)
                 {
-                    r[4*1]=((((command>>16)&0xf)>>ucount)&1)?true:false;
-                    r[4*4]=((((command>>20)&0xf)>>ucount)&1)?true:false;
+                    rr[4*1]=((((command>>16)&0xf)>>ucount)&1)?true:false;
+                    rr[4*4]=((((command>>20)&0xf)>>ucount)&1)?true:false;
                 }
                 ucmd=asprom[0x5f][jrom[icount]];
             }
@@ -101,7 +94,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     if(ucmd>0x3b)
     {
         ucmd=(ucmd-0x3c)*2;
-        ucmd+=!l?1:0;
+        ucmd+=!rl?1:0;
         ucmd+=0x3c;
     }
     
@@ -110,22 +103,22 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
  
     
     if(u_command.bits.a_r)
-        a|=r[0];
+        a|=rr[0];
 
     if(u_command.bits.a_m)
-        a|=m[0];
+        a|=rm[0];
 
     if(u_command.bits.a_st)
-        a|=st[0];
+        a|=rst[0];
 
     if(u_command.bits.a_nr)
-        a|=!r[0];
+        a|=!rr[0];
 
     if(u_command.bits.a_10nl)
-        a|=((10>>ucount)&1)&!l;
+        a|=((10>>ucount)&1)&!rl;
 
     if(u_command.bits.a_s)
-        a|=s[0];
+        a|=rs[0];
 
     if(u_command.bits.a_4)
         a|=(4>>ucount)&1;
@@ -139,28 +132,32 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     if(u_command.bits.b_6)
         b|=(6>>ucount)&1;
     if(u_command.bits.b_s)
-        b|=s[0];
+        b|=rs[0];
     if(u_command.bits.b_s1)
-        b|=s1[0];
+        b|=rs1[0];
     if(u_command.bits.b_ns)
-        b|=!s[0];
+        b|=!rs[0];
     
     if(u_command.bits.g_l)
-        g|=l;
+        g|=rl;
     if(u_command.bits.g_nl)
-        g|=!l;
+        g|=!rl;
     if(u_command.bits.g_nt)
-    switch(ecount)
     {
-        case 0:
-            g|=!k1;
-            break;
-        case 1:
-            g|=!k2;
-            break;
-        case 2:
-            g|=!(k1|k2);
-            break;
+        if(k1|k2)
+        {
+            rt=1;
+        }
+        else
+        if(command&0xfc0000)
+            rt=0;
+    
+        if(((command&0xfc0000)==0)&&(rt))
+        {
+            rs1[0]=((((k2?1:0)<<8|(k1?1:0))>>ucount)&1)?true:false;
+        }
+        
+        g|=!rt;
     }
     
     if(ucount!=0) //gamma input -- 1 bit data or carry only. 
@@ -173,83 +170,83 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     switch(u_command.bits.r0)
     {
         case 0:
-            newr0=r[0];
+            newr0=rr[0];
             break;
         case 1:
-            newr0=r[3*4];
+            newr0=rr[3*4];
             break;
         case 2:
             newr0=sigma;
             break;
         case 3:
-            newr0=s[0];
+            newr0=rs[0];
             break;
         case 4:
-            newr0=r[0]|s[0]|sigma;
+            newr0=rr[0]|rs[0]|sigma;
             break;
         case 5:
-            newr0=s[0]|sigma;
+            newr0=rs[0]|sigma;
             break;
         case 6:
-            newr0=r[0]|s[0];
+            newr0=rr[0]|rs[0];
             break;
         case 7:
-            newr0=r[0]|sigma;
+            newr0=rr[0]|sigma;
             break;
     }
     if(u_command.bits.r_1)
-        r[MCU_BITLEN-1*4]=sigma;
+        rr[MCU_BITLEN-1*4]=sigma;
     if(u_command.bits.r_2)
-        r[MCU_BITLEN-2*4]=sigma;
+        rr[MCU_BITLEN-2*4]=sigma;
     if(u_command.bits.l)
-        l=carry;
+        rl=carry;
     if(u_command.bits.m)
-        newm0=s[0];
+        newm0=rs[0];
     else
         newm0=rin;
     
     switch(u_command.bits.s)
     {
         case 0:
-            t=s[0];
-            s[0]=s[1];s[1]=s[2];s[2]=s[3];
-            s[3]=t;
+            temp=rs[0];
+            rs[0]=rs[1];rs[1]=rs[2];rs[2]=rs[3];
+            rs[3]=temp;
             break;
         case 1:
-            s[0]=s[1];s[1]=s[2];s[2]=s[3];
-            s[3]=s1[0];
+            rs[0]=rs[1];rs[1]=rs[2];rs[2]=rs[3];
+            rs[3]=rs1[0];
             break;
         case 2:
-            s[0]=s[1];s[1]=s[2];s[2]=s[3];
-            s[3]=sigma;
+            rs[0]=rs[1];rs[1]=rs[2];rs[2]=rs[3];
+            rs[3]=sigma;
             break;
         case 3:
-            t=s[0];
-            s[0]=s[1];s[1]=s[2];s[2]=s[3];
-            s[3]=sigma|t;
+            temp=rs[0];
+            rs[0]=rs[1];rs[1]=rs[2];rs[2]=rs[3];
+            rs[3]=sigma|temp;
             break;
     }
     
     switch(u_command.bits.s1)
     {
         case 0:
-            t=s1[0];
-            s1[0]=s1[1];s1[1]=s1[2];s1[2]=s1[3];
-            s1[3]=t;
+            temp=rs1[0];
+            rs1[0]=rs1[1];rs1[1]=rs1[2];rs1[2]=rs1[3];
+            rs1[3]=temp;
             break;
         case 1:
-            s1[0]=s1[1];s1[1]=s1[2];s1[2]=s1[3];
-            s1[3]=sigma;
+            rs1[0]=rs1[1];rs1[1]=rs1[2];rs1[2]=rs1[3];
+            rs1[3]=sigma;
             break;
         case 2:
-            t=s1[0];
-            s1[0]=s1[1];s1[1]=s1[2];s1[2]=s1[3];
-            s1[3]=t|h[0];
+            temp=rs1[0];
+            rs1[0]=rs1[1];rs1[1]=rs1[2];rs1[2]=rs1[3];
+            rs1[3]=temp|rh[0];
             break;
         case 3:
-            t=s1[0];
-            s1[0]=s1[1];s1[1]=s1[2];s1[2]=s1[3];
-            s1[3]=t|h[0]|sigma;
+            temp=rs1[0];
+            rs1[0]=rs1[1];rs1[1]=rs1[2];rs1[2]=rs1[3];
+            rs1[3]=temp|rh[0]|sigma;
             break;
     }
     
@@ -257,43 +254,43 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     {
         case 1:
             for(i=0;i<11;i++)
-                st[i+1]=st[i];
-            st[0]=sigma;
+                rst[i+1]=rst[i];
+            rst[0]=sigma;
             break;
         case 2:
-            t=st[0];
+            temp=rst[0];
             for(i=0;i<11;i++)
-                st[i]=st[i+1];
-            st[11]=t;
+                rst[i]=rst[i+1];
+            rst[11]=temp;
             break;
         case 3:
-            x=st[0*4+ucount];
-            y=st[1*4+ucount];
-            z=st[2*4+ucount];
-            st[0*4+ucount]=sigma|y;
-            st[1*4+ucount]=x|z;
-            st[2*4+ucount]=x|y;
+            x=rst[0*4+ucount];
+            y=rst[1*4+ucount];
+            z=rst[2*4+ucount];
+            rst[0*4+ucount]=sigma|y;
+            rst[1*4+ucount]=x|z;
+            rst[2*4+ucount]=x|y;
             break;
     }
     
     
     ret=newm0;
     for(i=0;i<(MCU_BITLEN-1);i++)
-        m[i]=m[i+1];
-    m[MCU_BITLEN-1]=rin;
+        rm[i]=rm[i+1];
+    rm[MCU_BITLEN-1]=rin;
     
 
     if((icount<36)&&(command&0xff000000))//mod flag -- do not modify R!!!
-        newr0=r[0];
+        newr0=rr[0];
     
     for(i=0;i<(MCU_BITLEN-1);i++)
-        r[i]=r[i+1];
-    r[MCU_BITLEN-1]=newr0;
+        rr[i]=rr[i+1];
+    rr[MCU_BITLEN-1]=newr0;
     
-    t=st[0];
+    temp=rst[0];
     for(i=0;i<(MCU_BITLEN-1);i++)
-        st[i]=st[i+1];
-    st[MCU_BITLEN-1]=newr0;
+        rst[i]=rst[i+1];
+    rst[MCU_BITLEN-1]=temp;
  
     
     ucount++;
@@ -306,9 +303,13 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     if(icount>=42)
     {
         icount=0;
-        cptr=r[39*4+0]|r[39*4+1]<<1|r[39*4+2]<<2|r[39*4+3]<<3;
-        cptr=cptr<<4|r[36*4+0]|r[36*4+1]<<1|r[36*4+2]<<2|r[36*4+3]<<3;
+        cptr=rr[39*4+0]|rr[39*4+1]<<1|rr[39*4+2]<<2|rr[39*4+3]<<3;
+        cptr=cptr<<4|rr[36*4+0]|rr[36*4+1]<<1|rr[36*4+2]<<2|rr[36*4+3]<<3;
         command=cmdrom[cptr];
+        if(command&0xfc0000)
+        {
+            rt=0;
+        }
     }
     if(ecount>=3)
     {
@@ -323,8 +324,8 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     //only needed for master - 1302
     if((dcycle)&&(syncout))
     {
-        *dcycle=dcount;
-        *syncout=((dcount==13)&&(ecount==3))?true:false;
+        *dcycle=(command&0xfc0000)?0:dcount+1;   //return value is D strobe idx for keyboard/display scan
+        *syncout=((dcount==13)&&(ecount==2)&&(ucount==3))?true:false;
     }
     
 
