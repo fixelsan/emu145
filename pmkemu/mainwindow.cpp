@@ -43,7 +43,7 @@ MainWindow::MainWindow(QWidget *parent) :
     olddcycle=0;
     timer=new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(OnTimer()));
-    timer->start(1);
+    timer->start(10);
     ui->lcdNumber->display("-8.Err0r  -99");
 
 
