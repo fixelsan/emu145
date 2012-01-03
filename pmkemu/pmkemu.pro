@@ -13,11 +13,14 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     cmcu13.cpp \
-    cmem.cpp
+    cmem.cpp \
+    cdebugdlg.cpp
 
 HEADERS  += mainwindow.h \
     cmcu13.h \
     cmem.h \
-    ucommands.h
+    ucommands.h \
+    cdebugdlg.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    cdebugdlg.ui

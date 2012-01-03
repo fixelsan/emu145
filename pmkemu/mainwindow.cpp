@@ -23,9 +23,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     display[7]=0x80;
 
-    ik1302=new cMCU();
-    ik1303=new cMCU();
-    ik1306=new cMCU();
+    ik1302=new cMCU("IK1302",true);
+    ik1303=new cMCU("IK1303");
+    ik1306=new cMCU("IK1306");
     ir2_1=new cMem();
     ir2_2=new cMem();
     for(i=0;i<68;i++)
@@ -51,6 +51,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    timer->stop();
+    delete timer;
+    delete ik1302;
+    delete ik1303;
+    delete ik1306;
+    delete ir2_1;
+    delete ir2_2;
     delete ui;
 }
 

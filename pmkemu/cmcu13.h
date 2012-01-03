@@ -9,6 +9,8 @@
 #ifndef m145ik13_cmcu13_h
 #define m145ik13_cmcu13_h
 
+#include "cdebugdlg.h"
+
 #define MCU_BITLEN  168
 
 typedef union{
@@ -54,7 +56,8 @@ class cMCU
 {
     
 public:
-    cMCU();
+    cMCU(QString name,bool debug=false);
+    ~cMCU();
     void init();
     bool tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout,bool * segment, bool * point);    //execute 1 tick of cpu,
                     // parameters:  rin - input register; 
@@ -83,6 +86,9 @@ private:
     bool carry;
     ucmd_u  u_command;
     unsigned int command;
+    cDebugDlg * dbg;
+    QString myname;
+    bool debugme;
 
 public:
     unsigned int icount;

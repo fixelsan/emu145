@@ -6,6 +6,7 @@
 //  Copyright 2011 Felix Lazarev. All rights reserved.
 //
 #include "cmcu13.h"
+#include "cdebugdlg.h"
 
 const unsigned char jrom[42]={
     0,1,2,3,4,5,3,4,5,3,4,5,3,4,5,3,4,5,3,4,5,3,4,5,6,7,8,
@@ -14,7 +15,7 @@ const unsigned char jrom[42]={
 };
 
 
-cMCU::cMCU()
+cMCU::cMCU(QString name,bool debug)
 {
     
     int i;
@@ -27,7 +28,23 @@ cMCU::cMCU()
         rst[i%12]=0;
         rh[i&2]=0;
     }
-    
+    debugme=debug;
+    myname=name;
+    if(debugme)
+    {
+        dbg=new cDebugDlg();
+        dbg->setWindowTitle(name);
+        dbg->show();
+    }
+}
+
+cMCU::~cMCU()
+{
+    if(debugme)
+    {
+        dbg->hide();
+        delete dbg;
+    }
 }
 
 void cMCU::init()
@@ -42,6 +59,9 @@ void cMCU::init()
     rt=0;
     
     cptr=0;
+
+    if(debugme)
+        dbg->setI(icount);
     
     command=cmdrom[cptr];
     
@@ -298,11 +318,19 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     {
         ucount=0;
         icount++;
+
+        if((debugme)&&(icount<42))
+            dbg->setI(icount);
+
         ecount++;
     }
     if(icount>=42)
     {
         icount=0;
+        if(debugme)
+            dbg->setI(icount);
+
+
         cptr=rr[39*4+0]|rr[39*4+1]<<1|rr[39*4+2]<<2|rr[39*4+3]<<3;
         cptr=cptr<<4|rr[36*4+0]|rr[36*4+1]<<1|rr[36*4+2]<<2|rr[36*4+3]<<3;
         command=cmdrom[cptr];
