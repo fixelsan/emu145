@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>443</width>
+    <height>440</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="alpha">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>91</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Вход α</string>
+    </property>
+    <widget class="QCheckBox" name="a_rsel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>R[i]</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="a_msel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>40</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>M[i]</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="a_stsel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>60</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ST[i]</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="a_ssel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>100</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>S</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="a_10nlsel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>140</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0xA*!L</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="a_nrsel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>~R[i]</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="a_4sel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>120</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="betta">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>0</y>
+      <width>91</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Вход β</string>
+    </property>
+    <widget class="QCheckBox" name="b_ssel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>S</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="b_nssel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>50</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>~S</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="b_s1sel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>S1</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="b_1sel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>140</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="b_6sel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>110</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>6</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="gamma">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>0</y>
+      <width>91</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Вход β</string>
+    </property>
+    <widget class="QCheckBox" name="g_lsel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>L</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="g_nlsel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>!L</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="g_ntsel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>140</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>!T</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="adderSym">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>311</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>62</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>S=</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="s_destbox">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>200</y>
+      <width>211</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>---</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>S1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Σ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>S1 | Σ</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="s1_destbox">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>230</y>
+      <width>211</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>---</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Σ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>S1 | H</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>S1 | H | Σ</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>62</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>S1=</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="st_destbox">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>260</y>
+      <width>211</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>---</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Push Σ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Pop</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Add XYZΣ</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>62</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ST=</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="r_destbox">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>290</y>
+      <width>211</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>---</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>R[i+3]</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Σ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>S</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>R[i] | S | Σ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>S | Σ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>R[i] | S</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>R[i] | Σ</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>62</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>R[i]=</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="r_i1sel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>R[i-1]=Σ</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="r_i2sel">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>320</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>R[i-2]=Σ</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="m_isel">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>320</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>M[i]=S</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="l_carsel">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>320</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>L=П</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="opcodeOut">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>350</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearBtn">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>350</y>
+      <width>114</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Очистить</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
