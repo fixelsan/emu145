@@ -57,6 +57,7 @@ public slots:
     void OnChange();
     void OnClear();
 
+
 private:
     Ui::MainWindow *ui;
     ucmd_u ucomm;

@@ -206,7 +206,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>Вход β</string>
+     <string>Вход γ</string>
     </property>
     <widget class="QCheckBox" name="g_lsel">
      <property name="geometry">
