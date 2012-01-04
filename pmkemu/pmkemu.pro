@@ -20,7 +20,9 @@ HEADERS  += mainwindow.h \
     cmcu13.h \
     cmem.h \
     ucommands.h \
-    cdebugdlg.h
+    cdebugdlg.h \
+    synchro.h \
+    mcommands.h
 
 FORMS    += mainwindow.ui \
     cdebugdlg.ui

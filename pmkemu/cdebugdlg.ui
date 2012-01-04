@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>cDebugDlg</class>
  <widget class="QDialog" name="cDebugDlg">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,7 +17,7 @@
    <string>Dialog</string>
   </property>
   <property name="windowOpacity">
-   <double>0.000000000000000</double>
+   <double>100.000000000000000</double>
   </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
@@ -278,7 +281,7 @@
      </property>
     </column>
    </widget>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLabel" name="ucmddis">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -291,7 +294,7 @@
      <string>uCMD: 3C</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -302,56 +305,56 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="rs">
        <property name="text">
         <string>S: F</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="rs1">
        <property name="text">
         <string>S1: F</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="rh">
        <property name="text">
         <string>H: F</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_4">
+      <widget class="QLabel" name="rl">
        <property name="text">
         <string>L: 0</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="rpc">
        <property name="text">
         <string>PC: WW</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_6">
+      <widget class="QLabel" name="rcmd">
        <property name="text">
         <string>CMD:  7F 7F FF 1</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_7">
+      <widget class="QLabel" name="aspid">
        <property name="text">
         <string>ASP: 7F</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_8">
+      <widget class="QLabel" name="ucmdaddr">
        <property name="text">
         <string>uCMD: 3C</string>
        </property>

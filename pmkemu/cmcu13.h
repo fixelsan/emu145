@@ -59,7 +59,7 @@ public:
     cMCU(QString name,bool debug=false);
     ~cMCU();
     void init();
-    bool tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout,bool * segment, bool * point);    //execute 1 tick of cpu,
+    bool tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout,unsigned char * segment);    //execute 1 tick of cpu,
                     // parameters:  rin - input register; 
                     //              k1 -- input pin K1 or H!!!
                     //              k2 -- input pin K2
@@ -80,6 +80,7 @@ private:
     bool rs[4];
     bool rs1[4];
     bool rh[4];
+    bool dispout[4];
     bool rl;
     bool rt;
     unsigned int sigma; //so we can calculate normally
@@ -89,6 +90,8 @@ private:
     cDebugDlg * dbg;
     QString myname;
     bool debugme;
+
+    void disassemble();
 
 public:
     unsigned int icount;

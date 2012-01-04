@@ -21,13 +21,15 @@ cMCU::cMCU(QString name,bool debug)
     int i;
     for(i=0;i<MCU_BITLEN;i++)
     {
-        rm[i]=0;
-        rr[i]=0;
-        rs[i&2]=0;
-        rs1[i&2]=0;
-        rst[i%12]=0;
-        rh[i&2]=0;
+        rm[i]=false;
+        rr[i]=false;
+        rs[i&2]=false;
+        rs1[i&2]=false;
+        rst[i]=false;
+        rh[i&2]=false;
+
     }
+
     debugme=debug;
     myname=name;
     if(debugme)
@@ -49,6 +51,8 @@ cMCU::~cMCU()
 
 void cMCU::init()
 {
+    int i;
+
     icount=0;
     dcount=0;
     ecount=0;
@@ -60,14 +64,41 @@ void cMCU::init()
     
     cptr=0;
 
+#if 0
+    //Test code for display
+    for(i=0;i<12;i++)
+    {
+        rr[i*3*4+0]=(i+1)&1;
+        rr[i*3*4+1]=((i+1)&2)?true:false;
+        rr[i*3*4+2]=((i+1)&4)?true:false;
+        rr[i*3*4+3]=((i+1)&8)?true:false;
+    }
+#endif
+
     if(debugme)
         dbg->setI(icount);
     
+
     command=cmdrom[cptr];
-    
+
+    if(debugme)
+    {
+        dbg->setCMD(command);
+        disassemble();
+    }
+
+    if(debugme)
+    {
+        dbg->setS(rs[0]|rs[1]<<1|rs[2]<<2|rs[3]<<3);
+        dbg->setS1(rs1[0]|rs1[1]<<1|rs1[2]<<2|rs1[3]<<3);
+        dbg->setL(rl);
+        dbg->setPC(cptr);
+        dbg->setH(rh[0]|rh[1]<<1|rh[2]<<2|rh[3]<<3);
+        dbg->setREGS(rm,rr,rst,MCU_BITLEN,icount,ucount);
+    }
 }
 
-bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout, bool *segment, bool *point)
+bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout, unsigned char *segment)
 {
     int i;
     unsigned int ret;
@@ -298,6 +329,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     for(i=0;i<(MCU_BITLEN-1);i++)
         rm[i]=rm[i+1];
     rm[MCU_BITLEN-1]=rin;
+
     
 
     if((icount<36)&&(command&0xff000000))//mod flag -- do not modify R!!!
@@ -306,13 +338,27 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     for(i=0;i<(MCU_BITLEN-1);i++)
         rr[i]=rr[i+1];
     rr[MCU_BITLEN-1]=newr0;
+
+    if((dcount<13)&&(ecount==0))
+    {
+        for(i=0;i<3;i++)
+            dispout[i]=dispout[i+1];
+        dispout[3]=newr0;
+    }
     
     temp=rst[0];
     for(i=0;i<(MCU_BITLEN-1);i++)
         rst[i]=rst[i+1];
     rst[MCU_BITLEN-1]=temp;
  
-    
+    if(debugme)
+    {
+        dbg->setS(rs[0]|rs[1]<<1|rs[2]<<2|rs[3]<<3);
+        dbg->setS1(rs1[0]|rs1[1]<<1|rs1[2]<<2|rs1[3]<<3);
+        dbg->setL(rl);
+        dbg->setPC(cptr);
+        dbg->setH(rh[0]|rh[1]<<1|rh[2]<<2|rh[3]<<3);
+    }
     ucount++;
     if(ucount>=4)
     {
@@ -321,7 +367,11 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
 
         if((debugme)&&(icount<42))
             dbg->setI(icount);
-
+        if(debugme)
+        {
+            dbg->setCMD(command);
+            disassemble();
+        }
         ecount++;
     }
     if(icount>=42)
@@ -338,6 +388,12 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
         {
             rt=0;
         }
+        if(debugme)
+        {
+            dbg->setCMD(command);
+            disassemble();
+        }
+
     }
     if(ecount>=3)
     {
@@ -352,15 +408,263 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     //only needed for master - 1302
     if((dcycle)&&(syncout))
     {
-        *dcycle=(command&0xfc0000)?0:dcount+1;   //return value is D strobe idx for keyboard/display scan
+        *dcycle=(((command&0xfc0000)==0)&&(ecount==0)&&(ucount==0))?(dcount+1):0;   //return value is D strobe idx for keyboard/display scan
         *syncout=((dcount==13)&&(ecount==2)&&(ucount==3))?true:false;
     }
 
-    if((segment)&&(point))
+    if(segment)
     {
-        *segment=(command&0xfc0000)?0:rr[0];
-        *point=(command&0xfc0000)?0:rl;
+
+        *segment=(((command&0xfc0000)==0)&&(ecount==0)&&(ucount==0))?(dispout[0]|dispout[1]<<1|dispout[2]<<2|dispout[3]<<3):0;
+        temp=((command&0xfc0000)==0)?rl:0;
+        *segment|=(temp)?0x80:0;
+    }
+
+    if(debugme)
+    {
+        dbg->setREGS(rm,rr,rst,MCU_BITLEN,icount,ucount);
     }
 
     return (ret&1)?true:false;
+}
+
+void cMCU::disassemble()
+{
+    QString cmd;
+    QString tmp;
+    unsigned char ucmd;
+    unsigned char masp;
+
+    if(icount<27)
+    {
+        ucmd=asprom[command&0x7f][jrom[icount]];
+        masp=command&0x7f;
+    }else
+        if((icount>=27)&&(icount<36))
+        {
+            ucmd=asprom[(command>>8)&0x7f][jrom[icount]];
+            masp=(command>>8)&0x7f;
+        }
+        else
+        {
+            // special case
+            if(((command>>16)&0xff)>=0x20)
+            {
+                //r0 points to i=36
+                //we need to store ASP field to R1[D14:D13]
+                if(icount==36)
+                {
+                    rr[4*1]=((((command>>16)&0xf)>>ucount)&1)?true:false;
+                    rr[4*4]=((((command>>20)&0xf)>>ucount)&1)?true:false;
+                }
+                ucmd=asprom[0x5f][jrom[icount]];
+                masp=0x5f;
+            }
+            else
+            {
+                ucmd=asprom[(command>>16)&0x3f][jrom[icount]];
+                masp=(command>>16)&0x3f;
+            }
+        }
+
+    ucmd&=0x3f; //fool's proof
+    if(ucmd>0x3b)
+    {
+        ucmd=(ucmd-0x3c)*2;
+        ucmd+=!rl?1:0;
+        ucmd+=0x3c;
+    }
+
+    if(u_command.raw==0)
+    {
+        dbg->setASP(masp);
+        dbg->setUCMD(ucmd,"NOP");
+        return;
+    }
+    cmd="";
+    tmp="";
+    if(u_command.bits.a_r)
+        tmp+="R[i]";
+    if(u_command.bits.a_m)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="M[i]";
+    }
+    if(u_command.bits.a_st)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="ST[i]";
+    }
+    if(u_command.bits.a_nr)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="~R[i]";
+    }
+    if(u_command.bits.a_10nl)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="0xA*!L";
+    }
+    if(u_command.bits.a_s)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="S";
+    }
+    if(u_command.bits.a_4)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="0x4";
+    }
+    if(u_command.bits.b_1|u_command.bits.b_6|u_command.bits.b_ns|u_command.bits.b_s|u_command.bits.b_s1)
+        cmd="("+tmp+")+";
+    else
+        cmd=tmp;
+    tmp="";
+    if(u_command.bits.b_1)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="0x1";
+    }
+    if(u_command.bits.b_6)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="0x6";
+    }
+    if(u_command.bits.b_ns)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="~S";
+    }
+    if(u_command.bits.b_s)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="S";
+    }
+    if(u_command.bits.b_s1)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="S1";
+    }
+    if(tmp.count())
+    {
+        if(cmd.count())
+            cmd+="("+tmp+")";
+        else
+            cmd=tmp;
+    }
+    if(cmd.count())
+    {
+        if(u_command.bits.g_l|u_command.bits.g_nl|u_command.bits.g_nt)
+            cmd+="+";
+    }
+    tmp="";
+    if(u_command.bits.g_l)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="L";
+    }
+    if(u_command.bits.g_nl)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="!L";
+    }
+    if(u_command.bits.g_nt)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="!T";
+    }
+    if(tmp.count())
+    {
+        if(cmd.count())
+            cmd+="("+tmp+")";
+    }
+    tmp="";
+    if(cmd.count())
+        cmd="sum="+cmd+"; ";
+
+    switch(u_command.bits.r0)
+    {
+        case 1:
+        cmd+="R[i]=R[i+3]; ";
+        break;
+    case 2:
+        cmd+="R[i]=sum; ";
+        break;
+    case 3:
+        cmd+="R[i]=S; ";
+        break;
+    case 4:
+        cmd+="R[i]=R[i]|S|sum; ";
+        break;
+    case 5:
+        cmd+="R[i]=S|sum; ";
+        break;
+    case 6:
+        cmd+="R[i]=R[i]|S; ";
+        break;
+    case 7:
+        cmd+="R[i]=R[i]|sum; ";
+        break;
+    }
+    if(u_command.bits.r_1)
+        cmd+="R[i-1]=sum; ";
+    if(u_command.bits.r_2)
+        cmd+="R[i-2]=sum; ";
+    if(u_command.bits.m)
+        cmd+="M[i]=S; ";
+    switch(u_command.bits.s)
+    {
+    case 1:
+        cmd+="S=S1; ";
+        break;
+    case 2:
+        cmd+="S=sum; ";
+        break;
+    case 3:
+        cmd+="S=S1|sum; ";
+        break;
+    }
+    if(u_command.bits.l)
+        cmd+="L=cry; ";
+    switch(u_command.bits.s1)
+    {
+        case 1:
+        cmd+="S1=sum; ";
+        break;
+    case 2:
+        cmd+="S1=S1|H; ";
+        break;
+    case 3:
+        cmd+="S1=S1|H|sum; ";
+        break;
+    }
+    switch(u_command.bits.st)
+    {
+        case 1:
+        cmd+="ST[i]=sum;";
+        break;
+    case 2:
+        cmd+="ST[i]=ST[i+1];";
+        break;
+    case 3:
+        cmd+="ST[]=XYZsum;";
+       break;
+    }
+
+    dbg->setASP(masp);
+    dbg->setUCMD(0,cmd);
 }

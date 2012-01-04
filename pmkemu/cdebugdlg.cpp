@@ -2,6 +2,7 @@
 #include "ui_cdebugdlg.h"
 #include <QTableWidgetItem>
 
+
 cDebugDlg::cDebugDlg(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::cDebugDlg)
@@ -11,7 +12,18 @@ cDebugDlg::cDebugDlg(QWidget *parent) :
     int i,j;
 
     ui->setupUi(this);
+    ui->rcmd->setText("CMD: 00 00 00 0");
+    ui->rh->setText("H: 0");
+    ui->rl->setText("L: 0");
+    ui->rpc->setText("PC: 00");
+    ui->rs->setText("S: 0");
+    ui->rs1->setText("S1: 0");
+    ui->ucmdaddr->setText("uCMD: 00");
+    ui->ucmddis->setText("uCMD: NOP");
+    ui->aspid->setText("ASP: 00");
 
+
+#if 1
     i=ui->regTable->rowCount();
     j=ui->regTable->columnCount();
 
@@ -30,7 +42,9 @@ cDebugDlg::cDebugDlg(QWidget *parent) :
             ui->regTable->item(i,j)->setBackgroundColor(rg);
 
         }
-    setI(2);
+    setI(0);
+#endif
+
 }
 
 cDebugDlg::~cDebugDlg()
@@ -42,7 +56,7 @@ void cDebugDlg::setI(unsigned int i)
 {
     int j;
     QColor rg;
-
+#if 1
     rg.setRgb(200,200,200);
     for(j=0;j<42;j++)
     {
@@ -54,5 +68,104 @@ void cDebugDlg::setI(unsigned int i)
     ui->regTable->item(0,i)->setBackgroundColor(rg);
     ui->regTable->item(1,i)->setBackgroundColor(rg);
     ui->regTable->item(2,i)->setBackgroundColor(rg);
+#endif
+}
+
+
+void cDebugDlg::setH(unsigned char h)
+{
+    ui->rh->setText(QString().sprintf("H: %1.1X",h&0xf));
+}
+void cDebugDlg::setL(bool l)
+{
+    ui->rl->setText(QString().sprintf("L: %c",l?'1':'0'));
+}
+void cDebugDlg::setPC(unsigned char pc)
+{
+    ui->rpc->setText(QString().sprintf("PC: %2.2X",pc));
+}
+void cDebugDlg::setCMD(unsigned int cmd)
+{
+    ui->rcmd->setText(QString().sprintf("CMD: %2.2X %2.2X %2.2X %c",cmd&0x7f,(cmd>>8)&0x7f,(cmd>>16)&0xff,cmd&0xff000000?'1':'0'));
+}
+void cDebugDlg::setS(unsigned char s)
+{
+    ui->rs->setText(QString().sprintf("S: %1.1X",s&0xf));
+}
+void cDebugDlg::setS1(unsigned char s1)
+{
+    ui->rs1->setText(QString().sprintf("S1: %1.1X",s1&0xf));
+}
+void cDebugDlg::setASP(unsigned char asp)
+{
+    ui->aspid->setText(QString().sprintf("ASP: %2.2X",asp));
+}
+void cDebugDlg::setUCMD(unsigned char ucmd,QString disassm)
+{
+    ui->ucmdaddr->setText(QString().sprintf("uCMD: %2.2X",ucmd));
+    QString str;
+
+    str="uCMD: "+disassm;
+    ui->ucmddis->setText(str);
+}
+
+void cDebugDlg::setREGS(bool rm[],bool rr[],bool rst[],unsigned int rlen, unsigned int curi, unsigned int curu)
+{
+    unsigned char curm;
+    unsigned char curr;
+    unsigned char curst;
+    unsigned int bitcnt;
+    unsigned int ptr;
+
+    ptr=0;
+    while(curu!=0)
+    {
+        ptr++;
+        curu++;
+        if(curu>=4)
+        {
+            curu=0;
+            curi++;
+            if(curi>=(rlen/4)){
+                curi=0;
+            }
+        }
+        if(ptr>=rlen)
+            ptr=0;
+    }
+
+    //now ptr is aligned at bit0 of r/m/st next i
+    for(bitcnt=0;bitcnt<rlen;bitcnt++)
+    {
+        if(curu==0)
+        {
+            curm=0;
+            curr=0;
+            curst=0;
+        }
+
+        curm|=rm[ptr]<<curu;
+        curr|=rr[ptr]<<curu;
+        curst|=rst[ptr]<<curu;
+
+        curu++;
+        if(curu>=4)
+        {
+            ui->regTable->item(0,curi)->setText(QString().sprintf("%1.1X",curm));
+            ui->regTable->item(1,curi)->setText(QString().sprintf("%1.1X",curr));
+            ui->regTable->item(2,curi)->setText(QString().sprintf("%1.1X",curst));
+            curu=0;
+            curi++;
+            if(curi>=(rlen/4))
+                curi=0;
+        }
+        ptr++;
+        if(ptr>=rlen)
+            ptr=0;
+    }
+
+
+
+
 
 }

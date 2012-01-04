@@ -4,6 +4,8 @@
 #include "cmem.h"
 
 #include "ucommands.h"
+#include "synchro.h"
+#include "mcommands.h"
 
 const char segments[16]={
     '0','1','2','3','4','5','6','7','8','9',
@@ -14,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    int i;
+    int i,j;
 
     ui->setupUi(this);
 
@@ -28,9 +30,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ik1306=new cMCU("IK1306");
     ir2_1=new cMem();
     ir2_2=new cMem();
+
+    //load memory
     for(i=0;i<68;i++)
         ik1302->ucrom[i].raw=ik1302_urom[i];
-
+    for(i=0;i<128;i++)
+        for(j=0;j<9;j++)
+            ik1302->asprom[i][j]=ik1302_srom[i][j];
+    for(i=0;i<256;i++)
+        ik1302->cmdrom[i]=ik1302_mrom[i];
 
 
     ik1302->init();
@@ -87,22 +95,16 @@ void MainWindow::updatedisp()
 void MainWindow::OnTimer()
 {
     unsigned int dcycle;
-    bool seg;
-    bool pt;
+    unsigned char seg;
+
 
     if(ui->runCheck->isChecked()==false)
         return;
 
-    chain=ik1302->tick(chain,false,false,&dcycle,&sync,&seg,&pt);
-#if 0
-    if((dcycle>1)&&(ik1302->ecount==0))
-    {
-
-        display[dcycle-2]=((display[dcycle-2]&0xf)>>1)|(display[dcycle-2]&0xf0);
-        display[dcycle-2]|=seg?8:0;
-        display[dcycle-2]&=~(pt?0x00:0x80);
-        display[dcycle-2]|=~(pt?0x80:0x00);
-    }
+    chain=ik1302->tick(chain,false,false,&dcycle,&sync,&seg);
+#if 1
+    if((dcycle>1)&&(dcycle<14))
+        display[dcycle-2]=seg;
 #endif
 
     if(sync)
@@ -110,8 +112,8 @@ void MainWindow::OnTimer()
         updatedisp();
     }
 
-    chain=ik1303->tick(chain,false,false,NULL,NULL,NULL,NULL);
-    chain=ik1306->tick(chain,false,false,NULL,NULL,NULL,NULL);
+    chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
+    chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
     chain=ir2_1->tick(chain);
     chain=ir2_1->tick(chain);
 
