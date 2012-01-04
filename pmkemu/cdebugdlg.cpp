@@ -1,6 +1,8 @@
 #include "cdebugdlg.h"
 #include "ui_cdebugdlg.h"
 #include <QTableWidgetItem>
+#include <iostream>
+#include "cvaluedlg.h"
 
 
 cDebugDlg::cDebugDlg(QWidget *parent) :
@@ -45,11 +47,21 @@ cDebugDlg::cDebugDlg(QWidget *parent) :
     setI(0);
 #endif
 
+   // connect(ui->regTable,SIGNAL(itemDoubleClicked(QTableWidgetItem*)),this,SLOT(onItemChange(QTableWidgetItem*)));
+
 }
 
 cDebugDlg::~cDebugDlg()
 {
     delete ui;
+}
+
+void cDebugDlg::onItemChange(QTableWidgetItem *itm)
+{
+    cValueDlg * dlg=new cValueDlg(this);
+
+    dlg->show();
+
 }
 
 void cDebugDlg::setI(unsigned int i)

@@ -27,6 +27,14 @@ public:
     void setUCMD(unsigned char ucmd,QString disassm);
     void setREGS(bool rm[],bool rr[],bool rst[],unsigned int rlen, unsigned int curi, unsigned int curu);
 
+signals:
+    void REGSChanged(unsigned int idx,unsigned char val);
+
+private slots:
+    void onItemChange(QTableWidgetItem* itm);
+
+
+
 private:
     Ui::cDebugDlg *ui;
     QTableWidgetItem * items[3*42];
