@@ -47,7 +47,7 @@ cDebugDlg::cDebugDlg(QWidget *parent) :
     setI(0);
 #endif
 
-   // connect(ui->regTable,SIGNAL(itemDoubleClicked(QTableWidgetItem*)),this,SLOT(onItemChange(QTableWidgetItem*)));
+    connect(ui->regTable,SIGNAL(itemDoubleClicked(QTableWidgetItem*)),this,SLOT(onItemChange(QTableWidgetItem*)));
 
 }
 
@@ -59,8 +59,29 @@ cDebugDlg::~cDebugDlg()
 void cDebugDlg::onItemChange(QTableWidgetItem *itm)
 {
     cValueDlg * dlg=new cValueDlg(this);
+    unsigned int i;
 
-    dlg->show();
+    i=itm->text().toInt(NULL,16);
+
+    switch(itm->row())
+    {
+        case 0:
+            dlg->setReg(QString().sprintf("M[%d]=",itm->column()),i&0xf);
+            break;
+        case 1:
+            dlg->setReg(QString().sprintf("R[%d]=",itm->column()),i&0xf);
+            break;
+        case 2:
+            dlg->setReg(QString().sprintf("ST[%d]=",itm->column()),i&0xf);
+            break;
+    }
+
+    dlg->exec();
+
+    if(dlg->changed)
+        itm->setText(QString().sprintf("%1.1X",dlg->newval&0xf));
+
+    delete dlg;
 
 }
 

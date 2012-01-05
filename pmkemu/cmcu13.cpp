@@ -15,7 +15,7 @@ const unsigned char jrom[42]={
 };
 
 
-cMCU::cMCU(QString name,bool debug)
+cMCU::cMCU(QWidget *parent, QString name,bool debug)
 {
     
     int i;
@@ -34,7 +34,7 @@ cMCU::cMCU(QString name,bool debug)
     myname=name;
     if(debugme)
     {
-        dbg=new cDebugDlg();
+        dbg=new cDebugDlg(parent);
         dbg->setWindowTitle(name);
         dbg->show();
     }

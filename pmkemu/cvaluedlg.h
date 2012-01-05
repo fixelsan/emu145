@@ -14,11 +14,19 @@ class cValueDlg : public QDialog
 public:
     explicit cValueDlg(QWidget *parent = 0);
     ~cValueDlg();
+
+    void setReg(QString str, unsigned char val);
+
+
+    int changed;
+    int newval;
     
 private slots:
     void on_cancelBtn_clicked();
 
     void on_okBtn_clicked();
+
+
 
 private:
     Ui::cValueDlg *ui;

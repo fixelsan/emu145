@@ -21,6 +21,13 @@ public:
 public slots:
     void OnTimer();
 
+private slots:
+    void on_ustepBtn_clicked();
+
+    void on_istepBtn_clicked();
+
+    void on_cycleBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     QTimer * timer;
@@ -33,6 +40,8 @@ private:
     unsigned int olddcycle;
     bool chain;
     bool sync;
+
+    int ustep;
 
     void updatedisp();
 };

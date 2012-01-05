@@ -18,6 +18,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     int i,j;
 
+    ustep=0;
+
     ui->setupUi(this);
 
     for(i=0;i<12;i++)
@@ -25,9 +27,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     display[7]=0x80;
 
-    ik1302=new cMCU("IK1302",true);
-    ik1303=new cMCU("IK1303");
-    ik1306=new cMCU("IK1306");
+    ik1302=new cMCU(this, "IK1302", true);
+    ik1303=new cMCU(this, "IK1303");
+    ik1306=new cMCU(this, "IK1306");
     ir2_1=new cMem();
     ir2_2=new cMem();
 
@@ -99,7 +101,12 @@ void MainWindow::OnTimer()
 
 
     if(ui->runCheck->isChecked()==false)
-        return;
+    {
+        if(ustep==0)
+            return;
+        ustep--;
+    }
+
 
     chain=ik1302->tick(chain,false,false,&dcycle,&sync,&seg);
 #if 1
@@ -129,4 +136,19 @@ void MainWindow::OnTimer()
     ui->ik1306_d->setText(QString().sprintf("d=%d   ",ik1306->dcount+1));
     ui->ik1306_e->setText(QString().sprintf("e=%d   ",ik1306->ecount+1));
     ui->ik1306_i->setText(QString().sprintf("i=%d   ",ik1306->icount));
+}
+
+void MainWindow::on_ustepBtn_clicked()
+{
+    ustep=1;
+}
+
+void MainWindow::on_istepBtn_clicked()
+{
+    ustep=4;
+}
+
+void MainWindow::on_cycleBtn_clicked()
+{
+    ustep=4*42;
 }

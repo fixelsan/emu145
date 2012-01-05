@@ -56,7 +56,7 @@ class cMCU
 {
     
 public:
-    cMCU(QString name,bool debug=false);
+    cMCU(QWidget *parent, QString name, bool debug=false);
     ~cMCU();
     void init();
     bool tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout,unsigned char * segment);    //execute 1 tick of cpu,
