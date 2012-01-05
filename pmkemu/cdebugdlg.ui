@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>832</width>
-    <height>271</height>
+    <width>560</width>
+    <height>440</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,8 +24,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>811</width>
-     <height>251</height>
+     <width>541</width>
+     <height>421</height>
     </rect>
    </property>
    <property name="title">
@@ -36,38 +36,68 @@
      <rect>
       <x>10</x>
       <y>30</y>
-      <width>791</width>
-      <height>121</height>
+      <width>371</width>
+      <height>301</height>
      </rect>
     </property>
     <property name="cornerButtonEnabled">
      <bool>false</bool>
     </property>
     <property name="rowCount">
-     <number>3</number>
+     <number>9</number>
     </property>
     <property name="columnCount">
-     <number>42</number>
+     <number>14</number>
     </property>
     <attribute name="horizontalHeaderCascadingSectionResizes">
      <bool>false</bool>
     </attribute>
     <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>18</number>
+     <number>24</number>
     </attribute>
     <row>
      <property name="text">
-      <string>M</string>
+      <string>M1</string>
      </property>
     </row>
     <row>
      <property name="text">
-      <string>R</string>
+      <string>M2</string>
      </property>
     </row>
     <row>
      <property name="text">
-      <string>ST</string>
+      <string>M3</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>R1</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>R2</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>R3</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>ST1</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>ST2</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>ST3</string>
      </property>
     </row>
     <column>
@@ -140,152 +170,12 @@
       <string>13</string>
      </property>
     </column>
-    <column>
-     <property name="text">
-      <string>14</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>15</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>16</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>17</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>18</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>19</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>20</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>21</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>22</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>23</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>24</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>25</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>26</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>27</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>28</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>29</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>30</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>31</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>32</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>33</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>34</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>35</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>36</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>37</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>38</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>39</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>40</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>41</string>
-     </property>
-    </column>
    </widget>
    <widget class="QLabel" name="ucmddis">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>200</y>
+      <x>10</x>
+      <y>340</y>
       <width>781</width>
       <height>21</height>
      </rect>
@@ -294,73 +184,109 @@
      <string>uCMD: 3C</string>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QLabel" name="rs">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>160</y>
-      <width>781</width>
-      <height>31</height>
+      <x>390</x>
+      <y>30</y>
+      <width>88</width>
+      <height>29</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLabel" name="rs">
-       <property name="text">
-        <string>S: F</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="rs1">
-       <property name="text">
-        <string>S1: F</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="rh">
-       <property name="text">
-        <string>H: F</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="rl">
-       <property name="text">
-        <string>L: 0</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="rpc">
-       <property name="text">
-        <string>PC: WW</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="rcmd">
-       <property name="text">
-        <string>CMD:  7F 7F FF 1</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="aspid">
-       <property name="text">
-        <string>ASP: 7F</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="ucmdaddr">
-       <property name="text">
-        <string>uCMD: 3C</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="text">
+     <string>S: F</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rs1">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>60</y>
+      <width>104</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>S1: F</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rh">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>90</y>
+      <width>123</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>H: F</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rl">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>120</y>
+      <width>149</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>L: 0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rpc">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>150</y>
+      <width>189</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PC: WW</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rcmd">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>180</y>
+      <width>254</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CMD:  7F 7F FF 1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="aspid">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>210</y>
+      <width>386</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ASP: 7F</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ucmdaddr">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>240</y>
+      <width>779</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>uCMD: 3C</string>
+    </property>
    </widget>
   </widget>
  </widget>

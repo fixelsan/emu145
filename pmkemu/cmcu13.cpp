@@ -64,7 +64,7 @@ void cMCU::init()
     
     cptr=0;
 
-#if 0
+#if 1
     //Test code for display
     for(i=0;i<12;i++)
     {
@@ -73,6 +73,17 @@ void cMCU::init()
         rr[i*3*4+2]=((i+1)&4)?true:false;
         rr[i*3*4+3]=((i+1)&8)?true:false;
     }
+    cptr=0x33;
+    rr[144+0]=(cptr)&1;
+    rr[144+1]=(cptr&2)?true:false;
+    rr[144+2]=(cptr&4)?true:false;
+    rr[144+3]=(cptr&8)?true:false;
+
+    rr[156+0]=(cptr)&1;
+    rr[156+1]=(cptr&2)?true:false;
+    rr[156+2]=(cptr&4)?true:false;
+    rr[156+3]=(cptr&8)?true:false;
+
 #endif
 
     if(debugme)
@@ -434,6 +445,8 @@ void cMCU::disassemble()
     QString tmp;
     unsigned char ucmd;
     unsigned char masp;
+    ucmd_u mcmd;
+
 
     if(icount<27)
     {
@@ -450,13 +463,6 @@ void cMCU::disassemble()
             // special case
             if(((command>>16)&0xff)>=0x20)
             {
-                //r0 points to i=36
-                //we need to store ASP field to R1[D14:D13]
-                if(icount==36)
-                {
-                    rr[4*1]=((((command>>16)&0xf)>>ucount)&1)?true:false;
-                    rr[4*4]=((((command>>20)&0xf)>>ucount)&1)?true:false;
-                }
                 ucmd=asprom[0x5f][jrom[icount]];
                 masp=0x5f;
             }
@@ -475,7 +481,9 @@ void cMCU::disassemble()
         ucmd+=0x3c;
     }
 
-    if(u_command.raw==0)
+    mcmd=ucrom[ucmd];
+
+    if(mcmd.raw==0)
     {
         dbg->setASP(masp);
         dbg->setUCMD(ucmd,"NOP");
@@ -483,74 +491,74 @@ void cMCU::disassemble()
     }
     cmd="";
     tmp="";
-    if(u_command.bits.a_r)
+    if(mcmd.bits.a_r)
         tmp+="R[i]";
-    if(u_command.bits.a_m)
+    if(mcmd.bits.a_m)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="M[i]";
     }
-    if(u_command.bits.a_st)
+    if(mcmd.bits.a_st)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="ST[i]";
     }
-    if(u_command.bits.a_nr)
+    if(mcmd.bits.a_nr)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="~R[i]";
     }
-    if(u_command.bits.a_10nl)
+    if(mcmd.bits.a_10nl)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="0xA*!L";
     }
-    if(u_command.bits.a_s)
+    if(mcmd.bits.a_s)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="S";
     }
-    if(u_command.bits.a_4)
+    if(mcmd.bits.a_4)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="0x4";
     }
-    if(u_command.bits.b_1|u_command.bits.b_6|u_command.bits.b_ns|u_command.bits.b_s|u_command.bits.b_s1)
+    if(mcmd.bits.b_1|mcmd.bits.b_6|mcmd.bits.b_ns|mcmd.bits.b_s|mcmd.bits.b_s1)
         cmd="("+tmp+")+";
     else
         cmd=tmp;
     tmp="";
-    if(u_command.bits.b_1)
+    if(mcmd.bits.b_1)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="0x1";
     }
-    if(u_command.bits.b_6)
+    if(mcmd.bits.b_6)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="0x6";
     }
-    if(u_command.bits.b_ns)
+    if(mcmd.bits.b_ns)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="~S";
     }
-    if(u_command.bits.b_s)
+    if(mcmd.bits.b_s)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="S";
     }
-    if(u_command.bits.b_s1)
+    if(mcmd.bits.b_s1)
     {
         if(tmp.count())
             tmp+="|";
@@ -565,23 +573,23 @@ void cMCU::disassemble()
     }
     if(cmd.count())
     {
-        if(u_command.bits.g_l|u_command.bits.g_nl|u_command.bits.g_nt)
+        if(mcmd.bits.g_l|mcmd.bits.g_nl|mcmd.bits.g_nt)
             cmd+="+";
     }
     tmp="";
-    if(u_command.bits.g_l)
+    if(mcmd.bits.g_l)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="L";
     }
-    if(u_command.bits.g_nl)
+    if(mcmd.bits.g_nl)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="!L";
     }
-    if(u_command.bits.g_nt)
+    if(mcmd.bits.g_nt)
     {
         if(tmp.count())
             tmp+="|";
@@ -596,7 +604,7 @@ void cMCU::disassemble()
     if(cmd.count())
         cmd="sum="+cmd+"; ";
 
-    switch(u_command.bits.r0)
+    switch(mcmd.bits.r0)
     {
         case 1:
         cmd+="R[i]=R[i+3]; ";
@@ -620,13 +628,13 @@ void cMCU::disassemble()
         cmd+="R[i]=R[i]|sum; ";
         break;
     }
-    if(u_command.bits.r_1)
+    if(mcmd.bits.r_1)
         cmd+="R[i-1]=sum; ";
-    if(u_command.bits.r_2)
+    if(mcmd.bits.r_2)
         cmd+="R[i-2]=sum; ";
-    if(u_command.bits.m)
+    if(mcmd.bits.m)
         cmd+="M[i]=S; ";
-    switch(u_command.bits.s)
+    switch(mcmd.bits.s)
     {
     case 1:
         cmd+="S=S1; ";
@@ -638,9 +646,9 @@ void cMCU::disassemble()
         cmd+="S=S1|sum; ";
         break;
     }
-    if(u_command.bits.l)
+    if(mcmd.bits.l)
         cmd+="L=cry; ";
-    switch(u_command.bits.s1)
+    switch(mcmd.bits.s1)
     {
         case 1:
         cmd+="S1=sum; ";
@@ -652,7 +660,7 @@ void cMCU::disassemble()
         cmd+="S1=S1|H|sum; ";
         break;
     }
-    switch(u_command.bits.st)
+    switch(mcmd.bits.st)
     {
         case 1:
         cmd+="ST[i]=sum;";
@@ -666,5 +674,5 @@ void cMCU::disassemble()
     }
 
     dbg->setASP(masp);
-    dbg->setUCMD(0,cmd);
+    dbg->setUCMD(ucmd,cmd);
 }
