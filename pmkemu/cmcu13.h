@@ -83,6 +83,8 @@ private:
     bool dispout[4];
     bool rl;
     bool rt;
+    bool latchk1;
+    bool latchk2;
     unsigned int sigma; //so we can calculate normally
     bool carry;
     ucmd_u  u_command;

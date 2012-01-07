@@ -208,14 +208,20 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     if(k1|k2)
     {
         rt=1;
+        latchk1=k1;
+        latchk2=k2;
     }
     else
     if(command&0xfc0000)
+    {
+        latchk1=false;
+        latchk2=false;
         rt=0;
+    }
 
     if(((command&0xfc0000)==0)&&(rt))
     {
-        rs1[0]=((((k2?1:0)<<3|(k1?1:0))>>ucount)&1)?true:false;
+        rs1[0]=((((latchk2?1:0)<<3|(latchk1?1:0))>>ucount)&1)?true:false;
     }
 
     if(u_command.bits.g_nt)
@@ -397,7 +403,9 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
         command=cmdrom[cptr];
         if(command&0xfc0000)
         {
-            rt=0;
+            rt=false;
+            latchk1=false;
+            latchk2=false;
         }
         if(debugme)
         {
