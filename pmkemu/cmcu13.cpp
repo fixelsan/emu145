@@ -401,12 +401,11 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
         cptr=rr[39*4+0]|rr[39*4+1]<<1|rr[39*4+2]<<2|rr[39*4+3]<<3;
         cptr=cptr<<4|rr[36*4+0]|rr[36*4+1]<<1|rr[36*4+2]<<2|rr[36*4+3]<<3;
         command=cmdrom[cptr];
-        if(command&0xfc0000)
-        {
-            rt=false;
-            latchk1=false;
-            latchk2=false;
-        }
+
+        rt=false;
+        latchk1=false;
+        latchk2=false;
+
         if(debugme)
         {
             dbg->setCMD(command);
