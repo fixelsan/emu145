@@ -204,23 +204,23 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
         g|=rl;
     if(u_command.bits.g_nl)
         g|=!rl;
-    if(u_command.bits.g_nt)
+
+    if(k1|k2)
     {
-        if(k1|k2)
-        {
-            rt=1;
-        }
-        else
-        if(command&0xfc0000)
-            rt=0;
-    
-        if(((command&0xfc0000)==0)&&(rt))
-        {
-            rs1[0]=((((k2?1:0)<<3|(k1?1:0))>>ucount)&1)?true:false;
-        }
-        
-        g|=!rt;
+        rt=1;
     }
+    else
+    if(command&0xfc0000)
+        rt=0;
+
+    if(((command&0xfc0000)==0)&&(rt))
+    {
+        rs1[0]=((((k2?1:0)<<3|(k1?1:0))>>ucount)&1)?true:false;
+    }
+
+    if(u_command.bits.g_nt)
+         g|=!rt;
+
     
     if(ucount!=0) //gamma input -- 1 bit data or carry only. 
         g=carry;
