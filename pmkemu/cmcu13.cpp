@@ -216,7 +216,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     
         if(((command&0xfc0000)==0)&&(rt))
         {
-            rs1[0]=((((k2?1:0)<<8|(k1?1:0))>>ucount)&1)?true:false;
+            rs1[0]=((((k2?1:0)<<3|(k1?1:0))>>ucount)&1)?true:false;
         }
         
         g|=!rt;
