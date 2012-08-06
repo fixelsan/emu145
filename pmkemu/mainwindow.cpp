@@ -122,7 +122,7 @@ void MainWindow::OnTimer()
     chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
     chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
     chain=ir2_1->tick(chain);
-    chain=ir2_1->tick(chain);
+    chain=ir2_2->tick(chain);
 
     ui->ik1302_d->setText(QString().sprintf("d=%d   ",ik1302->dcount+1));
     ui->ik1302_e->setText(QString().sprintf("e=%d   ",ik1302->ecount+1));
