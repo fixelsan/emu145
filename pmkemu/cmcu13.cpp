@@ -23,10 +23,10 @@ cMCU::cMCU(QWidget *parent, QString name,bool debug)
     {
         rm[i]=false;
         rr[i]=false;
-        rs[i&2]=false;
-        rs1[i&2]=false;
+        rs[i&3]=false;
+        rs1[i&3]=false;
         rst[i]=false;
-        rh[i&2]=false;
+        rh[i&3]=false;
 
     }
 
