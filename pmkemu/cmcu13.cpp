@@ -64,7 +64,7 @@ void cMCU::init()
     
     cptr=0;
 
-#if 1
+#if 0
     //Test code for display
     for(i=0;i<12;i++)
     {

@@ -98,8 +98,12 @@ void MainWindow::OnTimer()
 {
     unsigned int dcycle;
     unsigned char seg;
+    bool k1;
+    bool k2;
 
 
+    k1=false;
+    k2=false;
     if(ui->runCheck->isChecked()==false)
     {
         if(ustep==0)
@@ -108,10 +112,12 @@ void MainWindow::OnTimer()
     }
 
 
-    chain=ik1302->tick(chain,false,false,&dcycle,&sync,&seg);
+    chain=ik1302->tick(chain,k1,k2,&dcycle,&sync,&seg);
 #if 1
     if((dcycle>1)&&(dcycle<14))
         display[dcycle-2]=seg;
+    if(dcycle==13)
+        k2=true;
 #endif
 
     if(sync)
@@ -119,8 +125,8 @@ void MainWindow::OnTimer()
         updatedisp();
     }
 
-    chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
-    chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
+    //chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
+    //chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
     chain=ir2_1->tick(chain);
     chain=ir2_2->tick(chain);
 
