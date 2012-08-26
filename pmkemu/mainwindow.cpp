@@ -96,7 +96,7 @@ void MainWindow::updatedisp()
 
 void MainWindow::OnTimer()
 {
-    unsigned int dcycle;
+    //unsigned int dcycle;
     unsigned char seg;
     bool k1;
     bool k2;
@@ -111,13 +111,16 @@ void MainWindow::OnTimer()
         ustep--;
     }
 
+    if(dcycle==13)
+        k2=true;
+
 
     chain=ik1302->tick(chain,k1,k2,&dcycle,&sync,&seg);
 #if 1
     if((dcycle>1)&&(dcycle<14))
         display[dcycle-2]=seg;
-    if(dcycle==13)
-        k2=true;
+
+
 #endif
 
     if(sync)
@@ -130,7 +133,9 @@ void MainWindow::OnTimer()
     chain=ir2_1->tick(chain);
     chain=ir2_2->tick(chain);
 
-    ui->ik1302_d->setText(QString().sprintf("d=%d   ",ik1302->dcount+1));
+    ik1302->pretick(chain);
+
+    ui->ik1302_d->setText(QString().sprintf("d=%d %d   ",ik1302->dcount+1,dcycle));
     ui->ik1302_e->setText(QString().sprintf("e=%d   ",ik1302->ecount+1));
     ui->ik1302_i->setText(QString().sprintf("i=%d   ",ik1302->icount));
     ui->ik1302_sy->setText(QString().sprintf("sync= %s  ",sync?"T":" "));

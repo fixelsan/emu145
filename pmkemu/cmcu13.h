@@ -59,6 +59,7 @@ public:
     cMCU(QWidget *parent, QString name, bool debug=false);
     ~cMCU();
     void init();
+    void pretick(bool rin);
     bool tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout,unsigned char * segment);    //execute 1 tick of cpu,
                     // parameters:  rin - input register; 
                     //              k1 -- input pin K1 or H!!!

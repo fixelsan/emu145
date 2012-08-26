@@ -40,6 +40,7 @@ private:
     unsigned int olddcycle;
     bool chain;
     bool sync;
+    unsigned int dcycle;
 
     int ustep;
 

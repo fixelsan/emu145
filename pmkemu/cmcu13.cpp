@@ -109,6 +109,11 @@ void cMCU::init()
     }
 }
 
+void cMCU::pretick(bool rin)
+{
+    rm[MCU_BITLEN-1]=rin;
+}
+
 bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout, unsigned char *segment)
 {
     int i;
@@ -121,11 +126,13 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     bool x,y,z;
     unsigned char ucmd;
     bool temp;
-    
+    bool oldrm0;
+
     a=0;
     b=0;
     g=0;
-    
+
+
     if(icount<27)
     {
         ucmd=asprom[command&0x7f][jrom[icount]];
@@ -162,7 +169,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     
     u_command=ucrom[ucmd];
     
- 
+
     
     if(u_command.bits.a_r)
         a|=rr[0];
@@ -271,7 +278,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     if(u_command.bits.m)
         newm0=rs[0];
     else
-        newm0=rin;
+        newm0=rm[0];
     
     switch(u_command.bits.s)
     {
@@ -343,6 +350,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     
     
     ret=newm0;
+
     for(i=0;i<(MCU_BITLEN-1);i++)
         rm[i]=rm[i+1];
     rm[MCU_BITLEN-1]=rin;

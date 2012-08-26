@@ -7,6 +7,11 @@ cMem::cMem()
         memarray[i]=false;
 }
 
+bool cMem::pretick()
+{
+    return memarray[0];
+}
+
 bool cMem::tick(bool rm)
 {
     bool ret;
