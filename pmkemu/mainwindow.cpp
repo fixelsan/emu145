@@ -12,6 +12,8 @@ const char segments[16]={
     '-','L','C','r','E',' '
 };
 
+
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -22,13 +24,55 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
 
+    btns.clear();
+    btns.append(ui->b_1_2);
+    btns.append(ui->b_1_3);
+    btns.append(ui->b_1_4);
+    btns.append(ui->b_1_5);
+    btns.append(ui->b_1_6);
+    btns.append(ui->b_1_7);
+    btns.append(ui->b_1_8);
+    btns.append(ui->b_1_9);
+    btns.append(ui->b_1_10);
+    btns.append(ui->b_1_11);
+
+
+    btns.append(ui->b_2_2);
+    btns.append(ui->b_2_3);
+    btns.append(ui->b_2_4);
+    btns.append(ui->b_2_5);
+    btns.append(ui->b_2_6);
+    btns.append(ui->b_2_7);
+    btns.append(ui->b_2_8);
+    btns.append(ui->b_2_9);
+    btns.append(ui->b_2_10);
+    btns.append(ui->b_2_11);
+
+
+    btns.append(ui->b_3_2);
+    btns.append(ui->b_3_3);
+    btns.append(ui->b_3_4);
+    btns.append(ui->b_3_5);
+    btns.append(ui->b_3_6);
+    btns.append(ui->b_3_7);
+    btns.append(ui->b_3_8);
+    btns.append(ui->b_3_9);
+    btns.append(ui->b_3_10);
+    btns.append(ui->b_3_11);
+
+
+    for(i=0;i<btns.count();i++)
+        connect(btns.at(i),SIGNAL(pressed()),this,SLOT(on_keypad_clicked()));
+
+
+
     for(i=0;i<12;i++)
         display[i]=0x0f;
 
     display[7]=0x80;
 
     ik1302=new cMCU(this, "IK1302", true);
-    ik1303=new cMCU(this, "IK1303");
+    ik1303=new cMCU(this, "IK1303", true);
     ik1306=new cMCU(this, "IK1306");
     ir2_1=new cMem();
     ir2_2=new cMem();
@@ -53,7 +97,7 @@ MainWindow::MainWindow(QWidget *parent) :
     olddcycle=0;
     timer=new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(OnTimer()));
-    timer->start(10);
+    timer->start(1);
     ui->lcdNumber->display("-8.Err0r  -99");
 
 
@@ -98,12 +142,7 @@ void MainWindow::OnTimer()
 {
     //unsigned int dcycle;
     unsigned char seg;
-    bool k1;
-    bool k2;
 
-
-    k1=false;
-    k2=false;
     if(ui->runCheck->isChecked()==false)
     {
         if(ustep==0)
@@ -114,12 +153,32 @@ void MainWindow::OnTimer()
     if(dcycle==13)
         k2=true;
 
+    if(btnpressed)
+    {
+        if(dcycle==(2+btnpressed&0xff))
+        {
+            switch(btnpressed>>8)
+            {
+                case 0x1: k1=true;break;
+            case 0x2:   k2=true;break;
+            case 0x3:   k1=true;k2=true;break;
+            }
+            btnpressed=0;
+        }
+
+    }
+    else
+    {
+        k1=false;
+        k2=false;
+    }
+
+
 
     chain=ik1302->tick(chain,k1,k2,&dcycle,&sync,&seg);
 #if 1
     if((dcycle>1)&&(dcycle<14))
         display[dcycle-2]=seg;
-
 
 #endif
 
@@ -128,7 +187,7 @@ void MainWindow::OnTimer()
         updatedisp();
     }
 
-    //chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
+   // chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
     //chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
     chain=ir2_1->tick(chain);
     chain=ir2_2->tick(chain);
@@ -162,4 +221,24 @@ void MainWindow::on_istepBtn_clicked()
 void MainWindow::on_cycleBtn_clicked()
 {
     ustep=4*42;
+}
+
+void MainWindow::on_keypad_clicked()
+{
+    int i;
+    //cycle
+
+    if(btnpressed) //one button is still processing
+        return;
+
+    for(i=0;i<btns.count();i++)
+    {
+        if(btns.at(i)->isDown())
+        {
+            btnpressed=(i/10)+1;
+            btnpressed<<=8;
+            btnpressed|=i%10;
+            return;
+        }
+    }
 }

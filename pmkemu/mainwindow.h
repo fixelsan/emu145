@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QTimer>
+#include <QList>
 #include "cmcu13.h"
 #include "cmem.h"
 
@@ -28,6 +29,8 @@ private slots:
 
     void on_cycleBtn_clicked();
 
+    void on_keypad_clicked();
+
 private:
     Ui::MainWindow *ui;
     QTimer * timer;
@@ -40,7 +43,12 @@ private:
     unsigned int olddcycle;
     bool chain;
     bool sync;
+    bool k1;
+    bool k2;
     unsigned int dcycle;
+
+    QList<QPushButton*> btns;
+    int btnpressed;
 
     int ustep;
 

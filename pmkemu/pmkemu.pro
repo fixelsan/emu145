@@ -29,3 +29,6 @@ HEADERS  += mainwindow.h \
 FORMS    += mainwindow.ui \
     cdebugdlg.ui \
     cvaluedlg.ui
+
+RESOURCES += \
+    rsrc.qrc
