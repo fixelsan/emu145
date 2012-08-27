@@ -7,6 +7,7 @@
 //
 #include "cmcu13.h"
 #include "cdebugdlg.h"
+#include "QFile"
 
 const unsigned char jrom[42]={
     0,1,2,3,4,5,3,4,5,3,4,5,3,4,5,3,4,5,3,4,5,3,4,5,6,7,8,
@@ -79,10 +80,10 @@ void cMCU::init()
     rr[144+2]=(cptr&4)?true:false;
     rr[144+3]=(cptr&8)?true:false;
 
-    rr[156+0]=(cptr)&1;
-    rr[156+1]=(cptr&2)?true:false;
-    rr[156+2]=(cptr&4)?true:false;
-    rr[156+3]=(cptr&8)?true:false;
+    rr[156+0]=(cptr>>4)&1;
+    rr[156+1]=((cptr>>4)&2)?true:false;
+    rr[156+2]=((cptr>>4)&4)?true:false;
+    rr[156+3]=((cptr>>4)&8)?true:false;
 
 #endif
 
@@ -132,6 +133,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     b=0;
     g=0;
 
+    rm[MCU_BITLEN-1]=rin; //shift in the data
 
     if(icount<27)
     {
@@ -353,7 +355,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
 
     for(i=0;i<(MCU_BITLEN-1);i++)
         rm[i]=rm[i+1];
-    rm[MCU_BITLEN-1]=rin;
+
 
     
 
@@ -410,9 +412,27 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
         cptr=cptr<<4|rr[36*4+0]|rr[36*4+1]<<1|rr[36*4+2]<<2|rr[36*4+3]<<3;
         command=cmdrom[cptr];
 
+#if 0
+        QFile * log=new QFile("/Users/admin/src/emu145/emu145/ik1302.log");
+        log->open(QFile::Append);
+        QString str;
+        str.sprintf("%2.2X    %2.2X %2.2X %2.2X %1.1X\n",cptr,command&0xff,(command>>8)&0xff,(command>>16)&0xff,(command>>24)&0xff);
+        log->write(str.toAscii());
+        log->close();
+#endif
+
         rt=false;
         latchk1=false;
         latchk2=false;
+
+        if(debugme)
+        {
+            dbg->setS(rs[0]|rs[1]<<1|rs[2]<<2|rs[3]<<3);
+            dbg->setS1(rs1[0]|rs1[1]<<1|rs1[2]<<2|rs1[3]<<3);
+            dbg->setL(rl);
+            dbg->setPC(cptr);
+            dbg->setH(rh[0]|rh[1]<<1|rh[2]<<2|rh[3]<<3);
+        }
 
         if(debugme)
         {

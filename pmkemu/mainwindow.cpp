@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
     int i,j;
 
     ustep=0;
+    btnpressed=0;
 
     ui->setupUi(this);
 
@@ -159,8 +160,8 @@ void MainWindow::OnTimer()
         {
             switch(btnpressed>>8)
             {
-                case 0x1: k1=true;break;
-            case 0x2:   k2=true;break;
+                case 0x1: k1=true;k2=false;break;
+            case 0x2:   k2=true;k1=false;break;
             case 0x3:   k1=true;k2=true;break;
             }
             btnpressed=0;
@@ -187,12 +188,12 @@ void MainWindow::OnTimer()
         updatedisp();
     }
 
-   // chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
+    //chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
     //chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
     chain=ir2_1->tick(chain);
     chain=ir2_2->tick(chain);
 
-    ik1302->pretick(chain);
+    //ik1302->pretick(chain);
 
     ui->ik1302_d->setText(QString().sprintf("d=%d %d   ",ik1302->dcount+1,dcycle));
     ui->ik1302_e->setText(QString().sprintf("e=%d   ",ik1302->ecount+1));

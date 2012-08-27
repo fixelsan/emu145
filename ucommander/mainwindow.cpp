@@ -74,6 +74,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->l_carsel->setChecked(false);connect(ui->l_carsel,SIGNAL(stateChanged(int)),this,SLOT(OnChange()));
 
     connect(ui->clearBtn,SIGNAL(clicked()),this,SLOT(OnClear()));
+    connect(ui->convBtn,SIGNAL(clicked()),this,SLOT(OnConv()));
     ucomm.raw=0;
     QString str;
     str.sprintf("0x%7.7X",ucomm.raw);
@@ -113,6 +114,52 @@ void MainWindow::OnChange()
 
     this->disassm();
 
+
+}
+
+void MainWindow::OnConv()
+{
+
+    QString line;
+    rcmd_u romc;
+    int i;
+    int t;
+    char stri[256];
+    romc.raw=0;
+
+    line=ui->opcodeIn->text();
+    memcpy(stri,line.toAscii(),line.length()+1);
+    for(i=0;i<line.length();i++)
+    {
+
+        t=stri[i]-'0';
+        romc.raw|=t<<i;
+    }
+    ucomm.raw=0;
+    ucomm.bits.l=!romc.bits.l;
+    ucomm.bits.a_10nl=romc.bits.a_10nl;
+    ucomm.bits.a_4=romc.bits.a_4;
+    ucomm.bits.a_s=romc.bits.a_s;
+    ucomm.bits.b_6=romc.bits.b_6;
+    ucomm.bits.b_s=romc.bits.b_s;
+    ucomm.bits.b_ns=romc.bits.b_ns;
+    ucomm.bits.b_s1=romc.bits.b_s1;
+    ucomm.bits.b_1=romc.bits.b_1;
+    ucomm.bits.g_l=romc.bits.g_l;
+    ucomm.bits.g_nl=romc.bits.g_nl;
+    ucomm.bits.g_nt=romc.bits.g_nt;
+    ucomm.bits.r_2=romc.bits.r_2;
+    ucomm.bits.a_st=!romc.bits.a_st;
+    ucomm.bits.r_1=romc.bits.r_1;
+    ucomm.bits.s=(~romc.bits.s)&3;
+    ucomm.bits.s1=(~(romc.bits.s1_lo|(romc.bits.s1_hi<<1)))&3;
+    ucomm.bits.st=(!romc.bits.st_lo|(romc.bits.st_hi<<1));
+    ucomm.bits.a_m=romc.bits.a_m;
+    ucomm.bits.a_nr=romc.bits.a_nr;
+    ucomm.bits.a_r=romc.bits.a_r;
+    ucomm.bits.r0=(romc.bits.r0)^0x6;
+    ucomm.bits.m=!romc.bits.m;
+    this->disassm();
 
 }
 
@@ -355,8 +402,7 @@ void MainWindow::disassm()
 
     QClipboard *cb = QApplication::clipboard();
     cb->setText(tmp);
-
-
+    //1000000000000101110100001111
 }
 
 MainWindow::~MainWindow()

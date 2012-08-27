@@ -36,7 +36,7 @@ const unsigned int ik1302_urom[]={
 0x0A00088, //sum=(~R[i])+(S); S=sum; L=cry; 
 0x0010200, //sum=(S1); R[i]=sum; 
 0x0800040, //sum=0x4; S=sum; 
-0x0801280, //sum=(S|S1)+(L); S=sum; 
+0x0801300, //sum=()+(~S|S1)+(L); S=sum; //0x0801280, //sum=(S|S1)+(L); S=sum;
 0x1801200, //sum=(S1)+(L); S=sum; S1=sum; 
 0x1000208, //sum=(~R[i])+(S1); S1=sum; 
 0x0080001, //sum=R[i]; R[i-2]=sum; 
