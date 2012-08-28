@@ -293,7 +293,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
 
     }
     if(u_command.bits.l)
-        //if(ucount==3)
+        if(ucount==3)
             rl=carry;
 
     if(u_command.bits.m)
