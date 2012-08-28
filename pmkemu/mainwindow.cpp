@@ -72,8 +72,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     display[7]=0x80;
 
-    ik1302=new cMCU(this, "IK1302", true);
-    ik1303=new cMCU(this, "IK1303", true);
+    ik1302=new cMCU(this, "IK1302", false);
+    ik1303=new cMCU(this, "IK1303");
     ik1306=new cMCU(this, "IK1306");
     ir2_1=new cMem();
     ir2_2=new cMem();
@@ -144,6 +144,11 @@ void MainWindow::OnTimer()
     //unsigned int dcycle;
     unsigned char seg;
 
+    unsigned int cycle;
+
+    for(cycle=0;cycle<168;cycle++)
+    {
+
     if(ui->runCheck->isChecked()==false)
     {
         if(ustep==0)
@@ -181,6 +186,7 @@ void MainWindow::OnTimer()
     if((dcycle>1)&&(dcycle<14))
         display[dcycle-2]=seg;
 
+
 #endif
 
     if(sync)
@@ -188,13 +194,14 @@ void MainWindow::OnTimer()
         updatedisp();
     }
 
+
     //chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
     //chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
     chain=ir2_1->tick(chain);
     chain=ir2_2->tick(chain);
 
     //ik1302->pretick(chain);
-
+    }
     ui->ik1302_d->setText(QString().sprintf("d=%d %d   ",ik1302->dcount+1,dcycle));
     ui->ik1302_e->setText(QString().sprintf("e=%d   ",ik1302->ecount+1));
     ui->ik1302_i->setText(QString().sprintf("i=%d   ",ik1302->icount));

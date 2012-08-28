@@ -74,7 +74,7 @@ void cMCU::init()
         rr[i*3*4+2]=((i+1)&4)?true:false;
         rr[i*3*4+3]=((i+1)&8)?true:false;
     }
-    cptr=0x33;
+    cptr=0x64;
     rr[144+0]=(cptr)&1;
     rr[144+1]=(cptr&2)?true:false;
     rr[144+2]=(cptr&4)?true:false;
@@ -272,11 +272,30 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
             break;
     }
     if(u_command.bits.r_1)
-        rr[MCU_BITLEN-1*4]=sigma;
+    {
+        if(icount<36)
+        {
+            if((command&0xff000000)==0)
+                rr[MCU_BITLEN-1*4]=sigma;
+        }
+        else
+            rr[MCU_BITLEN-1*4]=sigma;
+    }
     if(u_command.bits.r_2)
-        rr[MCU_BITLEN-2*4]=sigma;
+    {
+        if(icount<36)
+        {
+            if((command&0xff000000)==0)
+                rr[MCU_BITLEN-2*4]=sigma;
+        }
+        else
+            rr[MCU_BITLEN-2*4]=sigma;
+
+    }
     if(u_command.bits.l)
-        rl=carry;
+        //if(ucount==3)
+            rl=carry;
+
     if(u_command.bits.m)
         newm0=rs[0];
     else
@@ -298,9 +317,9 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
             rs[3]=sigma;
             break;
         case 3:
-            temp=rs[0];
-            rs[0]=rs[1];rs[1]=rs[2];rs[2]=rs[3];
-            rs[3]=sigma|temp;
+            temp=rs1[0];
+            rs1[0]=rs1[1];rs1[1]=rs1[2];rs1[2]=rs1[3];
+            rs1[3]=sigma|temp;
             break;
     }
     
@@ -330,23 +349,23 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     switch(u_command.bits.st)
     {
         case 1:
-            for(i=0;i<11;i++)
-                rst[i+1]=rst[i];
+            rst[8]=rst[4];
+            rst[4]=rst[0];
             rst[0]=sigma;
             break;
         case 2:
             temp=rst[0];
-            for(i=0;i<11;i++)
-                rst[i]=rst[i+1];
-            rst[11]=temp;
+            rst[0]=rst[4];
+            rst[4]=rst[8];
+            rst[8]=temp;
             break;
         case 3:
-            x=rst[0*4+ucount];
-            y=rst[1*4+ucount];
-            z=rst[2*4+ucount];
-            rst[0*4+ucount]=sigma|y;
-            rst[1*4+ucount]=x|z;
-            rst[2*4+ucount]=x|y;
+            x=rst[0*4];
+            y=rst[1*4];
+            z=rst[2*4];
+            rst[0*4]=sigma|y;
+            rst[1*4]=x|z;
+            rst[2*4]=x|y;
             break;
     }
     
