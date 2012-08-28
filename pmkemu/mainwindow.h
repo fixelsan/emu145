@@ -48,7 +48,7 @@ private:
     unsigned int dcycle;
 
     QList<QPushButton*> btns;
-    int btnpressed;
+    unsigned int btnpressed;
 
     int ustep;
 

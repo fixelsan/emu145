@@ -161,7 +161,7 @@ void MainWindow::OnTimer()
 
     if(btnpressed)
     {
-        if(dcycle==(2+btnpressed&0xff))
+        if(dcycle==(2+(btnpressed&0xff)))
         {
             switch(btnpressed>>8)
             {
@@ -198,7 +198,7 @@ void MainWindow::OnTimer()
     //chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
     //chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
     chain=ir2_1->tick(chain);
-    chain=ir2_2->tick(chain);
+    //chain=ir2_2->tick(chain);
 
     //ik1302->pretick(chain);
     }

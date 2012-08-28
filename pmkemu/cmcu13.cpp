@@ -52,8 +52,6 @@ cMCU::~cMCU()
 
 void cMCU::init()
 {
-    int i;
-
     icount=0;
     dcount=0;
     ecount=0;
@@ -66,6 +64,7 @@ void cMCU::init()
     cptr=0;
 
 #if 0
+    int i;
     //Test code for display
     for(i=0;i<12;i++)
     {
@@ -127,7 +126,6 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     bool x,y,z;
     unsigned char ucmd;
     bool temp;
-    bool oldrm0;
 
     a=0;
     b=0;
