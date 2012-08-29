@@ -209,11 +209,99 @@ void MainWindow::disassm()
 {
     QString cmd;
     QString tmp;
+    bool alpha_numeric;
+    int alpha_val;
+    bool beta_numeric;
+    int beta_val;
+    bool gamma_numeric;
+    int gamma_val;
+    bool combined_numeric;
+    int combined_val;
+
+    alpha_val=0;
+    beta_val=0;
+    gamma_val=0;
+    combined_val=0;
+    alpha_numeric=false;
+    beta_numeric=false;
+    gamma_numeric=false;
 
     cmd="";
     tmp="";
-    if(ucomm.bits.a_r)
-        tmp+="R[i]";
+    if(ucomm.bits.a_r & ucomm.bits.a_nr)
+    {
+        alpha_numeric=true;
+        alpha_val|=0xf;
+    }
+    if(ucomm.bits.a_4)
+    {
+        alpha_numeric=true;
+        alpha_val|=0x4;
+    }
+
+    if(ucomm.bits.b_1)
+    {
+        beta_numeric=true;
+        beta_val|=1;
+    }
+    if(ucomm.bits.b_6)
+    {
+        beta_numeric=true;
+        beta_val|=6;
+    }
+    if(ucomm.bits.b_ns & ucomm.bits.b_s)
+    {
+        beta_numeric=true;
+        beta_val|=0xf;
+    }
+    if(ucomm.bits.g_l & ucomm.bits.g_nl)
+    {
+        gamma_numeric=true;
+        gamma_val|=1;
+    }
+
+    combined_val=0;
+    combined_val+=alpha_numeric?1:0;
+    combined_val+=beta_numeric?1:0;
+    combined_val+=gamma_numeric?1:0;
+    if(combined_val>1)
+    {
+        combined_numeric=true;
+        combined_val=alpha_val+beta_val+gamma_val;
+    }
+    else
+    {
+        combined_val=0;
+    }
+    if(ucomm.bits.a_s & ucomm.bits.b_ns)
+    {
+        combined_numeric=true;
+        combined_val=0x0;
+    }
+    if(ucomm.bits.a_s & ucomm.bits.b_s)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+="2*S";
+    }
+
+
+    if(ucomm.bits.a_r!=ucomm.bits.a_nr)
+    {
+        if(ucomm.bits.a_r)
+        {
+            if(tmp.count())
+                tmp+="|";
+            tmp+="R[i]";
+        }
+        if(ucomm.bits.a_nr)
+        {
+            if(tmp.count())
+                tmp+="|";
+            tmp+="~R[i]";
+        }
+    }
+
     if(ucomm.bits.a_m)
     {
         if(tmp.count())
@@ -226,58 +314,62 @@ void MainWindow::disassm()
             tmp+="|";
         tmp+="ST[i]";
     }
-    if(ucomm.bits.a_nr)
-    {
-        if(tmp.count())
-            tmp+="|";
-        tmp+="~R[i]";
-    }
+
     if(ucomm.bits.a_10nl)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="0xA*!L";
     }
-    if(ucomm.bits.a_s)
+
+    if((ucomm.bits.a_s!=ucomm.bits.b_s) && (ucomm.bits.a_s!=ucomm.bits.b_ns))
     {
-        if(tmp.count())
-            tmp+="|";
-        tmp+="S";
+        if(ucomm.bits.a_s)
+        {
+            if(tmp.count())
+                tmp+="|";
+            tmp+="S";
+        }
     }
+    /*
     if(ucomm.bits.a_4)
     {
         if(tmp.count())
             tmp+="|";
         tmp+="0x4";
+    }*/
+    if((!combined_numeric)&(alpha_numeric))
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+=QString().sprintf("0x%1.1X",alpha_val&0xf);
     }
+
     if(ucomm.bits.b_1|ucomm.bits.b_6|ucomm.bits.b_ns|ucomm.bits.b_s|ucomm.bits.b_s1)
-        cmd="("+tmp+")+";
+    {
+        if(tmp.count())
+            cmd="("+tmp+")+";
+    }
     else
         cmd=tmp;
     tmp="";
-    if(ucomm.bits.b_1)
+
+    if(ucomm.bits.b_ns!=ucomm.bits.b_s)
     {
-        if(tmp.count())
-            tmp+="|";
-        tmp+="0x1";
-    }
-    if(ucomm.bits.b_6)
-    {
-        if(tmp.count())
-            tmp+="|";
-        tmp+="0x6";
-    }
-    if(ucomm.bits.b_ns)
-    {
-        if(tmp.count())
-            tmp+="|";
-        tmp+="~S";
-    }
-    if(ucomm.bits.b_s)
-    {
-        if(tmp.count())
-            tmp+="|";
-        tmp+="S";
+        if(!ucomm.bits.a_s)
+        if(ucomm.bits.b_ns)
+        {
+            if(tmp.count())
+                tmp+="|";
+            tmp+="~S";
+        }
+        if(!ucomm.bits.a_s)
+        if(ucomm.bits.b_s)
+        {
+            if(tmp.count())
+                tmp+="|";
+            tmp+="S";
+        }
     }
     if(ucomm.bits.b_s1)
     {
@@ -285,6 +377,14 @@ void MainWindow::disassm()
             tmp+="|";
         tmp+="S1";
     }
+
+    if(beta_numeric)
+    {
+        if(tmp.count())
+            tmp+="|";
+        tmp+=QString().sprintf("0x%1.1X",beta_val);
+    }
+
     if(tmp.count())
     {
         if(cmd.count())
@@ -298,18 +398,29 @@ void MainWindow::disassm()
             cmd+="+";
     }
     tmp="";
-    if(ucomm.bits.g_l)
+
+    if(ucomm.bits.g_l!=ucomm.bits.g_nl)
     {
-        if(tmp.count())
-            tmp+="|";
-        tmp+="L";
+        if(ucomm.bits.g_l)
+        {
+            if(tmp.count())
+                tmp+="|";
+            tmp+="L";
+        }
+        if(ucomm.bits.g_nl)
+        {
+            if(tmp.count())
+                tmp+="|";
+            tmp+="!L";
+        }
     }
-    if(ucomm.bits.g_nl)
-    {
-        if(tmp.count())
-            tmp+="|";
-        tmp+="!L";
-    }
+    else
+        if(gamma_numeric)
+        {
+            if(tmp.count())
+                tmp+="|";
+            tmp+="1";
+        }
     if(ucomm.bits.g_nt)
     {
         if(tmp.count())
@@ -320,8 +431,12 @@ void MainWindow::disassm()
     {
         if(cmd.count())
             cmd+="("+tmp+")";
+        else
+            cmd=tmp;
     }
     tmp="";
+    if(combined_numeric)
+        cmd=QString().sprintf("0x%1.1X",combined_val&0xf);
     if(cmd.count())
         cmd="sum="+cmd+"; ";
 

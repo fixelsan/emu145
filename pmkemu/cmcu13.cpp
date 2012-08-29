@@ -131,7 +131,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     b=0;
     g=0;
 
-    rm[MCU_BITLEN-1]=rin; //shift in the data
+    //rm[MCU_BITLEN-1]=rin; //shift in the data
 
     if(icount<27)
     {
@@ -372,7 +372,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
 
     for(i=0;i<(MCU_BITLEN-1);i++)
         rm[i]=rm[i+1];
-
+    rm[MCU_BITLEN-1]=rin;
 
     
 

@@ -73,19 +73,28 @@ MainWindow::MainWindow(QWidget *parent) :
     display[7]=0x80;
 
     ik1302=new cMCU(this, "IK1302", false);
-    ik1303=new cMCU(this, "IK1303");
+    ik1303=new cMCU(this, "IK1303" );
     ik1306=new cMCU(this, "IK1306");
     ir2_1=new cMem();
     ir2_2=new cMem();
 
     //load memory
     for(i=0;i<68;i++)
+    {
         ik1302->ucrom[i].raw=ik1302_urom[i];
+        ik1303->ucrom[i].raw=ik1303_urom[i];
+    }
     for(i=0;i<128;i++)
         for(j=0;j<9;j++)
+        {
             ik1302->asprom[i][j]=ik1302_srom[i][j];
+            ik1303->asprom[i][j]=ik1303_srom[i][j];
+        }
     for(i=0;i<256;i++)
+    {
         ik1302->cmdrom[i]=ik1302_mrom[i];
+        ik1303->cmdrom[i]=ik1303_mrom[i];
+    }
 
 
     ik1302->init();
@@ -146,7 +155,7 @@ void MainWindow::OnTimer()
 
     unsigned int cycle;
 
-    for(cycle=0;cycle<168;cycle++)
+    for(cycle=0;cycle<168*28;cycle++)
     {
 
     if(ui->runCheck->isChecked()==false)
@@ -165,9 +174,9 @@ void MainWindow::OnTimer()
         {
             switch(btnpressed>>8)
             {
-                case 0x1: k1=true;k2=false;break;
-            case 0x2:   k2=true;k1=false;break;
-            case 0x3:   k1=true;k2=true;break;
+                case 0x1:   k1=true;k2=false;break;
+                case 0x2:   k2=true;k1=false;break;
+                case 0x3:   k1=true;k2=true;break;
             }
             btnpressed=0;
         }
@@ -195,12 +204,12 @@ void MainWindow::OnTimer()
     }
 
 
-    //chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
+    chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
     //chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
     chain=ir2_1->tick(chain);
     //chain=ir2_2->tick(chain);
 
-    //ik1302->pretick(chain);
+    ik1302->pretick(chain);
     }
     ui->ik1302_d->setText(QString().sprintf("d=%d %d   ",ik1302->dcount+1,dcycle));
     ui->ik1302_e->setText(QString().sprintf("e=%d   ",ik1302->ecount+1));
