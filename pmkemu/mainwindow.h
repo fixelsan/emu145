@@ -11,6 +11,11 @@ namespace Ui {
 class MainWindow;
 }
 
+typedef enum{
+    e_rad,
+    e_deg,
+    e_grd
+}mode_e;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -45,7 +50,10 @@ private:
     bool sync;
     bool k1;
     bool k2;
+    bool fast;
     unsigned int dcycle;
+    mode_e mode;
+
 
     QList<QPushButton*> btns;
     unsigned int btnpressed;

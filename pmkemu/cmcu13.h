@@ -73,6 +73,7 @@ public:
     ucmd_u  ucrom[68];              //ucommand rom
     unsigned char asprom[128][9];   //synchro sequence rom
     unsigned int cmdrom[256];       //macrocommand rom   -- format (asp0)|(asp1<<8)|(asp2<<16)|(modflag<<24)
+    bool debugme;
 
 private:
     bool rm[MCU_BITLEN];
@@ -92,7 +93,7 @@ private:
     unsigned int command;
     cDebugDlg * dbg;
     QString myname;
-    bool debugme;
+
 
     void disassemble();
 

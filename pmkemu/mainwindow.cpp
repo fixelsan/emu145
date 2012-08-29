@@ -72,8 +72,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     display[7]=0x80;
 
-    ik1302=new cMCU(this, "IK1302", false);
-    ik1303=new cMCU(this, "IK1303" );
+    ik1302=new cMCU(this, "IK1302");
+    ik1303=new cMCU(this, "IK1303");
     ik1306=new cMCU(this, "IK1306");
     ir2_1=new cMem();
     ir2_2=new cMem();
@@ -150,12 +150,16 @@ void MainWindow::updatedisp()
 
 void MainWindow::OnTimer()
 {
-    //unsigned int dcycle;
     unsigned char seg;
 
     unsigned int cycle;
+    unsigned int maxcycle;
+    bool grd;
 
-    for(cycle=0;cycle<168*28;cycle++)
+
+    maxcycle=ui->runCheck->isChecked()?168*28:1;
+
+    for(cycle=0;(cycle<168*28);cycle++)
     {
 
     if(ui->runCheck->isChecked()==false)
@@ -191,12 +195,11 @@ void MainWindow::OnTimer()
 
 
     chain=ik1302->tick(chain,k1,k2,&dcycle,&sync,&seg);
-#if 1
+
     if((dcycle>1)&&(dcycle<14))
+    {
         display[dcycle-2]=seg;
-
-
-#endif
+    }
 
     if(sync)
     {
@@ -204,21 +207,60 @@ void MainWindow::OnTimer()
     }
 
 
-    chain=ik1303->tick(chain,false,false,NULL,NULL,NULL);
+    switch(ui->modeSlider->value())
+    {
+        case 1:
+            mode=e_rad;
+            break;
+        case 2:
+            mode=e_grd;
+            break;
+        case 3:
+            mode=e_deg;
+            break;
+    }
+
+    switch(mode)
+    {
+        case e_rad:
+        if(ik1303->dcount==9) //D10
+                grd=false;
+            else
+                grd=true;
+            break;
+        case e_deg:
+        if(ik1303->dcount==10) //D11
+            grd=false;
+        else
+            grd=true;
+        break;
+        case e_grd:
+        if(ik1303->dcount==11) //D12
+            grd=false;
+        else
+            grd=true;
+        break;
+    }
+
+    chain=ik1303->tick(chain,grd,false,NULL,NULL,NULL);
+
     //chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
     chain=ir2_1->tick(chain);
-    //chain=ir2_2->tick(chain);
+    chain=ir2_2->tick(chain);
 
     ik1302->pretick(chain);
     }
-    ui->ik1302_d->setText(QString().sprintf("d=%d %d   ",ik1302->dcount+1,dcycle));
-    ui->ik1302_e->setText(QString().sprintf("e=%d   ",ik1302->ecount+1));
+    ui->ik1302_d->setText(QString().sprintf("d=%d %d   ",ik1302->dcount,dcycle));
+    ui->ik1302_e->setText(QString().sprintf("e=%d   ",ik1302->ecount));
     ui->ik1302_i->setText(QString().sprintf("i=%d   ",ik1302->icount));
     ui->ik1302_sy->setText(QString().sprintf("sync= %s  ",sync?"T":" "));
+    ui->ic1302_cp->setText(QString().sprintf("pc=%2.2X    ",ik1302->cptr));
 
-    ui->ik1303_d->setText(QString().sprintf("d=%d   ",ik1303->dcount+1));
-    ui->ik1303_e->setText(QString().sprintf("e=%d   ",ik1303->ecount+1));
+    ui->ik1303_d->setText(QString().sprintf("d=%d   ",ik1303->dcount));
+    ui->ik1303_e->setText(QString().sprintf("e=%d   ",ik1303->ecount));
     ui->ik1303_i->setText(QString().sprintf("i=%d   ",ik1303->icount));
+    ui->ic1303_cp->setText(QString().sprintf("pc=%2.2X    ",ik1303->cptr));
+
 
     ui->ik1306_d->setText(QString().sprintf("d=%d   ",ik1306->dcount+1));
     ui->ik1306_e->setText(QString().sprintf("e=%d   ",ik1306->ecount+1));

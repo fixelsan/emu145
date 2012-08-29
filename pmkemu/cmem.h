@@ -1,7 +1,7 @@
 #ifndef CMEM_H
 #define CMEM_H
 
-#define MEM_BITLEN  1008*2
+#define MEM_BITLEN  1008
 
 class cMem
 {

@@ -169,6 +169,22 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     
     u_command=ucrom[ucmd];
     
+    switch(u_command.bits.s1)
+    {
+        case 2:
+            rh[0]=((((k2?1:0)<<3|(k1?1:0))>>ucount)&1)?true:false;
+            //rh[0]=(k1|k2)?true:false;
+            //temp=rs1[0];
+            rs1[0]|=rh[0];
+            break;
+        case 3:
+            rh[0]=((((k2?1:0)<<3|(k1?1:0))>>ucount)&1)?true:false;
+            //rh[0]=(k1|k2)?true:false;
+            //temp=rs1[0];
+            rs1[0]|=rh[0];
+            break;
+
+    }
 
     
     if(u_command.bits.a_r)
@@ -229,7 +245,9 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     if(((command&0xfc0000)==0)&&(rt))
     {
         rs1[0]=((((latchk2?1:0)<<3|(latchk1?1:0))>>ucount)&1)?true:false;
+
     }
+
 
     if(u_command.bits.g_nt)
          g|=!rt;
@@ -332,16 +350,19 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
             rs1[0]=rs1[1];rs1[1]=rs1[2];rs1[2]=rs1[3];
             rs1[3]=sigma;
             break;
+#if 1
         case 2:
             temp=rs1[0];
             rs1[0]=rs1[1];rs1[1]=rs1[2];rs1[2]=rs1[3];
-            rs1[3]=temp|rh[0];
+            rs1[3]=temp;
             break;
+
         case 3:
             temp=rs1[0];
             rs1[0]=rs1[1];rs1[1]=rs1[2];rs1[2]=rs1[3];
-            rs1[3]=temp|rh[0]|sigma;
+            rs1[3]=temp|sigma;
             break;
+#endif
     }
     
     switch(u_command.bits.st)
@@ -382,6 +403,10 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     for(i=0;i<(MCU_BITLEN-1);i++)
         rr[i]=rr[i+1];
     rr[MCU_BITLEN-1]=newr0;
+
+    temp=rh[0];
+    rh[0]=rh[1];rh[1]=rh[2];rh[2]=rh[3];
+    rh[3]=temp;
 
     if((dcount<13)&&(ecount==0))
     {
