@@ -65,6 +65,7 @@ MainWindow::MainWindow(QWidget *parent) :
     for(i=0;i<btns.count();i++)
         connect(btns.at(i),SIGNAL(pressed()),this,SLOT(on_keypad_clicked()));
 
+   // QPushButton::pressed()
 
 
     for(i=0;i<12;i++)

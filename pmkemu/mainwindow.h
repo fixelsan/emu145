@@ -26,15 +26,13 @@ public:
     
 public slots:
     void OnTimer();
+    void on_keypad_clicked();
 
 private slots:
     void on_ustepBtn_clicked();
-
     void on_istepBtn_clicked();
-
     void on_cycleBtn_clicked();
 
-    void on_keypad_clicked();
 
 private:
     Ui::MainWindow *ui;
