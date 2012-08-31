@@ -41,6 +41,8 @@ private slots:
     void on_debug_clicked();
 
 
+    void on_showVariables_toggled(bool checked);
+
 private:
     Ui::MainWindow *ui;
     QTimer * timer;
