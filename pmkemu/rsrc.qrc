@@ -70,13 +70,11 @@
         <file>buttons/_22r.png</file>
         <file>buttons/_23r.png</file>
         <file>buttons/_24r.png</file>
-        <file>buttons/_24r.svg</file>
         <file>buttons/_25r.png</file>
         <file>buttons/_26r.png</file>
         <file>buttons/_27r.png</file>
         <file>buttons/_28r.png</file>
         <file>buttons/_29r.png</file>
-        <file>buttons/_rest.png</file>
         <file>buttons/_19r.png</file>
     </qresource>
 </RCC>
