@@ -98,7 +98,12 @@ MainWindow::MainWindow(QWidget *parent) :
     //timer->start(25);
     ui->lcdNumber->display("-8.Err0r  -99");
 
-
+    ui->gutsSplitter->setStretchFactor(0, 10);
+    ui->gutsSplitter->setStretchFactor(1, 1);
+    ui->mainToolBar->hide();
+    ui->menuBar->setVisible(false);
+    ui->statusBar->setVisible(false);
+    this->layout()->setSizeConstraint(QLayout::SetFixedSize);
 }
 
 
@@ -258,4 +263,10 @@ void MainWindow::on_keypad_clicked()
 void MainWindow::on_run_clicked()
 {
     emit enable(ui->runCheck->isChecked());
+}
+
+void MainWindow::on_showVariables_toggled(bool checked)
+{
+    ui->gutsSplitter->setVisible(checked);
+    ui->centralWidget->updateGeometry();
 }

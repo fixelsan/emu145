@@ -6,1308 +6,1627 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>436</width>
-    <height>783</height>
+    <width>464</width>
+    <height>817</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLCDNumber" name="lcdNumber">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>30</y>
-      <width>371</width>
-      <height>61</height>
-     </rect>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget {background-color:#444448; color:ivory}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0">
+    <property name="spacing">
+     <number>1</number>
     </property>
-    <property name="palette">
-     <palette>
-      <active>
-       <colorrole role="WindowText">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>255</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="Button">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="Text">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>255</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="ButtonText">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>255</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="Base">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="Window">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-      </active>
-      <inactive>
-       <colorrole role="WindowText">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>255</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="Button">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="Text">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>255</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="ButtonText">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>255</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="Base">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="Window">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-      </inactive>
-      <disabled>
-       <colorrole role="WindowText">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>255</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="Button">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="Text">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>255</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="ButtonText">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>255</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="Base">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-       <colorrole role="Window">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-      </disabled>
-     </palette>
+    <property name="sizeConstraint">
+     <enum>QLayout::SetMinimumSize</enum>
     </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 255, 0);
+    <item>
+     <widget class="QLCDNumber" name="lcdNumber">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>440</width>
+        <height>75</height>
+       </size>
+      </property>
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>40</red>
+            <green>255</green>
+            <blue>100</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Button">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>40</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>40</red>
+            <green>255</green>
+            <blue>100</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>40</red>
+            <green>255</green>
+            <blue>100</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>40</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>40</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>40</red>
+            <green>255</green>
+            <blue>100</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Button">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>40</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>40</red>
+            <green>255</green>
+            <blue>100</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>40</red>
+            <green>255</green>
+            <blue>100</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>40</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>40</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>40</red>
+            <green>255</green>
+            <blue>100</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Button">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>40</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>40</red>
+            <green>255</green>
+            <blue>100</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>40</red>
+            <green>255</green>
+            <blue>100</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>40</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>40</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> color: rgb(40, 255, 100);
 border-color: rgb(0, 255, 0);
-background-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Panel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <property name="lineWidth">
-     <number>6</number>
-    </property>
-    <property name="midLineWidth">
-     <number>2</number>
-    </property>
-    <property name="smallDecimalPoint">
-     <bool>true</bool>
-    </property>
-    <property name="numDigits">
-     <number>12</number>
-    </property>
-    <property name="digitCount">
-     <number>12</number>
-    </property>
-    <property name="mode">
-     <enum>QLCDNumber::Bin</enum>
-    </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Filled</enum>
-    </property>
-    <property name="value" stdset="0">
-     <double>0.000000000000000</double>
-    </property>
-    <property name="intValue" stdset="0">
-     <number>0</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ik1302_i">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>140</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>i=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ik1302_d">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>160</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>d=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ik1302_e">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>180</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>e=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ik1302_sy">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>200</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>sync=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ic1302_cp">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>220</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>cptr=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ic1303_cp">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>220</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>cptr=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ik1303_i">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>140</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>i=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ik1303_d">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>160</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>d=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ik1303_e">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>180</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>e=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ik1306_d">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>160</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>d=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ik1306_e">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>180</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>e=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ik1306_i">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>140</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>i=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ic1306_cp">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>220</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>cptr=</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>260</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>1302</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>260</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>1303</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>260</y>
-      <width>62</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>1306</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="runCheck">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>140</y>
-      <width>87</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Run</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="ustepBtn">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>170</y>
-      <width>131</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>1 микро такт</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="istepBtn">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>210</y>
-      <width>131</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>1 макро такт</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="cycleBtn">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>250</y>
-      <width>131</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>42 макро такта</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_3_11">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>290</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="cursor">
-     <cursorShape>ArrowCursor</cursorShape>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_21r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_21p.gif);}</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-    <property name="autoRepeatInterval">
-     <number>100</number>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_3_7">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>290</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::NoFocus</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_22r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_22p.gif);}</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_3_9">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>290</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_29r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_29p.gif);}</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_3_4">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>290</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_28r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_28p.gif);}</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_3_2">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>290</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_24r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_24p.gif);}</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_3_5">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>360</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_23r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_23p.gif);}</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_3_10">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>360</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_19r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_19p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_3_3">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>360</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_26r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_26p.gif);}</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_3_6">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>360</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_27r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_27p.gif);}</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_3_8">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>360</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_25r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_25p.gif);}</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_1_10">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>430</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_8r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_8p.gif);}</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_2_3">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>430</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_16r.gif);}
- QPushButton:pressed {border-image:url(:/buttons/buttons/_16p.gif);}</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_2_5">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>430</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_20r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_20p.gif);}</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_1_11">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>430</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_9r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_9p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_1_9">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>430</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_7r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_7p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_1_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>640</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_0r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_0p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_1_4">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>570</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_2r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_2p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_1_6">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>500</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_4r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_4p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_2_6">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>570</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_14r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_14p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_2_7">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>640</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_11r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_11p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_2_10">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>640</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_10r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_10p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_2_11">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>570</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_17r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_17p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_2_9">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>640</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_13r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_13p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_2_2">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>500</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_15r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_15p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_2_4">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>500</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_18r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_18p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_1_8">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>500</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_6r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_6p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_2_8">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>640</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_12r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_12p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_1_5">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>570</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_3r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_3p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_1_7">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>500</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_5r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_5p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b_1_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>570</y>
-      <width>78</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="styleSheet">
-       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_1r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_1p.gif);}</string>
-    </property>
-
-    <property name="iconSize">
-     <size>
-      <width>80</width>
-      <height>80</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QSlider" name="modeSlider">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>110</y>
-      <width>160</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>1</number>
-    </property>
-    <property name="maximum">
-     <number>3</number>
-    </property>
-    <property name="pageStep">
-     <number>1</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <property name="tickPosition">
-     <enum>QSlider::TicksAbove</enum>
-    </property>
-    <property name="tickInterval">
-     <number>1</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>90</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Р</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>90</y>
-      <width>31</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ГРД</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>90</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Г</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="debugCheck">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>110</y>
-      <width>87</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Отладчик</string>
-    </property>
-   </widget>
+background-color: rgb(0, 40, 0);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="midLineWidth">
+       <number>2</number>
+      </property>
+      <property name="smallDecimalPoint">
+       <bool>true</bool>
+      </property>
+      <property name="numDigits">
+       <number>12</number>
+      </property>
+      <property name="digitCount">
+       <number>12</number>
+      </property>
+      <property name="mode">
+       <enum>QLCDNumber::Bin</enum>
+      </property>
+      <property name="segmentStyle">
+       <enum>QLCDNumber::Flat</enum>
+      </property>
+      <property name="value" stdset="0">
+       <double>0.000000000000000</double>
+      </property>
+      <property name="intValue" stdset="0">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>440</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="runCheck">
+         <property name="text">
+          <string>Run</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QCheckBox" name="showVariables">
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Кишки</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Р</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>ГРД</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Г</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="3">
+          <widget class="QSlider" name="modeSlider">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>3</number>
+           </property>
+           <property name="pageStep">
+            <number>1</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="invertedAppearance">
+            <bool>false</bool>
+           </property>
+           <property name="invertedControls">
+            <bool>false</bool>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksAbove</enum>
+           </property>
+           <property name="tickInterval">
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSplitter" name="gutsSplitter">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">margin-left:1em;margin-right:1em;</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="opaqueResize">
+       <bool>true</bool>
+      </property>
+      <property name="handleWidth">
+       <number>7</number>
+      </property>
+      <property name="childrenCollapsible">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="ik1302_i">
+          <property name="text">
+           <string>i=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="ik1303_i">
+          <property name="text">
+           <string>i=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="ik1306_i">
+          <property name="text">
+           <string>i=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="ik1302_d">
+          <property name="text">
+           <string>d=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="ik1303_d">
+          <property name="text">
+           <string>d=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="ik1306_d">
+          <property name="text">
+           <string>d=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="ik1302_e">
+          <property name="text">
+           <string>e=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="ik1303_e">
+          <property name="text">
+           <string>e=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLabel" name="ik1306_e">
+          <property name="text">
+           <string>e=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="ik1302_sy">
+          <property name="text">
+           <string>sync=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="ic1302_cp">
+          <property name="text">
+           <string>cptr=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="ic1303_cp">
+          <property name="text">
+           <string>cptr=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLabel" name="ic1306_cp">
+          <property name="text">
+           <string>cptr=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>1302</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>1303</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>1306</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget2">
+       <layout class="QGridLayout" name="gridLayout_5">
+        <property name="horizontalSpacing">
+         <number>-1</number>
+        </property>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="istepBtn">
+          <property name="styleSheet">
+           <string notr="true">QPushButton { background-color: #8080ff; }</string>
+          </property>
+          <property name="text">
+           <string>1 макро такт</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="ustepBtn">
+          <property name="styleSheet">
+           <string notr="true">QPushButton { background-color: #8080ff; }</string>
+          </property>
+          <property name="text">
+           <string>1 микро такт</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="cycleBtn">
+          <property name="styleSheet">
+           <string notr="true">QPushButton { background-color: #8080ff; }</string>
+          </property>
+          <property name="text">
+           <string>42 макро такта</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QCheckBox" name="debugCheck">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Отладчик</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>440</width>
+        <height>460</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="horizontalSpacing">
+        <number>0</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>-1</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="b_3_11">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_yellowrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_yellowpress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_21r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="autoRepeatInterval">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="b_3_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_22r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="b_3_9">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_29r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QPushButton" name="b_3_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_28r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QPushButton" name="b_3_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_24r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="b_3_10">
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_bluerest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_bluepress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_19r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="b_3_8">
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_25r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="b_3_6">
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_27r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="b_3_3">
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_26r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QPushButton" name="b_3_5">
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_23r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="b_1_9">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_7r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="b_1_10">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_8r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="b_1_11">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_9r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="b_2_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_16r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4">
+        <widget class="QPushButton" name="b_2_5">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_20r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="b_1_6">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_4r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="b_1_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_5r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QPushButton" name="b_1_8">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_6r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QPushButton" name="b_2_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_15r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="4">
+        <widget class="QPushButton" name="b_2_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_18r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="b_1_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_1r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="b_1_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_2r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QPushButton" name="b_1_5">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_3r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QPushButton" name="b_2_6">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_14r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="4">
+        <widget class="QPushButton" name="b_2_11">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_17r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="b_1_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_0r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QPushButton" name="b_2_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_11r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QPushButton" name="b_2_8">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_12r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QPushButton" name="b_2_9">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_13r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="4">
+        <widget class="QPushButton" name="b_2_10">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_redrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_redpress.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_10r.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>78</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>436</width>
+     <width>464</width>
      <height>22</height>
     </rect>
    </property>
@@ -1326,8 +1645,6 @@ background-color: rgb(0, 0, 0);</string>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="rsrc.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
