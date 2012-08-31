@@ -512,9 +512,9 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_21r.gif</normaloff>:/buttons/buttons/_21r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_21r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_21p.gif);}</string>
     </property>
     <property name="iconSize">
      <size>
@@ -541,9 +541,9 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_22r.gif</normaloff>:/buttons/buttons/_22r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_22r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_22p.gif);}</string>
     </property>
     <property name="iconSize">
      <size>
@@ -564,9 +564,9 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_29r.gif</normaloff>:/buttons/buttons/_29r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_29r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_29p.gif);}</string>
     </property>
     <property name="iconSize">
      <size>
@@ -587,9 +587,9 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_28r.gif</normaloff>:/buttons/buttons/_28r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_28r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_28p.gif);}</string>
     </property>
     <property name="iconSize">
      <size>
@@ -610,9 +610,9 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_24r.gif</normaloff>:/buttons/buttons/_24r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_24r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_24p.gif);}</string>
     </property>
     <property name="iconSize">
      <size>
@@ -633,9 +633,9 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_23r.gif</normaloff>:/buttons/buttons/_23r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_23r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_23p.gif);}</string>
     </property>
     <property name="iconSize">
      <size>
@@ -663,10 +663,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_19r.gif</normaloff>:/buttons/buttons/_19r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_19r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_19p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -686,9 +687,9 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_26r.gif</normaloff>:/buttons/buttons/_26r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_26r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_26p.gif);}</string>
     </property>
     <property name="iconSize">
      <size>
@@ -709,9 +710,9 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_27r.gif</normaloff>:/buttons/buttons/_27r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_27r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_27p.gif);}</string>
     </property>
     <property name="iconSize">
      <size>
@@ -732,9 +733,9 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_25r.gif</normaloff>:/buttons/buttons/_25r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_25r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_25p.gif);}</string>
     </property>
     <property name="iconSize">
      <size>
@@ -755,9 +756,9 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_8r.gif</normaloff>:/buttons/buttons/_8r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_8r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_8p.gif);}</string>
     </property>
     <property name="iconSize">
      <size>
@@ -775,12 +776,12 @@ background-color: rgb(0, 0, 0);</string>
       <height>68</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_16r.gif);}
+ QPushButton:pressed {border-image:url(:/buttons/buttons/_16p.gif);}</string>
+    </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_16r.gif</normaloff>:/buttons/buttons/_16r.gif</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -801,9 +802,9 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_20r.gif</normaloff>:/buttons/buttons/_20r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_20r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_20p.gif);}</string>
     </property>
     <property name="iconSize">
      <size>
@@ -824,10 +825,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_9r.gif</normaloff>:/buttons/buttons/_9r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_9r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_9p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -847,10 +849,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_7r.gif</normaloff>:/buttons/buttons/_7r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_7r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_7p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -870,10 +873,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_0r.gif</normaloff>:/buttons/buttons/_0r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_0r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_0p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -893,10 +897,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_2r.gif</normaloff>:/buttons/buttons/_2r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_2r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_2p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -916,10 +921,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_4r.gif</normaloff>:/buttons/buttons/_4r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_4r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_4p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -939,10 +945,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_14r.gif</normaloff>:/buttons/buttons/_14r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_14r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_14p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -962,10 +969,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_11r.gif</normaloff>:/buttons/buttons/_11r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_11r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_11p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -985,10 +993,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_10r.gif</normaloff>:/buttons/buttons/_10r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_10r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_10p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -1008,10 +1017,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_17r.gif</normaloff>:/buttons/buttons/_17r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_17r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_17p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -1031,10 +1041,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_13r.gif</normaloff>:/buttons/buttons/_13r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_13r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_13p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -1054,10 +1065,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_15r.gif</normaloff>:/buttons/buttons/_15r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_15r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_15p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -1077,10 +1089,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_18r.gif</normaloff>:/buttons/buttons/_18r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_18r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_18p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -1100,10 +1113,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_6r.gif</normaloff>:/buttons/buttons/_6r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_6r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_6p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -1123,10 +1137,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_12r.gif</normaloff>:/buttons/buttons/_12r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_12r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_12p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -1146,10 +1161,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_3r.gif</normaloff>:/buttons/buttons/_3r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_3r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_3p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -1169,10 +1185,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_5p.gif</normaloff>:/buttons/buttons/_5p.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_5r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_5p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
@@ -1192,10 +1209,11 @@ background-color: rgb(0, 0, 0);</string>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="rsrc.qrc">
-      <normaloff>:/buttons/buttons/_1r.gif</normaloff>:/buttons/buttons/_1r.gif</iconset>
+    <property name="styleSheet">
+       <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_1r.gif);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_1p.gif);}</string>
     </property>
+
     <property name="iconSize">
      <size>
       <width>80</width>
