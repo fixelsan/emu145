@@ -628,16 +628,21 @@ background-color: rgb(0, 40, 0);</string>
           <cursorShape>ArrowCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_21r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_21p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_yellowrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_yellowpress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_21r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
          <property name="autoRepeatInterval">
@@ -663,16 +668,21 @@ background-color: rgb(0, 40, 0);</string>
           <enum>Qt::NoFocus</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_22r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_22p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_22r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -692,16 +702,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_29r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_29p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_29r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -721,16 +736,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_28r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_28p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_28r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -750,16 +770,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_24r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_24p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_24r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -780,16 +805,21 @@ background-color: rgb(0, 40, 0);</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_19r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_19p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_bluerest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_bluepress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_19r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -803,16 +833,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_25r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_25p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_25r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -826,16 +861,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_27r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_27p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_27r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -849,16 +889,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_26r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_26p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_26r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -872,16 +917,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_23r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_23p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_23r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>

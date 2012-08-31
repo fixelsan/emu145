@@ -60,5 +60,23 @@
         <file>buttons/_28r.gif</file>
         <file>buttons/_29p.gif</file>
         <file>buttons/_29r.gif</file>
+        <file>buttons/_pressblack.png</file>
+        <file>buttons/_restblack.png</file>
+        <file>buttons/_bluepress.png</file>
+        <file>buttons/_bluerest.png</file>
+        <file>buttons/_yellowpress.png</file>
+        <file>buttons/_yellowrest.png</file>
+        <file>buttons/_21r.png</file>
+        <file>buttons/_22r.png</file>
+        <file>buttons/_23r.png</file>
+        <file>buttons/_24r.png</file>
+        <file>buttons/_24r.svg</file>
+        <file>buttons/_25r.png</file>
+        <file>buttons/_26r.png</file>
+        <file>buttons/_27r.png</file>
+        <file>buttons/_28r.png</file>
+        <file>buttons/_29r.png</file>
+        <file>buttons/_rest.png</file>
+        <file>buttons/_19r.png</file>
     </qresource>
 </RCC>
