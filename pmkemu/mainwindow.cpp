@@ -3,9 +3,7 @@
 #include "cmcu13.h"
 #include "cmem.h"
 
-#include "ucommands.h"
-#include "synchro.h"
-#include "mcommands.h"
+
 
 const char segments[16]={
     '0','1','2','3','4','5','6','7','8','9',
@@ -18,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    int i,j;
+   int i;
 
     ustep=0;
     btnpressed=0;
@@ -63,67 +61,64 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     for(i=0;i<btns.count();i++)
+    {
         connect(btns.at(i),SIGNAL(pressed()),this,SLOT(on_keypad_clicked()));
+        connect(btns.at(i),SIGNAL(released()),this,SLOT(on_keypad_clicked()));
+    }
 
    // QPushButton::pressed()
 
+    display_blank=0;
 
     for(i=0;i<12;i++)
         display[i]=0x0f;
 
     display[7]=0x80;
 
-    ik1302=new cMCU(this, "IK1302");
-    ik1303=new cMCU(this, "IK1303");
-    ik1306=new cMCU(this, "IK1306");
-    ir2_1=new cMem();
-    ir2_2=new cMem();
 
-    //load memory
-    for(i=0;i<68;i++)
-    {
-        ik1302->ucrom[i].raw=ik1302_urom[i];
-        ik1303->ucrom[i].raw=ik1303_urom[i];
-    }
-    for(i=0;i<128;i++)
-        for(j=0;j<9;j++)
-        {
-            ik1302->asprom[i][j]=ik1302_srom[i][j];
-            ik1303->asprom[i][j]=ik1303_srom[i][j];
-        }
-    for(i=0;i<256;i++)
-    {
-        ik1302->cmdrom[i]=ik1302_mrom[i];
-        ik1303->cmdrom[i]=ik1303_mrom[i];
-    }
+    emu=new emulator(this);
+
+    connect(emu,SIGNAL(on_sync(QByteArray*)),this,SLOT(on_sync(QByteArray*)));
+    connect(this,SIGNAL(step(int)),emu,SLOT(step(int)));
+    connect(this,SIGNAL(keypad(uint)),emu,SLOT(keypad(uint)));
+    connect(this,SIGNAL(enable(bool)),emu,SLOT(enable(bool)));
+    connect(this,SIGNAL(set_mode(mode_e)),emu,SLOT(set_mode(mode_e)));
+    connect(this,SIGNAL(debug(bool)),emu,SLOT(debug(bool)));
+    connect(ui->runCheck,SIGNAL(clicked()),this,SLOT(on_run_clicked()));
+    connect(ui->debugCheck,SIGNAL(clicked()),this,SLOT(on_debug_clicked()));
+    emu->start();
+
+    ui->modeSlider->setValue(1);
+    connect(ui->modeSlider,SIGNAL(valueChanged(int)),this,SLOT(on_mode_changed(int)));
+    emit set_mode(e_rad);
 
 
-    ik1302->init();
-    ik1303->init();
-    ik1306->init();
-
-
-    chain=false;
-    sync=false;
-    olddcycle=0;
     timer=new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(OnTimer()));
-    timer->start(1);
+    //timer->start(25);
     ui->lcdNumber->display("-8.Err0r  -99");
 
 
 }
 
+
+
 MainWindow::~MainWindow()
 {
+
+    emu->enable(false);
+    disconnect(this,SLOT(on_sync(QByteArray*)));
     timer->stop();
-    delete timer;
-    delete ik1302;
-    delete ik1303;
-    delete ik1306;
-    delete ir2_1;
-    delete ir2_2;
+    emu->deleteLater();
+    //delete emu;
+    timer->deleteLater();
+    //delete timer;
     delete ui;
+}
+
+void MainWindow::on_debug_clicked()
+{
+    emit debug(ui->debugCheck->isChecked());
 }
 
 void MainWindow::updatedisp()
@@ -149,65 +144,43 @@ void MainWindow::updatedisp()
 
 }
 
+void MainWindow::on_sync(QByteArray *disp)
+{
+    for(int i=0;i<disp->count();i++)
+        display[i]=disp->at(i);
+    //int i;
+    //for(i=0;i<12;i++)
+      //  display[i]=disp[i];
+    updatedisp();
+    display_blank=1;
+}
+
+void MainWindow::on_mode_changed(int i)
+{
+    switch(ui->modeSlider->value())
+    {
+        case 1:
+            emit set_mode(e_rad);
+            break;
+        case 2:
+            emit set_mode(e_grd);
+            break;
+        case 3:
+            emit set_mode(e_deg);
+            break;
+    }
+}
+
 void MainWindow::OnTimer()
 {
-    unsigned char seg;
-
-    unsigned int cycle;
-    unsigned int maxcycle;
-    bool grd;
-
-
-    maxcycle=ui->runCheck->isChecked()?168*28:1;
-
-    for(cycle=0;(cycle<168*28);cycle++)
+    if(display_blank)
     {
-
-    if(ui->runCheck->isChecked()==false)
-    {
-        if(ustep==0)
-            return;
-        ustep--;
-    }
-
-    if(dcycle==13)
-        k2=true;
-
-    if(btnpressed)
-    {
-        if(dcycle==(2+(btnpressed&0xff)))
-        {
-            switch(btnpressed>>8)
-            {
-                case 0x1:   k1=true;k2=false;break;
-                case 0x2:   k2=true;k1=false;break;
-                case 0x3:   k1=true;k2=true;break;
-            }
-            btnpressed=0;
-        }
-
-    }
-    else
-    {
-        k1=false;
-        k2=false;
-    }
-
-
-
-    chain=ik1302->tick(chain,k1,k2,&dcycle,&sync,&seg);
-
-    if((dcycle>1)&&(dcycle<14))
-    {
-        display[dcycle-2]=seg;
-    }
-
-    if(sync)
-    {
+        display_blank--;
         updatedisp();
     }
-
-
+    else
+        ui->lcdNumber->display("");
+  #if 0
     switch(ui->modeSlider->value())
     {
         case 1:
@@ -220,37 +193,10 @@ void MainWindow::OnTimer()
             mode=e_deg;
             break;
     }
+    #endif
 
-    switch(mode)
-    {
-        case e_rad:
-        if(ik1303->dcount==9) //D10
-                grd=false;
-            else
-                grd=true;
-            break;
-        case e_deg:
-        if(ik1303->dcount==10) //D11
-            grd=false;
-        else
-            grd=true;
-        break;
-        case e_grd:
-        if(ik1303->dcount==11) //D12
-            grd=false;
-        else
-            grd=true;
-        break;
-    }
-
-    chain=ik1303->tick(chain,grd,false,NULL,NULL,NULL);
-
-    //chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
-    chain=ir2_1->tick(chain);
-    chain=ir2_2->tick(chain);
-
-    ik1302->pretick(chain);
-    }
+#if 0
+    //updatedisp();
     ui->ik1302_d->setText(QString().sprintf("d=%d %d   ",ik1302->dcount,dcycle));
     ui->ik1302_e->setText(QString().sprintf("e=%d   ",ik1302->ecount));
     ui->ik1302_i->setText(QString().sprintf("i=%d   ",ik1302->icount));
@@ -266,21 +212,23 @@ void MainWindow::OnTimer()
     ui->ik1306_d->setText(QString().sprintf("d=%d   ",ik1306->dcount+1));
     ui->ik1306_e->setText(QString().sprintf("e=%d   ",ik1306->ecount+1));
     ui->ik1306_i->setText(QString().sprintf("i=%d   ",ik1306->icount));
+#endif
+
 }
 
 void MainWindow::on_ustepBtn_clicked()
 {
-    ustep=1;
+    emit step(1);
 }
 
 void MainWindow::on_istepBtn_clicked()
 {
-    ustep=4;
+    emit step(4);
 }
 
 void MainWindow::on_cycleBtn_clicked()
 {
-    ustep=4*42;
+    emit step(4*42);
 }
 
 void MainWindow::on_keypad_clicked()
@@ -288,8 +236,8 @@ void MainWindow::on_keypad_clicked()
     int i;
     //cycle
 
-    if(btnpressed) //one button is still processing
-        return;
+    //if(btnpressed) //one button is still processing
+      //  return;
 
     for(i=0;i<btns.count();i++)
     {
@@ -298,7 +246,16 @@ void MainWindow::on_keypad_clicked()
             btnpressed=(i/10)+1;
             btnpressed<<=8;
             btnpressed|=i%10;
+            ui->ik1302_d->setText(QString().sprintf("d=%x  ",btnpressed));
+            emit keypad(btnpressed);
             return;
         }
     }
+    btnpressed=0;
+    emit keypad(0);
+}
+
+void MainWindow::on_run_clicked()
+{
+    emit enable(ui->runCheck->isChecked());
 }

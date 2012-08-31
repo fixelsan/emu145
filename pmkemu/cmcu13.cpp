@@ -16,7 +16,7 @@ const unsigned char jrom[42]={
 };
 
 
-cMCU::cMCU(QWidget *parent, QString name,bool debug)
+cMCU::cMCU(QObject *parent, QString name,bool debug)
 {
     
     int i;
@@ -33,21 +33,27 @@ cMCU::cMCU(QWidget *parent, QString name,bool debug)
 
     debugme=debug;
     myname=name;
+#if 0
     if(debugme)
     {
         dbg=new cDebugDlg(parent);
         dbg->setWindowTitle(name);
         dbg->show();
     }
+#endif
+
 }
 
 cMCU::~cMCU()
 {
+#if 0
     if(debugme)
     {
         dbg->hide();
         delete dbg;
     }
+#endif
+
 }
 
 void cMCU::init()
@@ -60,6 +66,7 @@ void cMCU::init()
     carry=0;
     rl=0;
     rt=0;
+    was_t_qrd=false;
     
     cptr=0;
 
@@ -86,12 +93,14 @@ void cMCU::init()
 
 #endif
 
+#if 0
     if(debugme)
         dbg->setI(icount);
+#endif
     
 
     command=cmdrom[cptr];
-
+#if 0
     if(debugme)
     {
         dbg->setCMD(command);
@@ -107,6 +116,7 @@ void cMCU::init()
         dbg->setH(rh[0]|rh[1]<<1|rh[2]<<2|rh[3]<<3);
         dbg->setREGS(rm,rr,rst,MCU_BITLEN,icount,ucount);
     }
+#endif
 }
 
 void cMCU::pretick(bool rin)
@@ -136,10 +146,12 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     if(icount<27)
     {
         ucmd=asprom[command&0x7f][jrom[icount]];
+        asp=command&0x7f;
     }else
         if((icount>=27)&&(icount<36))
         {
             ucmd=asprom[(command>>8)&0x7f][jrom[icount]];
+            asp=(command>>8)&0x7f;
         }
         else
         {
@@ -154,9 +166,13 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
                     rr[4*4]=((((command>>20)&0xf)>>ucount)&1)?true:false;
                 }
                 ucmd=asprom[0x5f][jrom[icount]];
+                asp=0x5f;
             }
             else
+            {
                 ucmd=asprom[(command>>16)&0x3f][jrom[icount]]; 
+                asp=(command>>16)&0x3f;
+            }
         }
    
     ucmd&=0x3f; //fool's proof
@@ -166,7 +182,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
         ucmd+=!rl?1:0;
         ucmd+=0x3c;
     }
-    
+    cur_ucmd=ucmd;
     u_command=ucrom[ucmd];
     
     switch(u_command.bits.s1)
@@ -184,6 +200,44 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
             rs1[0]|=rh[0];
             break;
 
+    }
+
+    if(k1|k2)
+    {
+       // rt=true;
+        latchk1=k1;
+        latchk2=k2;
+    }
+    /*
+    else
+    if(command&0xfc0000)
+    {
+        latchk1=false;
+        latchk2=false;
+        rt=false;
+    }*/
+    if(u_command.bits.g_nt)
+        was_t_qrd=true;
+
+    if(latchk1|latchk2)
+    {
+#if 0
+        if(myname=="IK1302")
+        {
+            if((command&0xfc0000)==0)
+                qDebug("lk %d:%d E%d D%d cmd %x %x",k1,k2,ecount+1,dcount+1,cptr,command);
+           // qDebug("%s LK = %d %d D%d E%d\n",myname.toAscii(),latchk1?1:0,latchk2?1:0,dcount+1,ecount+1);
+        }
+#endif
+        rt=true;
+    }
+    else
+        rt=false;
+
+    //if((command&0xfc0000)==0)
+    {
+        if(u_command.bits.g_nt | was_t_qrd)
+            rs1[0]=((((latchk2?1:0)<<3|(latchk1?1:0))>>ucount)&1)?true:false;
     }
 
     
@@ -228,25 +282,6 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
     if(u_command.bits.g_nl)
         g|=!rl;
 
-    if(k1|k2)
-    {
-        rt=1;
-        latchk1=k1;
-        latchk2=k2;
-    }
-    else
-    if(command&0xfc0000)
-    {
-        latchk1=false;
-        latchk2=false;
-        rt=0;
-    }
-
-    if(((command&0xfc0000)==0)&&(rt))
-    {
-        rs1[0]=((((latchk2?1:0)<<3|(latchk1?1:0))>>ucount)&1)?true:false;
-
-    }
 
 
     if(u_command.bits.g_nt)
@@ -257,7 +292,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
         g=carry;
     
     sigma=a+b+g;
-    carry=(sigma>>1)&1;
+    carry=((sigma>>1)&1)?true:false;
     sigma&=1;
     
     switch(u_command.bits.r0)
@@ -420,6 +455,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
         rst[i]=rst[i+1];
     rst[MCU_BITLEN-1]=temp;
  
+#if 0
     if(debugme)
     {
         dbg->setS(rs[0]|rs[1]<<1|rs[2]<<2|rs[3]<<3);
@@ -428,12 +464,14 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
         dbg->setPC(cptr);
         dbg->setH(rh[0]|rh[1]<<1|rh[2]<<2|rh[3]<<3);
     }
+#endif
+
     ucount++;
     if(ucount>=4)
     {
         ucount=0;
         icount++;
-
+#if 0
         if((debugme)&&(icount<42))
             dbg->setI(icount);
         if(debugme)
@@ -441,18 +479,22 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
             dbg->setCMD(command);
             disassemble();
         }
+#endif
         ecount++;
     }
     if(icount>=42)
     {
         icount=0;
+#if 0
         if(debugme)
             dbg->setI(icount);
+#endif
 
 
         cptr=rr[39*4+0]|rr[39*4+1]<<1|rr[39*4+2]<<2|rr[39*4+3]<<3;
         cptr=cptr<<4|rr[36*4+0]|rr[36*4+1]<<1|rr[36*4+2]<<2|rr[36*4+3]<<3;
         command=cmdrom[cptr];
+        was_t_qrd=false;
 
 #if 0
         QFile * log=new QFile("/Users/admin/src/emu145/emu145/ik1302.log");
@@ -466,7 +508,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
         rt=false;
         latchk1=false;
         latchk2=false;
-
+#if 0
         if(debugme)
         {
             dbg->setS(rs[0]|rs[1]<<1|rs[2]<<2|rs[3]<<3);
@@ -481,6 +523,7 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
             dbg->setCMD(command);
             disassemble();
         }
+#endif
 
     }
     if(ecount>=3)
@@ -508,12 +551,21 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
         *segment|=(temp)?0x80:0;
     }
 
+#if 0
     if(debugme)
     {
         dbg->setREGS(rm,rr,rst,MCU_BITLEN,icount,ucount);
     }
+#endif
 
     return (ret&1)?true:false;
+}
+
+bool cMCU::strobe()
+{
+    return (((command&0xfc0000)==0))?true:false;   //return value is D strobe idx for keyboard/display scan
+
+
 }
 
 void cMCU::disassemble()
@@ -562,8 +614,11 @@ void cMCU::disassemble()
 
     if(mcmd.raw==0)
     {
+        disassm="NOP";
+#if 0
         dbg->setASP(masp);
         dbg->setUCMD(ucmd,"NOP");
+#endif
         return;
     }
     cmd="";
@@ -749,7 +804,9 @@ void cMCU::disassemble()
         cmd+="ST[]=XYZsum;";
        break;
     }
-
+    disassm=cmd;
+#if 0
     dbg->setASP(masp);
     dbg->setUCMD(ucmd,cmd);
+#endif
 }

@@ -4,18 +4,13 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QList>
-#include "cmcu13.h"
-#include "cmem.h"
+#include "emulator.h"
 
 namespace Ui {
 class MainWindow;
 }
 
-typedef enum{
-    e_rad,
-    e_deg,
-    e_grd
-}mode_e;
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -28,30 +23,31 @@ public slots:
     void OnTimer();
     void on_keypad_clicked();
 
+    void on_sync(QByteArray * disp);
+
+signals:
+    void enable(bool en);
+    void step(int count);
+    void debug(bool en);
+    void set_mode(mode_e mod);
+    void keypad(unsigned int key);
+
 private slots:
     void on_ustepBtn_clicked();
     void on_istepBtn_clicked();
     void on_cycleBtn_clicked();
+    void on_run_clicked();
+    void on_mode_changed(int i);
+    void on_debug_clicked();
 
 
 private:
     Ui::MainWindow *ui;
     QTimer * timer;
-    cMCU * ik1302;
-    cMCU * ik1303;
-    cMCU * ik1306;
-    cMem * ir2_1;
-    cMem * ir2_2;
-    unsigned char display[12];
-    unsigned int olddcycle;
-    bool chain;
-    bool sync;
-    bool k1;
-    bool k2;
-    bool fast;
-    unsigned int dcycle;
-    mode_e mode;
+    emulator * emu;
 
+    unsigned char display[12];
+    int display_blank;
 
     QList<QPushButton*> btns;
     unsigned int btnpressed;

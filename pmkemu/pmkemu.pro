@@ -15,7 +15,8 @@ SOURCES += main.cpp\
     cmcu13.cpp \
     cmem.cpp \
     cdebugdlg.cpp \
-    cvaluedlg.cpp
+    cvaluedlg.cpp \
+    emulator.cpp
 
 HEADERS  += mainwindow.h \
     cmcu13.h \
@@ -24,7 +25,8 @@ HEADERS  += mainwindow.h \
     cdebugdlg.h \
     synchro.h \
     mcommands.h \
-    cvaluedlg.h
+    cvaluedlg.h \
+    emulator.h
 
 FORMS    += mainwindow.ui \
     cdebugdlg.ui \

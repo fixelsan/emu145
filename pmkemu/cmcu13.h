@@ -56,7 +56,7 @@ class cMCU
 {
     
 public:
-    cMCU(QWidget *parent, QString name, bool debug=false);
+    cMCU(QObject *parent, QString name, bool debug=false);
     ~cMCU();
     void init();
     void pretick(bool rin);
@@ -69,13 +69,13 @@ public:
                     //              *segment -- bit to display
                     //              *point   -- decimal point
                     //return value = output register
-    
+    bool strobe();
     ucmd_u  ucrom[68];              //ucommand rom
     unsigned char asprom[128][9];   //synchro sequence rom
     unsigned int cmdrom[256];       //macrocommand rom   -- format (asp0)|(asp1<<8)|(asp2<<16)|(modflag<<24)
     bool debugme;
 
-private:
+public:
     bool rm[MCU_BITLEN];
     bool rr[MCU_BITLEN];
     bool rst[MCU_BITLEN];
@@ -91,8 +91,11 @@ private:
     bool carry;
     ucmd_u  u_command;
     unsigned int command;
-    cDebugDlg * dbg;
     QString myname;
+    QString disassm;
+    unsigned char asp;
+    unsigned char cur_ucmd;
+    bool was_t_qrd;
 
 
     void disassemble();

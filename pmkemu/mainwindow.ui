@@ -1270,6 +1270,19 @@ background-color: rgb(0, 0, 0);</string>
      <string>Г</string>
     </property>
    </widget>
+   <widget class="QCheckBox" name="debugCheck">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>110</y>
+      <width>87</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Отладчик</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
