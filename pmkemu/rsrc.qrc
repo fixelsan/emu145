@@ -66,6 +66,10 @@
         <file>buttons/_bluerest.png</file>
         <file>buttons/_yellowpress.png</file>
         <file>buttons/_yellowrest.png</file>
+        <file>buttons/_greypress.png</file>
+        <file>buttons/_greyrest.png</file>
+        <file>buttons/_redpress.png</file>
+        <file>buttons/_redrest.png</file>
         <file>buttons/_21r.png</file>
         <file>buttons/_22r.png</file>
         <file>buttons/_23r.png</file>
@@ -76,5 +80,26 @@
         <file>buttons/_28r.png</file>
         <file>buttons/_29r.png</file>
         <file>buttons/_19r.png</file>
+        <file>buttons/_7r.png</file>
+        <file>buttons/_8r.png</file>
+        <file>buttons/_9r.png</file>
+        <file>buttons/_16r.png</file>
+        <file>buttons/_20r.png</file>
+        <file>buttons/_24r.svg</file>
+        <file>buttons/_4r.png</file>
+        <file>buttons/_5r.png</file>
+        <file>buttons/_6r.png</file>
+        <file>buttons/_15r.png</file>
+        <file>buttons/_18r.png</file>
+        <file>buttons/_1r.png</file>
+        <file>buttons/_2r.png</file>
+        <file>buttons/_3r.png</file>
+        <file>buttons/_14r.png</file>
+        <file>buttons/_17r.png</file>
+        <file>buttons/_0r.png</file>
+        <file>buttons/_11r.png</file>
+        <file>buttons/_12r.png</file>
+        <file>buttons/_13r.png</file>
+        <file>buttons/_10r.png</file>
     </qresource>
 </RCC>

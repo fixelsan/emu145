@@ -19,6 +19,40 @@
    sodipodi:docname="_24r.svg">
   <defs
      id="defs4">
+    <inkscape:path-effect
+       effect="bend_path"
+       id="path-effect8898"
+       is_visible="true"
+       bendpath="m 111.74926,197.588 99.01311,0"
+       prop_scale="1"
+       scale_y_rel="false"
+       vertical="false" />
+    <marker
+       inkscape:stockid="DiamondS"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="DiamondS"
+       style="overflow:visible">
+      <path
+         id="path6154"
+         d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path6095"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
     <marker
        inkscape:stockid="Arrow2Send"
        orient="auto"
@@ -56,15 +90,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="654.72471"
-     inkscape:cy="71.312651"
+     inkscape:zoom="1"
+     inkscape:cx="1329.2343"
+     inkscape:cy="-1159.0025"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1440"
      inkscape:window-height="852"
-     inkscape:window-x="0"
+     inkscape:window-x="2"
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
@@ -86,14 +120,14 @@
      style="display:none"
      sodipodi:insensitive="true">
     <rect
-       style="fill:#2c2c2c;fill-opacity:0.99180328;stroke:#000000;stroke-width:2.68911171;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       style="fill:#2c2c2c;fill-opacity:0.99180328;stroke:#000000;stroke-width:3.94238782;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        id="rect5984"
        width="3250.3169"
-       height="1575.803"
+       height="3386.9043"
        x="-199.40411"
        y="-73.720779"
        rx="57.153931"
-       ry="50.411999" />
+       ry="108.35149" />
   </g>
   <g
      inkscape:label="Capa 1"
@@ -166,7 +200,10 @@ Ng1DNg1DNg1DNg1DNg1DtqrVavkOM4RqmuZfmEPFYh2D+YoAAAAASUVORK5CYII=
          x="218.57143"
          y="350.93362" /></text>
     <g
-       id="g6648">
+       id="g6648"
+       inkscape:export-xdpi="37"
+       inkscape:export-ydpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_restblack.png">
       <rect
          inkscape:export-ydpi="38.009998"
          inkscape:export-xdpi="38.009998"
@@ -185,7 +222,7 @@ Ng1DNg1DNg1DNg1DNg1DtqrVavkOM4RqmuZfmEPFYh2D+YoAAAAASUVORK5CYII=
          height="182.73438"
          width="272.8652"
          id="rect3810"
-         style="fill:#181818;fill-opacity:0.99180328;stroke:#000000;stroke-width:8;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="fill:#212121;fill-opacity:0.99180329;stroke:#000000;stroke-width:8;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
     <g
        id="g6652">
@@ -801,19 +838,19 @@ Ng1DNg1DNg1DNg1DNg1DtqrVavkOM4RqmuZfmEPFYh2D+YoAAAAASUVORK5CYII=
          style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
          id="path6700" />
       <text
-         transform="scale(1.0835348,0.92290529)"
+         transform="scale(1.0232571,0.97727148)"
          inkscape:export-ydpi="37.57"
          inkscape:export-xdpi="37.57"
          inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
          sodipodi:linespacing="125%"
          id="text6702"
-         y="281.311"
-         x="157.33415"
-         style="font-size:115.42616272px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#d9d9d9;fill-opacity:1;stroke:none;font-family:Arial Rounded MT Bold;-inkscape-font-specification:'Arial Rounded MT Bold,'"
+         y="265.6615"
+         x="168.10493"
+         style="font-size:109.00493622px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#d9d9d9;fill-opacity:1;stroke:none;font-family:Arial Rounded MT Bold;-inkscape-font-specification:'Arial Rounded MT Bold,'"
          xml:space="preserve"><tspan
-           style="font-size:192.37695312px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#d9d9d9;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
-           y="281.311"
-           x="157.33415"
+           style="font-size:181.6749115px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#d9d9d9;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+           y="265.6615"
+           x="168.10493"
            id="tspan6704"
            sodipodi:role="line">K</tspan></text>
       <text
@@ -851,6 +888,1746 @@ Ng1DNg1DNg1DNg1DNg1DtqrVavkOM4RqmuZfmEPFYh2D+YoAAAAASUVORK5CYII=
            x="154.72379"
            y="281.311"
            style="font-size:192.37695312px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#141414;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold" /></text>
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_greyrest.png"
+       transform="translate(753.53317,332.76955)"
+       id="g6716">
+      <rect
+         inkscape:export-ydpi="38.009998"
+         inkscape:export-xdpi="38.009998"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_restblack.png"
+         y="313.56903"
+         x="14.139977"
+         height="282.0043"
+         width="320.0043"
+         id="rect6718"
+         style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.99568212;stroke-opacity:0" />
+      <rect
+         ry="21.53545"
+         rx="18.50156"
+         y="402.12921"
+         x="36.039448"
+         height="182.73438"
+         width="272.8652"
+         id="rect6720"
+         style="fill:#c4c3bc;fill-opacity:0.99180329;stroke:#000000;stroke-width:8;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_greypress.png"
+       transform="translate(742.21946,337.01219)"
+       id="g6722">
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.99568212;stroke-opacity:0"
+         id="rect6724"
+         width="320.0043"
+         height="282.0043"
+         x="345.06595"
+         y="314.98325"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_pressblack.png"
+         inkscape:export-xdpi="38.009998"
+         inkscape:export-ydpi="38.009998" />
+      <rect
+         style="fill:#9d9b8f;fill-opacity:0.99215686;stroke:#383838;stroke-width:8;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect6726"
+         width="272.8652"
+         height="182.73438"
+         x="366.96542"
+         y="403.54343"
+         rx="18.50156"
+         ry="21.53545" />
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_7r.png"
+       id="g6728"
+       transform="translate(-144.4336,1318.0618)">
+      <path
+         id="path6730"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         x="172.98335"
+         y="259.91678"
+         id="text6732"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"
+         transform="scale(1.0011301,0.99887123)"><tspan
+           sodipodi:role="line"
+           id="tspan6734"
+           x="172.98335"
+           y="259.91678"
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold">7</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="61.365501"
+         y="78.125252"
+         id="text6736"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan6738"
+           x="61.365501"
+           y="78.125252">sin</tspan></text>
+      <path
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path6740"
+         inkscape:connector-curvature="0" />
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6742"
+         y="78.125252"
+         x="191.36549"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="191.36549"
+           id="tspan6744"
+           sodipodi:role="line">[x]</tspan></text>
+    </g>
+    <g
+       transform="translate(189.5664,1314.0618)"
+       id="g6746"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_8r.png"
+       inkscape:export-xdpi="37"
+       inkscape:export-ydpi="37">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path6748" />
+      <text
+         transform="scale(1.0011301,0.99887123)"
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6750"
+         y="259.91678"
+         x="172.98335"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+           y="259.91678"
+           x="172.98335"
+           id="tspan6752"
+           sodipodi:role="line">8</tspan></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6754"
+         y="78.125252"
+         x="61.365501"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="61.365501"
+           id="tspan6756"
+           sodipodi:role="line">cos</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path6758"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="191.36549"
+         y="78.125252"
+         id="text6760"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan6762"
+           x="191.36549"
+           y="78.125252">{x}</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_9r.png"
+       id="g6764"
+       transform="translate(511.5664,1312.0618)">
+      <path
+         id="path6766"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         x="172.98335"
+         y="259.91678"
+         id="text6768"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"
+         transform="scale(1.0011301,0.99887123)"><tspan
+           sodipodi:role="line"
+           id="tspan6770"
+           x="172.98335"
+           y="259.91678"
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold">9</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="45.365501"
+         y="78.125252"
+         id="text6772"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan6774"
+           x="45.365501"
+           y="78.125252">tg</tspan></text>
+      <path
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path6776"
+         inkscape:connector-curvature="0" />
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6778"
+         y="78.125252"
+         x="151.36549"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="151.36549"
+           id="tspan6780"
+           sodipodi:role="line">max</tspan></text>
+    </g>
+    <g
+       transform="translate(1159.5664,1300.0618)"
+       id="g6782"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_20r.png"
+       inkscape:export-xdpi="37"
+       inkscape:export-ydpi="37">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path6784" />
+      <text
+         transform="scale(1.0011301,0.99887119)"
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6786"
+         y="259.91678"
+         x="141.01947"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+           y="259.91678"
+           x="141.01947"
+           id="tspan6788"
+           sodipodi:role="line"
+           dx="58 -39.999996 -62 -42.000004"
+           dy="-12 14 -94 80">-..-</tspan></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6790"
+         y="78.125252"
+         x="101.3655"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="101.3655"
+           id="tspan6792"
+           sodipodi:role="line"
+           dx="0 0 0 6"
+           dy="0 0 0 30">1/x </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path6794"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="151.36549"
+         y="78.125252"
+         id="text6796"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan6798"
+           x="151.36549"
+           y="78.125252" /></text>
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_16r.png"
+       id="g6818"
+       transform="translate(841.5664,1304.0618)">
+      <path
+         id="path6820"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         x="172.98335"
+         y="259.91678"
+         id="text6822"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"
+         transform="scale(1.0011301,0.99887123)"><tspan
+           dy="-12"
+           dx="0 -20"
+           sodipodi:role="line"
+           id="tspan6824"
+           x="172.98335"
+           y="259.91678"
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold">--</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="95.365501"
+         y="78.125252"
+         id="text6826"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           dy="0 0 0 -30 0 30"
+           dx="0 0 0 -2 -4 6"
+           sodipodi:role="line"
+           id="tspan6828"
+           x="95.365501"
+           y="78.125252">  √-- </tspan></text>
+      <path
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path6830"
+         inkscape:connector-curvature="0" />
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6832"
+         y="78.125252"
+         x="151.36549"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="151.36549"
+           id="tspan6834"
+           sodipodi:role="line" /></text>
+    </g>
+    <g
+       transform="translate(849.73292,1608.6976)"
+       id="g6836"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_15r.png"
+       inkscape:export-xdpi="37"
+       inkscape:export-ydpi="37">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path6838" />
+      <text
+         transform="scale(1.0011301,0.9988712)"
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6840"
+         y="247.17448"
+         x="170.15813"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+           y="247.17448"
+           x="170.15813"
+           id="tspan6842"
+           sodipodi:role="line">+</tspan></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6844"
+         y="82.367897"
+         x="100.76247"
+         style="font-size:90px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:AppleMyungjo;-inkscape-font-specification:AppleMyungjo Bold"
+         xml:space="preserve"><tspan
+           y="82.367897"
+           x="100.76247"
+           id="tspan6846"
+           sodipodi:role="line">π</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path6848"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z" />
+      <g
+         inkscape:transform-center-x="25.173828"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         id="text6850"
+         transform="translate(0,2.8284271)">
+        <path
+           d="m 221.44934,39.707283 c 3.39842,5.2e-5 6.16404,1.171926 8.29688,3.515625 2.15622,2.343797 3.23435,5.578168 3.23437,9.703125 -2e-5,4.101598 -1.07815,7.324251 -3.23437,9.667969 -2.15627,2.343777 -4.91018,3.515651 -8.26172,3.515625 -3.39845,2.6e-5 -6.17579,-1.148411 -8.33203,-3.445313 -2.15626,-2.296843 -3.23438,-5.496059 -3.23438,-9.597656 0,-4.218707 1.0664,-7.499953 3.19922,-9.84375 2.15624,-2.343699 4.93358,-3.515573 8.33203,-3.515625 m 0,4.675781 c -1.89845,4.8e-5 -3.4336,0.668016 -4.60547,2.003907 -1.14844,1.335981 -1.72266,3.515667 -1.72265,6.539062 -1e-5,2.953161 0.58593,5.121128 1.75781,6.503906 1.1953,1.359407 2.71874,2.039093 4.57031,2.039063 1.87499,3e-5 3.39842,-0.679656 4.57031,-2.039063 1.17186,-1.382778 1.7578,-3.609338 1.75782,-6.679687 -2e-5,-2.859333 -0.59768,-4.968706 -1.79297,-6.328125 -1.17189,-1.359328 -2.68361,-2.039015 -4.53516,-2.039063"
+           id="path7632"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m 247.02356,66.582283 2.42187,-17.382812 1.82813,-8.613282 7.24219,0 -1.86328,8.613282 -5.69141,17.382812 -3.9375,0"
+           style="font-style:italic;-inkscape-font-specification:Arial Italic"
+           id="path7634"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccc" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         x="916"
+         y="664.36218"
+         id="text6854"
+         sodipodi:linespacing="125%"
+         transform="translate(-753.5664,-630.0618)"><tspan
+           sodipodi:role="line"
+           id="tspan6856"
+           x="916"
+           y="664.36218" /></text>
+      <text
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="114.6792"
+         y="50.125252"
+         id="text6858"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan6860"
+           x="114.6792"
+           y="50.125252" /></text>
+      <g
+         id="g7622"
+         transform="matrix(-1,0,0,-1,460.1797,54.97015)">
+        <path
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#0058e8;fill-opacity:1;stroke:none;stroke-width:6;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+           d="m 971.65625,649.3125 -14.21875,8.46875 14.21875,8.5 -0.25,-5.5 32.96875,0 0,-6 -32.96875,0 z"
+           transform="translate(-753.5664,-630.0618)"
+           id="path7064"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccc" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_4r.png"
+       id="g6917"
+       transform="translate(-154.4336,1626.0618)">
+      <path
+         id="path6919"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         x="172.98335"
+         y="259.91678"
+         id="text6921"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"
+         transform="scale(1.0011301,0.99887123)"><tspan
+           sodipodi:role="line"
+           id="tspan6923"
+           x="172.98335"
+           y="259.91678"
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold">4</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="47.022354"
+         y="78.125252"
+         id="text6925"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan6927"
+           x="47.022354"
+           y="78.125252">sin</tspan></text>
+      <path
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path6929"
+         inkscape:connector-curvature="0" />
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6931"
+         y="78.125252"
+         x="208.33606"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="208.33606"
+           id="tspan6933"
+           sodipodi:role="line">|x|</tspan></text>
+      <text
+         transform="translate(-753.5664,-630.0618)"
+         sodipodi:linespacing="125%"
+         id="text6935"
+         y="664.36218"
+         x="916"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="664.36218"
+           x="916"
+           id="tspan6937"
+           sodipodi:role="line" /></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6939"
+         y="50.125252"
+         x="149.02235"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="50.125252"
+           x="149.02235"
+           id="tspan6941"
+           sodipodi:role="line">-1</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_5r.png"
+       id="g6943"
+       transform="translate(193.5664,1626.0618)">
+      <path
+         id="path6945"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         x="172.98335"
+         y="259.91678"
+         id="text6947"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"
+         transform="scale(1.0011301,0.99887123)"><tspan
+           sodipodi:role="line"
+           id="tspan6949"
+           x="172.98335"
+           y="259.91678"
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold">5</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="34.294434"
+         y="78.125252"
+         id="text6951"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan6953"
+           x="34.294434"
+           y="78.125252">cos</tspan></text>
+      <path
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path6955"
+         inkscape:connector-curvature="0" />
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6957"
+         y="78.125252"
+         x="208.33606"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="208.33606"
+           id="tspan6959"
+           sodipodi:role="line">ЗН</tspan></text>
+      <text
+         transform="translate(-753.5664,-630.0618)"
+         sodipodi:linespacing="125%"
+         id="text6961"
+         y="664.36218"
+         x="916"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="664.36218"
+           x="916"
+           id="tspan6963"
+           sodipodi:role="line" /></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text6965"
+         y="50.125252"
+         x="149.02235"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="50.125252"
+           x="149.02235"
+           id="tspan6967"
+           sodipodi:role="line">-1</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_6r.png"
+       id="g7636"
+       transform="translate(521.63538,1620.0113)">
+      <path
+         id="path7638"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         x="172.98335"
+         y="259.91678"
+         id="text7640"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"
+         transform="scale(1.0011301,0.99887123)"><tspan
+           sodipodi:role="line"
+           id="tspan7642"
+           x="172.98335"
+           y="259.91678"
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold">6</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="39.951286"
+         y="78.125252"
+         id="text7644"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan7646"
+           x="39.951286"
+           y="78.125252">tg</tspan></text>
+      <path
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path7648"
+         inkscape:connector-curvature="0" />
+      <g
+         transform="translate(0,2.8284271)"
+         id="g7650"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         inkscape:transform-center-x="25.173828">
+        <path
+           inkscape:connector-curvature="0"
+           id="path7652"
+           d="m 221.44934,39.707283 c 3.39842,5.2e-5 6.16404,1.171926 8.29688,3.515625 2.15622,2.343797 3.23435,5.578168 3.23437,9.703125 -2e-5,4.101598 -1.07815,7.324251 -3.23437,9.667969 -2.15627,2.343777 -4.91018,3.515651 -8.26172,3.515625 -3.39845,2.6e-5 -6.17579,-1.148411 -8.33203,-3.445313 -2.15626,-2.296843 -3.23438,-5.496059 -3.23438,-9.597656 0,-4.218707 1.0664,-7.499953 3.19922,-9.84375 2.15624,-2.343699 4.93358,-3.515573 8.33203,-3.515625 m 0,4.675781 c -1.89845,4.8e-5 -3.4336,0.668016 -4.60547,2.003907 -1.14844,1.335981 -1.72266,3.515667 -1.72265,6.539062 -1e-5,2.953161 0.58593,5.121128 1.75781,6.503906 1.1953,1.359407 2.71874,2.039093 4.57031,2.039063 1.87499,3e-5 3.39842,-0.679656 4.57031,-2.039063 1.17186,-1.382778 1.7578,-3.609338 1.75782,-6.679687 -2e-5,-2.859333 -0.59768,-4.968706 -1.79297,-6.328125 -1.17189,-1.359328 -2.68361,-2.039015 -4.53516,-2.039063" />
+        <path
+           sodipodi:nodetypes="ccccccc"
+           inkscape:connector-curvature="0"
+           id="path7654"
+           style="font-style:italic;-inkscape-font-specification:Arial Italic"
+           d="m 247.02356,66.582283 2.42187,-17.382812 1.82813,-8.613282 7.24219,0 -1.86328,8.613282 -5.69141,17.382812 -3.9375,0" />
+      </g>
+      <text
+         transform="translate(-753.5664,-630.0618)"
+         sodipodi:linespacing="125%"
+         id="text7656"
+         y="664.36218"
+         x="916"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="664.36218"
+           x="916"
+           id="tspan7658"
+           sodipodi:role="line" /></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text7660"
+         y="50.125252"
+         x="114.6792"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="50.125252"
+           x="114.6792"
+           id="tspan7662"
+           sodipodi:role="line">-1</tspan></text>
+      <g
+         transform="translate(5.5,-0.5)"
+         id="g7664">
+        <path
+           sodipodi:nodetypes="cccccccc"
+           inkscape:connector-curvature="0"
+           id="path7666"
+           transform="translate(-753.5664,-630.0618)"
+           d="m 971.65625,649.3125 -14.21875,8.46875 14.21875,8.5 -0.25,-5.5 32.96875,0 0,-6 -32.96875,0 z"
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#0058e8;fill-opacity:1;stroke:none;stroke-width:6;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_18r.png"
+       id="g7668"
+       transform="translate(1157.4444,1619.1388)">
+      <path
+         id="path7670"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         x="173.50966"
+         y="250.0061"
+         id="text7672"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"
+         transform="scale(1.0011301,0.99887118)"><tspan
+           sodipodi:role="line"
+           id="tspan7674"
+           x="173.50966"
+           y="250.0061"
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold">×</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="135.30663"
+         y="78.125252"
+         id="text7676"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           dy="0 30"
+           dx="0 6"
+           sodipodi:role="line"
+           id="tspan7678"
+           x="135.30663"
+           y="78.125252">x </tspan></text>
+      <path
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path7680"
+         inkscape:connector-curvature="0" />
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text7682"
+         y="78.125252"
+         x="151.36549"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="151.36549"
+           id="tspan7684"
+           sodipodi:role="line" /></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text7686"
+         y="56.912048"
+         x="183.38989"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="56.912048"
+           x="183.38989"
+           id="tspan7688"
+           sodipodi:role="line"
+           dx="0 6"
+           dy="0 30">2 </tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_1r.png"
+       id="g7740"
+       transform="translate(-146.4336,1930.0618)">
+      <path
+         id="path7742"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         inkscape:connector-curvature="0" />
+      <g
+         id="g7744"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         transform="scale(1.0011301,0.99887123)">
+        <path
+           sodipodi:nodetypes="ccccccc"
+           inkscape:connector-curvature="0"
+           id="path7746"
+           style="font-size:165.03211975px;line-height:125%;fill:#171717;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+           d="m 162.34652,160.72023 -15.13782,5.80191 0,-21.11251 14.97665,-5.80191 29.49305,0 c 0.0964,39.48236 -0.0843,82.28835 -0.0711,120.30906 l -29.42435,0" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="137.53203"
+         y="78.125252"
+         id="text7748"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan7750"
+           x="137.53203"
+           y="78.125252">e</tspan></text>
+      <path
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path7752"
+         inkscape:connector-curvature="0" />
+      <text
+         transform="translate(-753.5664,-630.0618)"
+         sodipodi:linespacing="125%"
+         id="text7754"
+         y="664.36218"
+         x="916"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="664.36218"
+           x="916"
+           id="tspan7756"
+           sodipodi:role="line" /></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text7758"
+         y="50.125252"
+         x="187.20612"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="50.125252"
+           x="187.20612"
+           id="tspan7760"
+           sodipodi:role="line">x</tspan></text>
+    </g>
+    <g
+       transform="translate(182.14923,1928.7035)"
+       id="g7762"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_2r.png"
+       inkscape:export-xdpi="37"
+       inkscape:export-ydpi="37">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path7764" />
+      <text
+         transform="scale(1.0011301,0.99887123)"
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text7766"
+         y="259.91678"
+         x="172.98335"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+           y="259.91678"
+           x="172.98335"
+           id="tspan7768"
+           sodipodi:role="line">2</tspan></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text7770"
+         y="78.125252"
+         x="141.77466"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="141.77466"
+           id="tspan7772"
+           sodipodi:role="line">lg</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path7774"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         x="916"
+         y="664.36218"
+         id="text7780"
+         sodipodi:linespacing="125%"
+         transform="translate(-753.5664,-630.0618)"><tspan
+           sodipodi:role="line"
+           id="tspan7782"
+           x="916"
+           y="664.36218" /></text>
+    </g>
+    <g
+       transform="translate(514.63538,1931.1383)"
+       id="g7788"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_3r.png"
+       inkscape:export-xdpi="37"
+       inkscape:export-ydpi="37">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path7790" />
+      <text
+         transform="scale(1.0011301,0.99887123)"
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text7792"
+         y="259.91678"
+         x="172.98335"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+           y="259.91678"
+           x="172.98335"
+           id="tspan7794"
+           sodipodi:role="line">3</tspan></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text7796"
+         y="78.125252"
+         x="81.951286"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="81.951286"
+           id="tspan7798"
+           sodipodi:role="line">ln</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path7800"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z" />
+      <g
+         inkscape:transform-center-x="25.173828"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         id="g7802"
+         transform="translate(0,2.8284271)">
+        <path
+           d="m 221.44934,39.707283 c 3.39842,5.2e-5 6.16404,1.171926 8.29688,3.515625 2.15622,2.343797 3.23435,5.578168 3.23437,9.703125 -2e-5,4.101598 -1.07815,7.324251 -3.23437,9.667969 -2.15627,2.343777 -4.91018,3.515651 -8.26172,3.515625 -3.39845,2.6e-5 -6.17579,-1.148411 -8.33203,-3.445313 -2.15626,-2.296843 -3.23438,-5.496059 -3.23438,-9.597656 0,-4.218707 1.0664,-7.499953 3.19922,-9.84375 2.15624,-2.343699 4.93358,-3.515573 8.33203,-3.515625 m 0,4.675781 c -1.89845,4.8e-5 -3.4336,0.668016 -4.60547,2.003907 -1.14844,1.335981 -1.72266,3.515667 -1.72265,6.539062 -1e-5,2.953161 0.58593,5.121128 1.75781,6.503906 1.1953,1.359407 2.71874,2.039093 4.57031,2.039063 1.87499,3e-5 3.39842,-0.679656 4.57031,-2.039063 1.17186,-1.382778 1.7578,-3.609338 1.75782,-6.679687 -2e-5,-2.859333 -0.59768,-4.968706 -1.79297,-6.328125 -1.17189,-1.359328 -2.68361,-2.039015 -4.53516,-2.039063"
+           id="path7804"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m 243.13447,66.582283 2.42187,-17.382812 1.82813,-8.613282 7.24219,0 -1.86328,8.613282 -5.69141,17.382812 -3.9375,0"
+           style="font-style:italic;-inkscape-font-specification:Arial Italic"
+           id="path7806"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccc" />
+        <path
+           sodipodi:nodetypes="ccccccc"
+           inkscape:connector-curvature="0"
+           id="path7820"
+           style="font-style:italic;-inkscape-font-specification:Arial Italic"
+           d="m 264.70123,66.582283 2.42187,-17.382812 1.82813,-8.613282 7.24219,0 -1.86328,8.613282 -5.69141,17.382812 -3.9375,0" />
+        <path
+           d="m 275.66139,66.582283 2.42187,-17.382812 1.82813,-8.613282 7.24219,0 -1.86328,8.613282 -5.69141,17.382812 -3.9375,0"
+           style="font-style:italic;-inkscape-font-specification:Arial Italic"
+           id="path7822"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccc" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         x="916"
+         y="664.36218"
+         id="text7808"
+         sodipodi:linespacing="125%"
+         transform="translate(-753.5664,-630.0618)"><tspan
+           sodipodi:role="line"
+           id="tspan7810"
+           x="916"
+           y="664.36218" /></text>
+      <text
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="114.6792"
+         y="50.125252"
+         id="text7812"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan7814"
+           x="114.6792"
+           y="50.125252" /></text>
+      <g
+         id="g7816"
+         transform="translate(21.763456,-0.5)">
+        <path
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#0058e8;fill-opacity:1;stroke:none;stroke-width:6;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+           d="m 971.65625,649.3125 -14.21875,8.46875 14.21875,8.5 -0.25,-5.5 32.96875,0 0,-6 -32.96875,0 z"
+           transform="translate(-753.5664,-630.0618)"
+           id="path7818"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccc" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_14r.png"
+       id="g7824"
+       transform="translate(862.98061,1942.0618)">
+      <path
+         id="path7826"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY Bold"
+         x="71.06398"
+         y="82.367897"
+         id="text7832"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan7834"
+           x="71.06398"
+           y="82.367897">x</tspan></text>
+      <path
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path7836"
+         inkscape:connector-curvature="0" />
+      <g
+         transform="translate(-9.8994949,2.8284271)"
+         id="g7838"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         inkscape:transform-center-x="25.173828">
+        <path
+           inkscape:connector-curvature="0"
+           id="path7840"
+           d="m 221.44934,39.707283 c 3.39842,5.2e-5 6.16404,1.171926 8.29688,3.515625 2.15622,2.343797 3.23435,5.578168 3.23437,9.703125 -2e-5,4.101598 -1.07815,7.324251 -3.23437,9.667969 -2.15627,2.343777 -4.91018,3.515651 -8.26172,3.515625 -3.39845,2.6e-5 -6.17579,-1.148411 -8.33203,-3.445313 -2.15626,-2.296843 -3.23438,-5.496059 -3.23438,-9.597656 0,-4.218707 1.0664,-7.499953 3.19922,-9.84375 2.15624,-2.343699 4.93358,-3.515573 8.33203,-3.515625 m 0,4.675781 c -1.89845,4.8e-5 -3.4336,0.668016 -4.60547,2.003907 -1.14844,1.335981 -1.72266,3.515667 -1.72265,6.539062 -1e-5,2.953161 0.58593,5.121128 1.75781,6.503906 1.1953,1.359407 2.71874,2.039093 4.57031,2.039063 1.87499,3e-5 3.39842,-0.679656 4.57031,-2.039063 1.17186,-1.382778 1.7578,-3.609338 1.75782,-6.679687 -2e-5,-2.859333 -0.59768,-4.968706 -1.79297,-6.328125 -1.17189,-1.359328 -2.68361,-2.039015 -4.53516,-2.039063" />
+        <path
+           sodipodi:nodetypes="ccccccc"
+           inkscape:connector-curvature="0"
+           id="path7842"
+           style="font-style:italic;-inkscape-font-specification:Arial Italic"
+           d="m 245.9629,66.582283 2.42187,-17.382812 1.82813,-8.613282 7.24219,0 -1.86328,8.613282 -5.69141,17.382812 -3.9375,0" />
+        <path
+           d="m 265.40834,66.582283 2.42187,-17.382812 1.82813,-8.613282 7.24219,0 -1.86328,8.613282 -5.69141,17.382812 -3.9375,0"
+           style="font-style:italic;-inkscape-font-specification:Arial Italic"
+           id="path7860"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccc" />
+        <path
+           sodipodi:nodetypes="ccccccc"
+           inkscape:connector-curvature="0"
+           id="path7862"
+           style="font-style:italic;-inkscape-font-specification:Arial Italic"
+           d="m 276.36849,66.582283 2.42187,-17.382812 1.82813,-8.613282 7.24219,0 -1.86328,8.613282 -5.69141,17.382812 -3.9375,0" />
+      </g>
+      <text
+         transform="translate(-753.5664,-630.0618)"
+         sodipodi:linespacing="125%"
+         id="text7844"
+         y="664.36218"
+         x="916"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="664.36218"
+           x="916"
+           id="tspan7846"
+           sodipodi:role="line" /></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text7848"
+         y="50.125252"
+         x="114.6792"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="50.125252"
+           x="114.6792"
+           id="tspan7850"
+           sodipodi:role="line" /></text>
+      <g
+         transform="matrix(-1,0,0,-1,467.95788,54.97015)"
+         id="g7852">
+        <path
+           sodipodi:nodetypes="cccccccc"
+           inkscape:connector-curvature="0"
+           id="path7854"
+           transform="translate(-753.5664,-630.0618)"
+           d="m 971.65625,649.3125 -14.21875,8.46875 14.21875,8.5 -0.25,-5.5 32.96875,0 0,-6 -32.96875,0 z"
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#0058e8;fill-opacity:1;stroke:none;stroke-width:6;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+      </g>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text7856"
+         y="46.30545"
+         x="121.26855"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY Bold"
+         xml:space="preserve"><tspan
+           y="46.30545"
+           x="121.26855"
+           id="tspan7858"
+           sodipodi:role="line">y</tspan></text>
+      <g
+         id="g8250"
+         transform="translate(0,-2)">
+        <path
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:16;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+           d="M 878.72729,806.28125 831,828.90625 l 47.72729,22.625 -0.22424,-14.625 97.59562,0 0.48286,14.625 45.63727,-22.625 -45.63727,-22.625 -0.48286,14.625 -97.59562,0 z"
+           transform="translate(-754.98061,-630.06181)"
+           id="path7876"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccccccc" />
+      </g>
+    </g>
+    <g
+       transform="translate(1187.4873,1927.1383)"
+       id="g8261"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_17r.png"
+       inkscape:export-xdpi="37"
+       inkscape:export-ydpi="37">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path8263" />
+      <g
+         transform="matrix(1.0011301,0,0,0.99887119,2.8284271,0)"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         id="text8265">
+        <path
+           d="m 141.11002,186.18417 c 4.88858,7e-5 8.59535,-1.07436 11.12033,-3.22329 2.52483,-2.14877 3.78728,-5.31833 3.78736,-9.50868 -8e-5,-4.13646 -1.26253,-7.27916 -3.78736,-9.42811 -2.52498,-2.20248 -6.23175,-3.30376 -11.12033,-3.30386 l -22.81445,0 0,25.46394 22.81445,0 m 1.04757,52.6201 c 6.23161,2e-5 10.90537,-1.31615 14.02128,-3.94852 3.16948,-2.63232 4.75426,-6.6077 4.75435,-11.92615 -9e-5,-5.21093 -1.55801,-9.10573 -4.67377,-11.6844 -3.11591,-2.6323 -7.81653,-3.94853 -14.10186,-3.94853 l -23.86202,0 0,31.5076 23.86202,0 m 28.84839,-43.27258 c 6.66135,1.93403 11.8186,5.5065 15.47176,10.71742 3.65294,5.21102 5.47947,11.60386 5.47958,19.17853 -1.1e-4,11.60385 -3.92177,20.25298 -11.76498,25.94744 -7.84342,5.69447 -19.76956,8.5417 -35.77845,8.5417 l -57.142428,0 0,-120.30906 52.226918,0 c 16.70727,0 28.79458,2.52502 36.26194,7.57472 7.52089,5.04991 11.28138,13.13498 11.28149,24.2552 -1.1e-4,5.85572 -1.37,10.8518 -4.10968,14.98827 -2.7399,4.0829 -6.71528,7.11815 -11.92615,9.10578"
+           style="font-size:165.03211975px;line-height:125%;fill:#171717;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+           id="path8857"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="csccccccccccsccccccssccscccc" />
+      </g>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text8269"
+         y="78.125252"
+         x="54.294434"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="54.294434"
+           id="tspan8271"
+           sodipodi:role="line"
+           dx="0 2">Bx</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path8273"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="204.33606"
+         y="78.125252"
+         id="text8275"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan8277"
+           x="204.33606"
+           y="78.125252"
+           dx="-10 7">СЧ</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         x="916"
+         y="664.36218"
+         id="text8279"
+         sodipodi:linespacing="125%"
+         transform="translate(-753.5664,-630.0618)"><tspan
+           sodipodi:role="line"
+           id="tspan8281"
+           x="916"
+           y="664.36218" /></text>
+      <text
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="149.02235"
+         y="50.125252"
+         id="text8283"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan8285"
+           x="149.02235"
+           y="50.125252" /></text>
+      <g
+         id="g8847"
+         transform="translate(-4.2426404,0)">
+        <path
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:16;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+           d="m 987,767.30635 -19.08947,45.95952 11.08947,0.12931 0,72.22246 16,0 0,-72.22246 9.6753,-0.12931 z"
+           transform="translate(-757.5664,-626.0618)"
+           id="path8287"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccc" />
+      </g>
+    </g>
+    <g
+       transform="translate(-129.09429,2221.0412)"
+       id="g8859"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_0r.png"
+       inkscape:export-xdpi="37"
+       inkscape:export-ydpi="37">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path8861" />
+      <g
+         transform="matrix(1.0011301,0,0,0.94842061,5.6568543,8.9077765)"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         id="text8863">
+        <path
+           style="font-size:165.03211975px;line-height:125%;fill:#171717;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+           d="m 122.25,137.84375 c -8.32283,0.45975 -13.90121,8.85146 -12.5,16.875 0.24798,30.83032 -0.48244,61.75891 0.34375,92.53125 1.52873,9.45867 12.55067,12.4483 20.84375,11.1875 24.07872,-0.28998 48.25798,0.55314 72.28125,-0.375 8.49457,-0.74139 10.32264,-10.65827 9.53125,-17.59375 -0.24727,-30.6342 0.48146,-61.35378 -0.34375,-91.9375 -1.21415,-8.56124 -10.73524,-12.06339 -18.46875,-10.75 -23.89478,0.0435 -47.79726,-0.085 -71.6875,0.0625 z m 15.21875,20.625 c 16.44344,0.62139 33.22178,-0.7222 49.5,0.59375 3.37516,2.40533 0.294,8.37209 1.375,11.84375 -0.29759,21.78146 0.57657,43.70901 -0.40625,65.40625 -3.12136,3.0498 -9.15658,0.44032 -13.1875,1.34375 -13.03286,-0.45399 -26.31575,0.86434 -39.21875,-0.5625 -2.67007,-3.26618 -0.32705,-9.12273 -1.15625,-13.15625 0.23023,-21.2682 -0.41962,-42.74754 0.25,-63.90625 0.50848,-1.12729 1.70899,-1.56391 2.84375,-1.5625 z"
+           id="path8889"
+           inkscape:connector-curvature="0" />
+      </g>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text8867"
+         y="78.125252"
+         x="30.022354"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="30.022354"
+           id="tspan8869"
+           sodipodi:role="line">10</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path8871"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="171.33606"
+         y="78.125252"
+         id="text8873"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan8875"
+           x="171.33606"
+           y="78.125252">НОП</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         x="916"
+         y="664.36218"
+         id="text8877"
+         sodipodi:linespacing="125%"
+         transform="translate(-753.5664,-630.0618)"><tspan
+           sodipodi:role="line"
+           id="tspan8879"
+           x="916"
+           y="664.36218" /></text>
+      <text
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="122.02235"
+         y="50.125252"
+         id="text8881"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan8883"
+           x="122.02235"
+           y="50.125252">x</tspan></text>
+    </g>
+    <g
+       transform="translate(223.25182,2230.4555)"
+       id="g8904"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_11r.png"
+       inkscape:export-xdpi="37"
+       inkscape:export-ydpi="37">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path8906" />
+      <g
+         transform="scale(1.0011301,0.99887123)"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         id="text8908">
+        <path
+           style="font-size:165.03211975px;line-height:125%;fill:#171717;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+           d="m 152.40476,180.67727 c 8.19081,-8.31296 21.03975,-8.60316 29.00956,0 7.96981,8.60316 8.12469,22.6894 0,31.18527 -8.12469,8.49587 -21.14739,7.56567 -29.00956,0 -7.86217,-7.56567 -8.19081,-22.87231 0,-31.18527 z"
+           id="path9511"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="zzzzz" />
+      </g>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text8912"
+         y="78.125252"
+         x="34.294434"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="34.294434"
+           id="tspan8914"
+           sodipodi:role="line" /></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path8916"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z" />
+      <g
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         id="text8918">
+        <path
+           style="font-weight:bold;-inkscape-font-specification:Charcoal CY Bold"
+           d="m 234.24818,23.26329 c -10.31881,20.96562 -20.58571,41.95698 -30.9375,62.90625 4.91774,-1.05497 13.00297,2.99361 14.32948,-3.81433 8.22351,-16.6348 16.44701,-33.26961 24.67052,-49.90442 8.7858,17.90909 17.6183,35.79565 26.375,53.71875 3.3574,-1.18809 15.0666,2.78552 11.1875,-2.875 -10.0662,-20.38866 -20.1863,-40.75127 -30.2188,-61.15625 -4.8734,0.65997 -11.4097,-1.30418 -15.30196,0.90425 l -0.10424,0.22075 z"
+           id="path9503"
+           inkscape:connector-curvature="0" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         x="916"
+         y="664.36218"
+         id="text8922"
+         sodipodi:linespacing="125%"
+         transform="translate(-753.5664,-630.0618)"><tspan
+           sodipodi:role="line"
+           id="tspan8924"
+           x="916"
+           y="664.36218" /></text>
+      <text
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         x="149.02235"
+         y="50.125252"
+         id="text8926"
+         sodipodi:linespacing="125%"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-ydpi="37.57"><tspan
+           sodipodi:role="line"
+           id="tspan8928"
+           x="149.02235"
+           y="50.125252" /></text>
+      <g
+         id="g9490">
+        <path
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffab06;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:11;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+           d="m 854.90625,646.625 c -16.53225,0 -30.6198,10.89062 -35.5,25.84375 l -11.84375,11.84375 9.92925,0.20698 c 0.0373,5.33064 1.24246,8.3256 2.1645,11.88677 5.04531,14.64295 18.96529,25.21875 35.28125,25.21875 16.55407,0 30.66901,-10.868 35.53125,-25.84375 l 11.8125,-11.8125 -9.55704,-0.0995 c -0.39942,-3.99808 -1.4425,-7.99617 -2.53671,-11.99426 -5.04531,-14.65106 -18.96529,-25.25 -35.28125,-25.25 z m 0.0312,11.34375 c 11.4563,0 21.16701,7.23948 24.8125,17.40625 1.4504,3.01047 2.21556,6.02094 2.01713,9.03141 l -10.61088,-0.43766 8.625,8.625 c -3.55016,10.32097 -13.30287,17.6875 -24.875,17.6875 -11.46332,0 -21.14095,-7.23793 -24.78125,-17.40625 -0.86325,-1.93284 -1.93875,-4.96152 -1.90704,-8.94391 l 10.46954,0.38141 -8.625,-8.625 c 3.54513,-10.33832 13.29631,-17.71875 24.875,-17.71875 z"
+           transform="translate(-759.25182,-630.45546)"
+           id="path8930"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sccccsccccssccccsccccs" />
+      </g>
+    </g>
+    <g
+       transform="translate(532.94909,2224.4662)"
+       id="g9514"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_12r.png"
+       inkscape:export-xdpi="37"
+       inkscape:export-ydpi="37">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path9516" />
+      <text
+         transform="scale(1.0640903,0.93976988)"
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text9518"
+         y="256.77408"
+         x="162.74826"
+         style="font-size:93.16049957px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:155.26748657px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+           y="256.77408"
+           x="162.74828"
+           id="tspan9520"
+           sodipodi:role="line"
+           dx="0 -6.5858235 -28.224957 -6.5858235">/--/</tspan></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text9522"
+         y="78.125252"
+         x="44.294434"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="44.294434"
+           id="tspan9524"
+           sodipodi:role="line"
+           dx="0 2 2">АВТ</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path9526"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z" />
+      <g
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         id="text9528"
+         transform="translate(6,0)">
+        <path
+           d="m 204.77735,25.0007 c 9.99434,20.38814 20.03397,40.75448 30,61.15625 4.86439,-0.6743 11.42079,1.3216 15.30205,-0.90425 10.4057,-21.0442 20.7959,-42.09642 31.2292,-63.127 -4.5637,1.16331 -12.3708,-2.865 -14.0383,2.92 -8.3206,16.93292 -16.6411,33.86583 -24.9617,50.79875 -8.83698,-17.90952 -17.7278,-35.79303 -26.53125,-53.71875 -2.67442,1.13906 -16.16377,-2.7549 -11,2.875 z"
+           id="path9541"
+           inkscape:connector-curvature="0" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         x="916"
+         y="664.36218"
+         id="text9532"
+         sodipodi:linespacing="125%"
+         transform="translate(-753.5664,-630.0618)"><tspan
+           sodipodi:role="line"
+           id="tspan9534"
+           x="916"
+           y="664.36218" /></text>
+    </g>
+    <g
+       transform="translate(876.35947,2210.2031)"
+       id="g9548"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_13r.png"
+       inkscape:export-xdpi="37"
+       inkscape:export-ydpi="37">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         id="path9550" />
+      <text
+         transform="scale(1.0011301,0.99887123)"
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text9552"
+         y="259.91678"
+         x="172.98335"
+         style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:165.03211975px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#171717;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+           y="259.91678"
+           x="172.98335"
+           id="tspan9554"
+           sodipodi:role="line"
+           dx="0 -8">ВП</tspan></text>
+      <text
+         inkscape:export-ydpi="37.57"
+         inkscape:export-xdpi="37.57"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+         sodipodi:linespacing="125%"
+         id="text9556"
+         y="78.125252"
+         x="51.264996"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+         xml:space="preserve"><tspan
+           y="78.125252"
+           x="51.264996"
+           id="tspan9558"
+           sodipodi:role="line"
+           dx="0 3 3">ПРГ</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path9560"
+         style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+         d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z" />
+      <g
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY Bold"
+         id="text9562"
+         transform="matrix(0.89873418,0,0,0.89873418,29.123172,1.9160965)">
+        <path
+           sodipodi:type="arc"
+           style="fill:#000000;fill-opacity:0;stroke:#0058e8;stroke-width:11;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="path9581"
+           sodipodi:cx="1000"
+           sodipodi:cy="690.36218"
+           sodipodi:rx="34"
+           sodipodi:ry="34"
+           d="m 1034,690.36218 c 0,18.77768 -15.2223,34 -34,34 -18.77768,0 -34,-15.22232 -34,-34 0,-18.77768 15.22232,-34 34,-34 18.7777,0 34,15.22232 34,34 z"
+           transform="translate(-751.90868,-631.94073)" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         x="916"
+         y="664.36218"
+         id="text9566"
+         sodipodi:linespacing="125%"
+         transform="translate(-753.5664,-630.0618)"><tspan
+           sodipodi:role="line"
+           id="tspan9568"
+           x="916"
+           y="664.36218" /></text>
+      <g
+         transform="scale(1.0001796,0.99982044)"
+         style="font-size:70.34284973px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="text9583">
+        <path
+           d="m 256.45755,32.333511 0,18.070481 17.71737,0 0,7.783899 -17.71737,0 0,18.24729 -8.42148,0 0,-18.24729 -17.89412,0 0,-7.783899 17.89412,0 0,-18.070481 8.42148,0"
+           id="path9588"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccccccccc"
+           style="fill:#0058e8;fill-opacity:1" />
+      </g>
+    </g>
+    <g
+       id="g9625"
+       transform="translate(446.14214,1586.8284)"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_10r.png"
+       inkscape:export-xdpi="37"
+       inkscape:export-ydpi="37">
+      <g
+         transform="translate(757.61761,632.87937)"
+         id="g9592"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_4r.png"
+         inkscape:export-xdpi="37"
+         inkscape:export-ydpi="37">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z"
+           style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+           id="path9594" />
+        <g
+           transform="matrix(1.0924961,0,0,0.9151805,-51.153538,11.579946)"
+           style="font-size:99.01927948px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e8e8e8;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+           id="g9596">
+          <path
+             sodipodi:nodetypes="ccccccccccccccccccccsc"
+             inkscape:connector-curvature="0"
+             id="path9598"
+             transform="matrix(0.8703708,0,0,0.91874263,-608.63046,-562.85166)"
+             d="m 925.5,762.3125 c -1.15219,0.0144 -2.29559,0.10256 -3.40625,0.28125 -27.45356,0.0474 -54.8954,-0.098 -82.34375,0.0625 -9.5624,0.50041 -15.9849,9.64183 -14.375,18.375 0.28491,33.55708 -0.54299,67.22478 0.40625,100.71875 1.75641,10.29523 14.40929,13.55981 23.9375,12.1875 27.6649,-0.31563 55.43006,0.60398 83.03125,-0.40625 9.75971,-0.80696 11.87801,-11.60737 10.96875,-19.15625 -0.0909,-10.66705 -0.0747,-1.90762 -0.0312,-12.58581 l -27.9375,0 c 2.9e-4,9.18706 -0.0944,-1.08119 -0.53125,8.05456 -3.58624,2.25888 -10.52498,0.48542 -15.15625,1.46875 -14.97392,-0.49414 -40.49083,0.39771 -45.0625,-0.625 -1.8303,-3.02472 -1.45171,-7.62414 -1.34375,-14.3125 0.26452,-23.14925 -0.4881,-46.53243 0.28125,-69.5625 0.58421,-1.22699 1.97748,-1.68903 3.28125,-1.6875 18.89245,0.67635 37.99559,-1.24928 56.69822,0.18306 1.50747,1.67815 1.7315,4.27997 1.73928,12.30932 l 28.09375,0 c 0.0505,-16.33325 0.0265,-7.01424 -0.4375,-23.30488 -1.22061,-8.15363 -9.74715,-12.10067 -17.8125,-12 z"
+             style="font-size:165.03211975px;line-height:125%;fill:#e8e8e8;fill-opacity:1;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold" />
+        </g>
+        <text
+           inkscape:export-ydpi="37.57"
+           inkscape:export-xdpi="37.57"
+           inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+           sodipodi:linespacing="125%"
+           id="text9600"
+           y="78.125252"
+           x="33.022354"
+           style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffab06;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+           xml:space="preserve"><tspan
+             y="78.125252"
+             x="33.022354"
+             id="tspan9602"
+             sodipodi:role="line"
+             dx="0 4">CF</tspan></text>
+        <path
+           inkscape:connector-curvature="0"
+           id="path9604"
+           style="fill:#000095;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.93936676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+           d="m 12.314677,17.145327 320.000003,0 0,282.371213 -320.000003,0 z" />
+        <text
+           xml:space="preserve"
+           style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0058e8;fill-opacity:1;stroke:none;font-family:Charcoal CY;-inkscape-font-specification:Charcoal CY"
+           x="158.33606"
+           y="78.125252"
+           id="text9606"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_24r.png"
+           inkscape:export-xdpi="37.57"
+           inkscape:export-ydpi="37.57"><tspan
+             sodipodi:role="line"
+             id="tspan9608"
+             x="158.33606"
+             y="78.125252"
+             dx="0 3 3">ИНВ</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+           x="916"
+           y="664.36218"
+           id="text9610"
+           sodipodi:linespacing="125%"
+           transform="translate(-753.5664,-630.0618)"><tspan
+             sodipodi:role="line"
+             id="tspan9612"
+             x="916"
+             y="664.36218" /></text>
+      </g>
+      <text
+         transform="scale(0.8205279,1.2187276)"
+         sodipodi:linespacing="125%"
+         id="text9621"
+         y="722.39197"
+         x="1160.2468"
+         style="font-size:122.53501892px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#e8e8e8;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+         xml:space="preserve"><tspan
+           y="722.39197"
+           x="1160.2468"
+           id="tspan9623"
+           sodipodi:role="line">X</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_redrest.png"
+       transform="translate(749.53317,-560.02857)"
+       id="g9642">
+      <rect
+         inkscape:export-ydpi="38.009998"
+         inkscape:export-xdpi="38.009998"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_restblack.png"
+         y="313.56903"
+         x="14.139977"
+         height="282.0043"
+         width="320.0043"
+         id="rect9644"
+         style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.99568212;stroke-opacity:0" />
+      <rect
+         ry="21.53545"
+         rx="18.50156"
+         y="402.12921"
+         x="36.039448"
+         height="182.73438"
+         width="272.8652"
+         id="rect9646"
+         style="fill:#f80000;fill-opacity:0.99180329;stroke:#000000;stroke-width:8;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       inkscape:export-ydpi="37"
+       inkscape:export-xdpi="37"
+       inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_redpress.png"
+       transform="translate(738.21946,-555.78593)"
+       id="g9648">
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.99568212;stroke-opacity:0"
+         id="rect9650"
+         width="320.0043"
+         height="282.0043"
+         x="345.06595"
+         y="314.98325"
+         inkscape:export-filename="/Users/svo/src/emu145repo/emu145/branches/ui-exp/pmkemu/buttons/_pressblack.png"
+         inkscape:export-xdpi="38.009998"
+         inkscape:export-ydpi="38.009998" />
+      <rect
+         style="fill:#ed4646;fill-opacity:0.99215686;stroke:#383838;stroke-width:8;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect9652"
+         width="272.8652"
+         height="182.73438"
+         x="366.96542"
+         y="403.54343"
+         rx="18.50156"
+         ry="21.53545" />
     </g>
   </g>
 </svg>

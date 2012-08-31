@@ -522,7 +522,7 @@ background-color: rgb(0, 40, 0);</string>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="layoutWidget">
+      <widget class="QWidget" name="layoutWidget2">
        <layout class="QGridLayout" name="gridLayout_5">
         <property name="horizontalSpacing">
          <number>-1</number>
@@ -951,16 +951,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_7r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_7p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_7r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -980,16 +985,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_8r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_8p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_8r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1009,16 +1019,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_9r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_9p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_9r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1038,16 +1053,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_16r.gif);}
- QPushButton:pressed {border-image:url(:/buttons/buttons/_16p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_16r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1067,16 +1087,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_20r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_20p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_20r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1096,16 +1121,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_4r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_4p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_4r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1125,16 +1155,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_5r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_5p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_5r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1154,16 +1189,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_6r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_6p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_6r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1183,16 +1223,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_15r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_15p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_15r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1212,16 +1257,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_18r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_18p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_18r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1241,16 +1291,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_1r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_1p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_1r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1270,16 +1325,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_2r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_2p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_2r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1299,16 +1359,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_3r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_3p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_3r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1328,16 +1393,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_14r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_14p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_14r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1357,16 +1427,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_17r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_17p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_17r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1386,16 +1461,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_0r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_0p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_0r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1415,16 +1495,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_11r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_11p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_11r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1444,16 +1529,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_12r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_12p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_12r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1473,16 +1563,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_13r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_13p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_13r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
@@ -1502,16 +1597,21 @@ background-color: rgb(0, 40, 0);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_10r.gif);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_10p.gif);}</string>
+          <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_redrest.png);}
+                   QPushButton:pressed {border-image:url(:/buttons/buttons/_redpress.png);}</string>
          </property>
          <property name="text">
           <string/>
          </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/buttons/buttons/_10r.png</normalon>
+          </iconset>
+         </property>
          <property name="iconSize">
           <size>
-           <width>80</width>
-           <height>80</height>
+           <width>78</width>
+           <height>68</height>
           </size>
          </property>
         </widget>
