@@ -142,7 +142,7 @@ void emulator::run()
     while(1)
     {
 
-        //msleep(1);
+        msleep(1);
         if(!enabled)
         {
             maxcycle=1;
@@ -211,23 +211,30 @@ void emulator::run()
 
             }
 
-            if((dcycle>1)&&(dcycle<14))
+            if(ik1302->strobe())
             {
-                display[dcycle-2]=seg;
+
+                if((dcycle>1)&&(dcycle<14))
+                {
+                 display[dcycle-2]=seg;
+                }
+
+
+
+                if(sync)
+                {
+
+                    QByteArray * arr=new QByteArray((const char*)display,12);
+                    emit on_sync(arr);
+                }
             }
-
-            if(ik1302->strobe()) //was sync
+            else
             {
-
-                QByteArray * arr=new QByteArray((const char*)display,12);
-                //arr.clear();
-                //for(int i=0;i<12;i++)
-                  //  arr.append(display[i]);
-                emit on_sync(arr);
-            }else
-            {
-                QByteArray * arr=new QByteArray(12,0xf);
-                emit on_sync(arr);
+                if(sync)
+                {
+                    QByteArray * arr=new QByteArray(12,0xf);
+                    emit on_sync(arr);
+                }
             }
 
             switch(mode)
