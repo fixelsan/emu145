@@ -98,7 +98,7 @@ MainWindow::MainWindow(QWidget *parent) :
     //timer->start(25);
     ui->lcdNumber->display("-8.Err0r  -99");
 
-    ui->gutsSplitter->setStretchFactor(0, 10);
+    ui->gutsSplitter->setStretchFactor(0, 8);
     ui->gutsSplitter->setStretchFactor(1, 1);
     ui->mainToolBar->hide();
     ui->menuBar->setVisible(false);
