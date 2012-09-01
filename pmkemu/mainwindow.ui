@@ -689,7 +689,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_yellowrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_yellowpress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_yellowpress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -729,7 +729,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -763,7 +763,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -797,7 +797,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -831,7 +831,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -866,7 +866,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_bluerest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_bluepress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_bluepress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -894,7 +894,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -922,7 +922,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -950,7 +950,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -978,7 +978,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_restblack.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_pressblack.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_pressblack.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1012,7 +1012,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1046,7 +1046,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1080,7 +1080,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1114,7 +1114,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1148,7 +1148,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1182,7 +1182,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1216,7 +1216,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1250,7 +1250,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1284,7 +1284,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1318,7 +1318,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1352,7 +1352,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1386,7 +1386,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1420,7 +1420,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1454,7 +1454,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1488,7 +1488,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1522,7 +1522,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1556,7 +1556,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1590,7 +1590,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1624,7 +1624,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_greyrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_greypress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_greypress.png);}</string>
          </property>
          <property name="text">
           <string/>
@@ -1658,7 +1658,7 @@ QPushButton:pressed {background-color: #a0a0ff}</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{ border-image:url(:/buttons/buttons/_redrest.png);}
-                   QPushButton:pressed {border-image:url(:/buttons/buttons/_redpress.png);}</string>
+                   QPushButton:pressed {padding:0px; border-image:url(:/buttons/buttons/_redpress.png);}</string>
          </property>
          <property name="text">
           <string/>
