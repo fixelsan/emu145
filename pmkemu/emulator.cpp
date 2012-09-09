@@ -20,17 +20,20 @@ emulator::emulator(QObject *parent) :
         {
             ik1302->ucrom[i].raw=ik1302_urom[i];
             ik1303->ucrom[i].raw=ik1303_urom[i];
+            ik1306->ucrom[i].raw=ik1306_urom[i];
         }
         for(i=0;i<128;i++)
             for(j=0;j<9;j++)
             {
                 ik1302->asprom[i][j]=ik1302_srom[i][j];
                 ik1303->asprom[i][j]=ik1303_srom[i][j];
+                ik1306->asprom[i][j]=ik1306_srom[i][j];
             }
         for(i=0;i<256;i++)
         {
             ik1302->cmdrom[i]=ik1302_mrom[i];
             ik1303->cmdrom[i]=ik1303_mrom[i];
+            ik1306->cmdrom[i]=ik1306_mrom[i];
         }
 
 
@@ -48,11 +51,15 @@ emulator::emulator(QObject *parent) :
         debugme=false;
         dbg1302=new cDebugDlg();
         dbg1303=new cDebugDlg();
+        dbg1306=new cDebugDlg();
 
         dbg1302->setWindowTitle("IK1302");
         dbg1303->setWindowTitle("IK1303");
+        dbg1306->setWindowTitle("IK1306");
+
         dbg1302->hide();
         dbg1303->hide();
+        dbg1306->hide();
 
         dbg1302->setASP(ik1302->asp);
         dbg1302->setREGS(ik1302->rm,ik1302->rr,ik1302->rst,MCU_BITLEN,ik1302->icount,ik1302->ucount);
@@ -82,6 +89,21 @@ emulator::emulator(QObject *parent) :
         dbg1303->setH(ik1303->rh[0]|ik1303->rh[1]<<1|ik1303->rh[2]<<2|ik1303->rh[3]<<3);
         dbg1303->setI(ik1303->icount);
 
+        dbg1306->setASP(ik1306->asp);
+        dbg1306->setREGS(ik1306->rm,ik1306->rr,ik1306->rst,MCU_BITLEN,ik1306->icount,ik1306->ucount);
+        dbg1306->setPC(ik1306->cptr);
+        dbg1306->setCMD(ik1306->command);
+        ik1306->disassemble();
+        dbg1306->setUCMD(ik1306->cur_ucmd,ik1306->disassm);
+
+
+        dbg1306->setS(ik1306->rs[0]|ik1306->rs[1]<<1|ik1306->rs[2]<<2|ik1306->rs[3]<<3);
+        dbg1306->setS1(ik1306->rs1[0]|ik1306->rs1[1]<<1|ik1306->rs1[2]<<2|ik1306->rs1[3]<<3);
+        dbg1306->setL(ik1306->rl);
+        dbg1306->setH(ik1306->rh[0]|ik1306->rh[1]<<1|ik1306->rh[2]<<2|ik1306->rh[3]<<3);
+        dbg1306->setI(ik1306->icount);
+
+
 
 }
 
@@ -102,6 +124,7 @@ void emulator::debug(bool en)
         {
             dbg1302->show();
             dbg1303->show();
+
         }else
         {
             dbg1302->hide();
@@ -278,7 +301,26 @@ void emulator::run()
                 dbg1303->setI(ik1303->icount);
             }
 
-            //chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
+            chain=ik1306->tick(chain,false,false,NULL,NULL,NULL);
+
+            if(debugme & !enabled)
+            {
+                dbg1306->setASP(ik1306->asp);
+                dbg1306->setREGS(ik1306->rm,ik1306->rr,ik1306->rst,MCU_BITLEN,ik1306->icount,ik1306->ucount);
+                dbg1306->setPC(ik1306->cptr);
+                dbg1306->setCMD(ik1306->command);
+                ik1306->disassemble();
+                dbg1306->setUCMD(ik1306->cur_ucmd,ik1306->disassm);
+
+
+                dbg1306->setS(ik1306->rs[0]|ik1306->rs[1]<<1|ik1306->rs[2]<<2|ik1306->rs[3]<<3);
+                dbg1306->setS1(ik1306->rs1[0]|ik1306->rs1[1]<<1|ik1306->rs1[2]<<2|ik1306->rs1[3]<<3);
+                dbg1306->setL(ik1306->rl);
+                dbg1306->setH(ik1306->rh[0]|ik1306->rh[1]<<1|ik1306->rh[2]<<2|ik1306->rh[3]<<3);
+                dbg1306->setI(ik1306->icount);
+            }
+
+
             chain=ir2_1->tick(chain);
             chain=ir2_2->tick(chain);
 

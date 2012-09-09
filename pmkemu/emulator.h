@@ -52,6 +52,7 @@ private:
     bool debugme;
     cDebugDlg * dbg1302;
     cDebugDlg * dbg1303;
+    cDebugDlg * dbg1306;
 
 };
 
