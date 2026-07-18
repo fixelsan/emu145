@@ -240,16 +240,16 @@ bool cMCU::tick(bool rin,bool k1, bool k2, unsigned int * dcycle, bool * syncout
            // qDebug("%s LK = %d %d D%d E%d\n",myname.toAscii(),latchk1?1:0,latchk2?1:0,dcount+1,ecount+1);
         }
 #endif
+        if((command&0xfc0000)==0)
+        {
+            if(u_command.bits.g_nt | was_t_qrd)
+                rs1[0]=((((latchk2?1:0)<<3|(latchk1?1:0))>>ucount)&1)?true:false;
+        }
         rt=true;
     }
     else
         rt=false;
 
-    //if((command&0xfc0000)==0)
-    {
-        if(u_command.bits.g_nt | was_t_qrd)
-            rs1[0]=((((latchk2?1:0)<<3|(latchk1?1:0))>>ucount)&1)?true:false;
-    }
 
     
     if(u_command.bits.a_r)
